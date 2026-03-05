@@ -1,0 +1,423 @@
+'use client'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+
+export default function Home() {
+  return (
+    <div style={{ background: 'var(--bg)' }}>
+      {/* Hero Section - Full-width image with left text overlay */}
+      <section 
+        className="relative w-full min-h-[450px] md:min-h-[520px] lg:min-h-[580px] flex items-center overflow-hidden"
+        aria-label="Empower Health hero section"
+      >
+        {/* Full-width Background Image - bright and natural */}
+        <Image
+          src="/clemson-campus-hero.png"
+          alt="Clemson University campus aerial view"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        
+        {/* Localized left-side gradient - Clemson blue to transparent */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to right, rgba(11, 95, 165, 0.75) 0%, rgba(11, 95, 165, 0.55) 25%, rgba(11, 95, 165, 0.25) 45%, transparent 65%)'
+          }}
+        />
+        
+        {/* Hero Text Content - Left aligned */}
+        <div className="relative z-10 w-full px-6 md:px-10 lg:px-16 py-12 md:py-16 lg:py-20">
+          <div style={{ maxWidth: '680px' }}>
+            {/* Orange accent line */}
+            <div 
+              className="mb-5"
+              style={{ 
+                width: '48px', 
+                height: '4px', 
+                background: '#F56600',
+                borderRadius: '2px',
+              }}
+            />
+            
+            {/* Main Heading - H1 */}
+            <h1 
+              className="font-extrabold tracking-tight mb-3"
+              style={{
+                fontSize: 'clamp(36px, 5vw, 56px)',
+                lineHeight: '1.1',
+                color: '#ffffff',
+                letterSpacing: '-0.025em',
+                textShadow: '0 2px 8px rgba(0,0,0,0.15), 0 0 30px rgba(255,255,255,0.1)',
+              }}
+            >
+              Empower Health:
+            </h1>
+            
+            {/* Subheading - Below H1 */}
+            <p 
+              className="font-semibold"
+              style={{
+                fontSize: 'clamp(18px, 2.5vw, 28px)',
+                lineHeight: '1.35',
+                color: '#ffffff',
+                textShadow: '0 1px 4px rgba(0,0,0,0.2)',
+                maxWidth: '620px',
+              }}
+            >
+              A Community Co-Designed Weatherization and Microgrid Plan for Energy Security and Environmental Health
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Slogan Banner - Thin ribbon-style bar (below hero) */}
+      <section 
+        className="w-full"
+        style={{
+          background: 'rgba(234, 199, 102, 0.38)',
+        }}
+      >
+        <div 
+          className="mx-auto px-6 md:px-8 lg:px-10 py-3"
+          style={{ 
+            maxWidth: '1400px',
+            borderLeft: '5px solid #F56600',
+          }}
+        >
+          <p 
+            className="text-base md:text-lg font-medium leading-snug"
+            style={{
+              color: '#0B2C6B',
+            }}
+          >
+            Shape the Future of Environmental Health — Through Practice, Policy, and Partnership
+          </p>
+        </div>
+      </section>
+
+      {/* ============================================
+          OVERVIEW - Research-Style Engaging Section
+          Strong hierarchy, scannable, research-professional
+         ============================================ */}
+      <section 
+        id="overview"
+        className="py-8 md:py-10"
+        style={{ background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)' }}
+      >
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1400px' }}>
+          
+          {/* Content Column - Centered, readable width, no hyphenation */}
+          <div 
+            className="w-full mx-auto"
+            style={{ 
+              maxWidth: '1000px',
+              hyphens: 'none',
+              WebkitHyphens: 'none',
+              MozHyphens: 'none',
+              wordBreak: 'normal',
+              overflowWrap: 'break-word',
+            }}
+          >
+            
+            {/* Section Header */}
+            <div className="mb-5 md:mb-6">
+              <div className="accent-bar mb-3" />
+              <h2 
+                className="text-xl md:text-2xl font-bold"
+                style={{ color: '#0c2340' }}
+              >
+                Overview
+              </h2>
+            </div>
+            
+            {/* Lead Paragraph - Slightly larger, engaging */}
+            <p 
+              className="text-lg md:text-xl leading-relaxed mb-5"
+              style={{ color: '#1e293b', lineHeight: '1.7', fontWeight: '400' }}
+            >
+              EMPOWER HEALTH is a community-centered research initiative advancing health, resilience, and energy efficiency in low- and moderate-income communities. We generate actionable evidence to inform policy and accelerate equitable energy transitions.
+            </p>
+
+            {/* At a Glance - Inline Summary */}
+            <div 
+              className="mb-5 py-3 px-4 rounded-lg"
+              style={{ 
+                background: 'rgba(11, 95, 165, 0.04)',
+                borderLeft: '3px solid #0B5FA5',
+              }}
+            >
+              <p 
+                className="text-sm mb-1.5"
+                style={{ color: '#475569' }}
+              >
+                <span className="font-semibold" style={{ color: '#0c2340' }}>Domains:</span>{' '}
+                Weatherization · Electrification · Microgrids · Indoor Air Quality
+              </p>
+              <p 
+                className="text-sm"
+                style={{ color: '#475569' }}
+              >
+                <span className="font-semibold" style={{ color: '#0c2340' }}>Methods:</span>{' '}
+                Community co-design · Mixed methods · Evaluation · Policy translation
+              </p>
+            </div>
+
+            {/* Key Statement Callout */}
+            <blockquote 
+              className="mb-6 py-3 pl-4 pr-3"
+              style={{ 
+                borderLeft: '4px solid #F56600',
+                background: 'linear-gradient(90deg, rgba(245, 102, 0, 0.04) 0%, transparent 100%)',
+              }}
+            >
+              <p 
+                className="text-base italic leading-relaxed"
+                style={{ color: '#374151' }}
+              >
+                "Through home electrification, weatherization, and community microgrids, our transdisciplinary team partners with researchers, local governments, utilities, and residents to reduce energy burdens, cut carbon emissions, and improve health outcomes."
+              </p>
+            </blockquote>
+
+            {/* Structured Content Blocks - Tighter spacing */}
+            <div className="space-y-5">
+              
+              {/* Objectives */}
+              <p 
+                className="text-base leading-7"
+                style={{ color: '#374151' }}
+              >
+                <strong className="font-semibold" style={{ color: '#0c2340' }}>Objectives.</strong>{' '}
+                We aim to reduce household energy burdens while lowering greenhouse gas emissions through clean energy adoption. We seek to strengthen physical and mental health outcomes by improving indoor environments and generate evidence-based policy recommendations that support equitable transitions. We also build community capacity for resilience during extreme weather and foster lasting partnerships across sectors.
+              </p>
+
+              {/* Focus Areas */}
+              <p 
+                className="text-base leading-7"
+                style={{ color: '#374151' }}
+              >
+                <strong className="font-semibold" style={{ color: '#0c2340' }}>Focus areas.</strong>{' '}
+                Our research spans four interconnected domains: weatherization and energy efficiency, improving home insulation and reducing energy consumption; building electrification, transitioning structures to clean electric systems; microgrids and resilience, developing community-scale energy systems for reliability during outages; and indoor air quality and health, measuring and improving air quality to protect well-being.
+              </p>
+
+              {/* Approach */}
+              <p 
+                className="text-base leading-7"
+                style={{ color: '#374151' }}
+              >
+                <strong className="font-semibold" style={{ color: '#0c2340' }}>Approach.</strong>{' '}
+                Our work is grounded in community-centered, participatory methods. We discover needs through engagement with local leaders and residents, co-design solutions reflecting community priorities, and implement interventions in partnership with local organizations. We rigorously evaluate outcomes to build the evidence base, then share learnings with policymakers and practitioners to inform broader energy transition efforts.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="section-divider" />
+
+      {/* Message from Dr. Chen Section - Tighter */}
+      <section className="py-8 md:py-12 bg-pattern-grid" style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)' }}>
+        <div className="mx-auto px-5 md:px-6" style={{ maxWidth: '1400px' }}>
+          <div className="grid md:grid-cols-[220px_1fr] gap-6 md:gap-10 items-start">
+            {/* Left: Dr. Chen Image */}
+            <div className="flex justify-center md:justify-start">
+              <div 
+                className="w-full max-w-[200px] rounded-lg overflow-hidden"
+                style={{ aspectRatio: '3/4' }}
+              >
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_empower-research/artifacts/2alyqhm7_Chien-fei%20Chen%20.jpeg" 
+                  alt="Portrait of Dr. Chen"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Right: Message Content - Full width */}
+            <div>
+              <h2 
+                className="text-xl md:text-2xl font-bold mb-4"
+                style={{ color: '#0c2340' }}
+              >
+                Welcome Message from Dr. Chen (Principal Investigator)
+              </h2>
+              <p className="text-sm leading-relaxed" style={{ color: '#4a5568', lineHeight: '1.75' }}>
+                Through my years of work on energy transitions, energy burdens, the social determinants of health, and community resilience, I am energized, and humbled, to lead this project on the environmental health impacts of energy transition and electrification. We partner with researchers, local governments, utilities, community organizations, and residents to provide practical support as communities work to reduce energy burdens, cut carbon emissions, and improve health outcomes through an equitable clean energy transition. Our goal is to help design and implement community microgrids, weatherization, and electrification in ways that are shaped by, and deliver meaningful benefits to, the people most affected by high energy costs and escalating extreme weather risks. Our transdisciplinary team brings together expertise in public and population health, electrical and industrial engineering, public policy, the social sciences, and community practice. We will draw on our shared knowledge, tools, and creativity to strengthen local capacity, build trust, and support community-led solutions that advance clean energy, climate resilience, and community well-being. This work will be grounded in the priorities and lived realities of the communities we serve. We will meet local leaders, residents, and organizations where they are, recognizing the challenges, resource gaps, and urgent needs they face. Together, we will identify barriers to clean energy acceptance and the conditions that enable adoption across households and communities. We will create spaces for dialogue and shared learning so communities can guide decisions and shape a healthier future that is practical, and locally meaningful.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="section-divider" />
+
+      {/* Our Partners Section - Tighter */}
+      <section className="py-8 md:py-12 bg-pattern-dots" style={{ background: 'linear-gradient(180deg, #f1f5f9 0%, #e8eef3 100%)' }}>
+        <div className="mx-auto px-5 md:px-6" style={{ maxWidth: '1400px' }}>
+          <p 
+            className="text-xs font-semibold uppercase tracking-wider mb-2"
+            style={{ color: '#F56600' }}
+          >
+            Collaboration
+          </p>
+          <h2 
+            className="text-xl md:text-2xl font-bold mb-3"
+            style={{ color: '#0c2340' }}
+          >
+            Our Partners
+          </h2>
+          <p 
+            className="mb-6 text-sm md:text-base leading-relaxed"
+            style={{ color: '#4a5568' }}
+          >
+            We collaborate with leading institutions, community organizations, and local governments to advance our mission.
+          </p>
+          
+          {/* Partner Logo Grid - Improved sizing for readability */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+            {[
+              {
+                name: 'Three3, Inc. (ThreeCubed)',
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/1upt974p_3.png'
+              },
+              {
+                name: 'The University of Tennessee, Knoxville',
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/r66r4sm4_Tenesse.svg'
+              },
+              {
+                name: 'Harvard T.H. Chan School of Public Health',
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/mw7avxk3_Harvard.png'
+              },
+              {
+                name: 'University of Nebraska Medical Center',
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/vovmk270_Nebraska.png'
+              },
+              {
+                name: 'Nurse-Family Partnership®',
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/gork4bvu_Nurse.png'
+              },
+              {
+                name: 'Clemson University',
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/qloox89b_Clemson.png'
+              },
+              {
+                name: 'Southeast Energy Efficiency Alliance (SEEA)',
+                logo: '/images/partners/seea.png'
+              }
+            ].map((partner, index) => (
+              <div 
+                key={index}
+                className="flex flex-col items-center justify-between p-5 md:p-6 rounded-xl transition-all hover:shadow-lg card-professional"
+                style={{ 
+                  background: 'white',
+                  minHeight: '180px',
+                }}
+              >
+                {/* Logo Container - Larger, fixed height, auto width */}
+                <div 
+                  className="w-full flex items-center justify-center mb-4"
+                  style={{ height: '90px' }}
+                >
+                  <img 
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    className="block"
+                    style={{ 
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain',
+                    }}
+                  />
+                </div>
+                {/* Partner Name */}
+                <p 
+                  className="text-center text-sm font-medium leading-snug mt-auto"
+                  style={{ color: '#475569' }}
+                >
+                  {partner.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Funder Section - Shrink-wrap card */}
+      <section 
+        className="py-8 md:py-10"
+        style={{ background: 'var(--card-bg-muted)' }}
+      >
+        {/* Centering wrapper */}
+        <div className="flex justify-center px-4 md:px-6">
+          {/* Card Container - Shrink-wrap to content */}
+          <div 
+            className="inline-flex w-fit max-w-full flex-col sm:flex-row items-center gap-4 sm:gap-5 rounded-xl p-5 md:p-6"
+            style={{ background: '#0B5FA5' }}
+          >
+            {/* Left: Label + Logo */}
+            <div className="flex-shrink-0 flex flex-col items-center">
+              {/* "Our Funder" label */}
+              <p 
+                className="uppercase tracking-widest font-semibold mb-2 text-xs"
+                style={{ 
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  letterSpacing: '0.12em',
+                }}
+              >
+                Our Funder
+              </p>
+              
+              {/* Wellcome W Logo - Compact white box */}
+              <div 
+                className="w-[120px] h-[120px] rounded-lg bg-white flex items-center justify-center overflow-hidden"
+              >
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_0d3c79a8-02be-453a-b90c-6e841ad238d1/artifacts/16k705v1_wellcome-logo-black_1200x600_Df2ubHd.width-800.jpg"
+                  alt="Wellcome Trust logo"
+                  className="block"
+                  style={{ 
+                    width: '180%', 
+                    height: '180%', 
+                    objectFit: 'contain',
+                    maxWidth: 'none', 
+                    maxHeight: 'none',
+                  }}
+                />
+              </div>
+            </div>
+            
+            {/* Right: Text - constrained width */}
+            <div className="text-center sm:text-left max-w-[52ch]">
+              <p 
+                className="text-sm leading-relaxed"
+                style={{ 
+                  color: 'rgba(255, 255, 255, 0.95)',
+                  lineHeight: '1.7',
+                }}
+              >
+                EMPOWER-ALL is funded by the Wellcome Trust under the project{' '}
+                <em style={{ fontStyle: 'italic', color: 'rgba(255, 255, 255, 0.9)' }}>
+                  "Advancing climate mitigation policy solutions with health co-benefits in G7 countries"
+                </em>{' '}
+                (Project No. 227151/Z/23/Z).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  )
+}

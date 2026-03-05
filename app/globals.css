@@ -1,0 +1,560 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Blue-Green Design System Variables */
+    --bg: #f8fafb;
+    --surface: #eef4f7;
+    --border: #c5dce6;
+    --text: #0c2d48;
+    --muted: #4a6b7c;
+    --brand: #1e5a8e;
+    --brand-2: #2e7ab8;
+    --accent: #2d9f7c;
+    --accent-hover: #24866a;
+    --link: var(--brand);
+    --focus: #2e7ab8;
+
+    /* Card Background Tokens - Site-wide consistency */
+    --card-bg: #F6F7F9;          /* Replaces pure white cards */
+    --card-bg-muted: #EEF1F4;    /* Slightly darker for secondary/muted cards */
+    --card-bg-white: #FFFFFF;    /* Only for inputs/modals that must stay white */
+
+    /* Nav Active Indicator - Aqua blue */
+    --nav-active: #39D6D6;
+    --nav-active-hover: #2BC4C4;
+
+    /* Header Theme Tokens - Single Source of Truth */
+    --brand-blue: var(--brand);
+    --brand-green: var(--accent);
+    --brand-gradient-header: linear-gradient(135deg, var(--brand-blue) 15%, var(--brand-2) 50%, var(--brand-green) 90%);
+    --brand-gradient-header-hover: linear-gradient(135deg, #1a4f7d 15%, #2669a3 50%, #268c6d 90%);
+    --header-fg: #ffffff;
+    --header-fg-muted: rgba(255, 255, 255, 0.85);
+    --header-fg-subtle: rgba(255, 255, 255, 0.7);
+    --header-border: rgba(255, 255, 255, 0.2);
+    --header-hover-bg: rgba(255, 255, 255, 0.1);
+
+    /* Shadcn defaults */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted-base: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent-base: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border-base: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted-base: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent-base: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border-base: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  /* Base font size increased by +2pt (approx 2.67px, rounding to 18px from 16px) */
+  html {
+    font-size: 18px;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  p {
+    color: var(--muted);
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  
+  /* Professional link styling */
+  a {
+    color: var(--link);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  
+  a:hover {
+    color: var(--accent);
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better focus states for accessibility */
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+  
+  /* Selection color */
+  ::selection {
+    background: rgba(11, 95, 165, 0.2);
+    color: var(--text);
+  }
+  
+  /* Headings - increased by +2pt */
+  h1 {
+    font-size: 3.25rem; /* ~52px, was 3rem/48px */
+    color: var(--brand);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 4rem; /* ~64px, was 3.75rem/60px */
+    }
+  }
+  
+  h2 {
+    font-size: 1.625rem; /* ~26px, was 1.5rem/24px */
+    color: var(--brand);
+    font-weight: 700;
+  }
+  
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2rem; /* ~32px, was 1.875rem/30px */
+    }
+  }
+  
+  h3 {
+    font-size: 1.375rem; /* ~22px, was 1.25rem/20px */
+    color: var(--brand);
+    font-weight: 600;
+  }
+}
+
+/* Academic Section Styles */
+.section-card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px 0 rgb(30 90 142 / 0.1);
+  padding: 2rem;
+}
+
+.section-card-muted {
+  background: var(--card-bg-muted);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px 0 rgb(30 90 142 / 0.1);
+  padding: 2rem;
+}
+
+.section-eyebrow {
+  @apply text-sm font-semibold uppercase tracking-wider;
+  color: var(--accent);
+}
+
+.content-surface {
+  background: var(--surface);
+}
+
+/* Prose styles for article content */
+.prose {
+  color: var(--text);
+}
+
+.prose h2 {
+  @apply text-2xl md:text-3xl font-bold mt-8 mb-4;
+  color: var(--brand);
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mt-6 mb-3;
+  color: var(--brand);
+}
+
+.prose p {
+  @apply mb-4;
+  color: var(--muted);
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.prose ul {
+  @apply list-disc list-inside mb-4;
+  color: var(--muted);
+}
+
+.prose ol {
+  @apply list-decimal list-inside mb-4;
+  color: var(--muted);
+}
+
+.prose a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: var(--accent);
+}
+
+.prose strong {
+  @apply font-semibold;
+  color: var(--text);
+}
+
+.prose code {
+  background: var(--surface);
+  @apply px-1.5 py-0.5 rounded text-sm;
+}
+
+/* Active nav indicator */
+.nav-active {
+  position: relative;
+  color: var(--brand);
+}
+
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* Navigation link hover effects */
+.nav-link-item:not(.active):hover {
+  background: var(--surface) !important;
+  color: var(--brand) !important;
+}
+
+/* Footer and breadcrumb link hover styles */
+a[href]:hover {
+  color: var(--accent);
+}
+
+/* Button hover states */
+button:hover {
+  transition: all 0.2s ease;
+}
+
+/* Hero Section Typography - Fixed sizes (excluded from global +2pt increase) */
+.hero-title-fixed {
+  font-size: 25px !important; /* Reduced ~17% from 30px */
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+}
+
+@media (min-width: 640px) {
+  .hero-title-fixed {
+    font-size: 30px !important; /* Reduced ~17% from 36px */
+    line-height: 1.2 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title-fixed {
+    font-size: 40px !important; /* Reduced ~17% from 48px */
+    line-height: 1.18 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title-fixed {
+    font-size: 50px !important; /* Reduced ~17% from 60px */
+    line-height: 1.15 !important;
+  }
+}
+
+.hero-button-fixed {
+  font-size: 16px !important; /* text-base equivalent */
+}
+
+/* Header Typography - Fixed sizes (excluded from global font-size changes) */
+.header-dept-name {
+  font-size: 16px !important; /* text-base */
+}
+
+@media (min-width: 768px) {
+  .header-dept-name {
+    font-size: 18px !important; /* text-lg */
+  }
+}
+
+.header-college-name {
+  font-size: 12px !important; /* text-xs */
+}
+
+@media (min-width: 768px) {
+  .header-college-name {
+    font-size: 14px !important; /* text-sm */
+  }
+}
+
+.header-initiative-name {
+  font-size: 12px !important; /* text-xs */
+}
+
+.header-nav-item {
+  font-size: 17px !important; /* increased from 16px (+1px) */
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Header Navigation Link Hover States */
+.nav-header-link {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-header-link:hover {
+  color: var(--header-fg) !important;
+  background-color: var(--header-hover-bg);
+}
+
+/* High-resolution image rendering for hero backgrounds */
+.hero-bg-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Ensure sharp rendering on Retina/HiDPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-bg-image {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* ============================================
+   VISUAL POLISH - Backgrounds & Patterns
+   ============================================ */
+
+/* Subtle dot pattern overlay for sections */
+.bg-pattern-dots {
+  background-image: radial-gradient(circle, rgba(11, 95, 165, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle grid pattern for variety */
+.bg-pattern-grid {
+  background-image: 
+    linear-gradient(rgba(11, 95, 165, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 95, 165, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Gradient mesh background - professional academic look */
+.bg-gradient-mesh {
+  background: 
+    radial-gradient(ellipse at 0% 0%, rgba(11, 95, 165, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(45, 159, 124, 0.05) 0%, transparent 50%);
+}
+
+/* Subtle wave pattern for section transitions */
+.bg-wave-top {
+  position: relative;
+}
+.bg-wave-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(11, 95, 165, 0.1) 25%, 
+    rgba(45, 159, 124, 0.1) 75%, 
+    transparent 100%
+  );
+}
+
+/* Decorative corner accent */
+.corner-accent {
+  position: relative;
+}
+.corner-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(11, 95, 165, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Professional card with subtle depth */
+.card-professional {
+  background: white;
+  border: 1px solid rgba(12, 35, 64, 0.08);
+  border-radius: 12px;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(11, 95, 165, 0.03);
+  transition: all 0.3s ease;
+}
+
+.card-professional:hover {
+  border-color: rgba(11, 95, 165, 0.15);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(11, 95, 165, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Section divider with gradient */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(12, 35, 64, 0.12) 20%,
+    rgba(12, 35, 64, 0.12) 80%,
+    transparent 100%
+  );
+}
+
+/* Decorative accent bar */
+.accent-bar {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #F56600, #0B5FA5);
+  border-radius: 2px;
+}
+
+/* Subtle highlight strip for important sections */
+.highlight-strip {
+  position: relative;
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, #F56600, #0B5FA5) 1;
+  padding-left: 1rem;
+}
+
+/* Interactive hover glow for links/buttons */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(11, 95, 165, 0.15);
+}
+
+/* Reading-friendly content area with subtle texture */
+.content-area {
+  background: 
+    linear-gradient(180deg, rgba(248, 250, 251, 0.5) 0%, rgba(255, 255, 255, 0.8) 100%),
+    radial-gradient(circle at 20% 80%, rgba(11, 95, 165, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(45, 159, 124, 0.02) 0%, transparent 40%);
+}
+
+/* Floating card effect for key content */
+.card-float {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.02),
+    0 2px 4px rgba(0,0,0,0.02),
+    0 4px 8px rgba(0,0,0,0.02),
+    0 8px 16px rgba(0,0,0,0.02),
+    0 16px 32px rgba(0,0,0,0.02);
+}
+
+/* Gradient text for headings (use sparingly) */
+.text-gradient {
+  background: linear-gradient(135deg, #0c2340 0%, #0B5FA5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated underline for links */
+.link-animated {
+  position: relative;
+  text-decoration: none;
+}
+.link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #F56600, #0B5FA5);
+  transition: width 0.3s ease;
+}
+.link-animated:hover::after {
+  width: 100%;
+}
+
+/* Subtle pulse animation for CTAs */
+@keyframes subtle-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(11, 95, 165, 0.2); }
+  50% { box-shadow: 0 0 0 8px rgba(11, 95, 165, 0); }
+}
+.pulse-subtle {
+  animation: subtle-pulse 3s infinite;
+}
+
+/* Section background variants */
+.section-bg-primary {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.section-bg-secondary {
+  background: 
+    linear-gradient(180deg, white 0%, #f8fafc 100%),
+    radial-gradient(ellipse at 100% 0%, rgba(11, 95, 165, 0.03) 0%, transparent 50%);
+}
+
+.section-bg-accent {
+  background: 
+    linear-gradient(135deg, rgba(11, 95, 165, 0.02) 0%, rgba(45, 159, 124, 0.02) 100%);
+}
