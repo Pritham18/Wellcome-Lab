@@ -42,8 +42,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full" style={{ background: '#0B5FA5', overflow: 'visible' }}>
-      {/* Top Brand Bar - Clemson Orange accent */}
-      <div className="h-1.5" style={{ background: '#F66733' }} />
       
       <div className="border-b shadow-sm" style={{ borderColor: 'var(--header-border)', overflow: 'visible' }}>
         <div className="container px-4 md:px-6 lg:px-8" style={{ overflow: 'visible' }}>
