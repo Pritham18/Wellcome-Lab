@@ -1,10 +1,10 @@
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { Card, CardContent } from '@/components/ui/card'
-import { FileText } from 'lucide-react'
+import { FileText, ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function PublicationsPage() {
   return (
-    <div style={{ background: 'var(--bg)' }}>
+    <div style={{ background: '#f8fafc' }}>
       <Breadcrumbs 
         items={[
           { label: 'Research', href: '/research/study-areas' },
@@ -14,98 +14,137 @@ export default function PublicationsPage() {
       
       {/* Page Hero */}
       <section 
-        className="py-6 md:py-8"
-        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
+        className="py-8 md:py-10"
+        style={{ background: '#0c2340' }}
       >
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
+        <div className="mx-auto px-6 md:px-10 lg:px-16" style={{ maxWidth: '1400px' }}>
+          <div className="mb-4" style={{ width: '40px', height: '3px', background: '#F56600', borderRadius: '2px' }} />
           <h1 
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: '#0c2340' }}
+            className="text-3xl md:text-4xl font-bold mb-2"
+            style={{ color: '#ffffff' }}
           >
-            Our Publications
+            Publications
           </h1>
           <p 
-            className="text-base leading-relaxed"
-            style={{ color: '#4a5568', maxWidth: '72ch' }}
+            className="text-sm md:text-base"
+            style={{ color: 'rgba(255,255,255,0.7)' }}
           >
             Academic publications and research papers from the EMPOWER-ALL project.
           </p>
         </div>
       </section>
 
-      <div className="mx-auto px-4 md:px-6 py-8 md:py-10" style={{ maxWidth: '1120px' }}>
-        
-        {/* Publications Section */}
-        <section>
-          <div className="flex items-center gap-3 mb-5">
-            <FileText className="w-6 h-6" style={{ color: 'var(--accent)' }} />
-            <h2 className="text-2xl font-bold" style={{ color: 'var(--text)' }}>Publications</h2>
-          </div>
-          
-          <div className="space-y-4">
-            {/* Publication 1 */}
-            <Card className="section-card hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3">
-                  <span className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0" style={{ background: 'var(--accent)' }}></span>
-                  <div>
-                    <h3 className="text-base font-semibold leading-relaxed" style={{ color: 'var(--text)' }}>
-                      Public Support for Mobile Community Microgrids: Perceptual, Socioeconomic, and Power Outage Experience Drivers of Energy Infrastructure Resilience
-                    </h3>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+      {/* Publication List */}
+      <div className="mx-auto px-6 md:px-10 lg:px-16 py-8 md:py-10" style={{ maxWidth: '1400px' }}>
+        <div className="space-y-3">
 
-            {/* Publication 2 */}
-            <Card className="section-card hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3">
-                  <span className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0" style={{ background: 'var(--accent)' }}></span>
-                  <div>
-                    <h3 className="text-base font-semibold leading-relaxed" style={{ color: 'var(--text)' }}>
-                      Electric Power Reliability, Energy Burdens, and Climate Change Beliefs in the United States
-                    </h3>
-                    <p className="text-sm mt-1" style={{ color: 'var(--muted)' }}>
-                      Environmental Science & Technology
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          {/* Publication 1 */}
+          <Link 
+            href="/publications/Public support for microgrids.pdf" 
+            target="_blank"
+            className="group block bg-white rounded-lg border border-transparent hover:border-slate-200 hover:shadow-sm transition-all"
+            style={{ borderLeft: '3px solid #0B5FA5' }}
+          >
+            <div className="flex items-center gap-4 md:gap-6 px-5 md:px-6 py-4">
+              <div className="flex-shrink-0 w-9 h-9 rounded-md flex items-center justify-center" style={{ background: 'rgba(11, 95, 165, 0.08)' }}>
+                <FileText className="w-4 h-4" style={{ color: '#0B5FA5' }} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-[15px] font-semibold leading-snug group-hover:text-[#0B5FA5] transition-colors" style={{ color: '#0c2340' }}>
+                  Public Support for Mobile Community Microgrids: Perceptual, Socioeconomic, and Power Outage Experience Drivers of Energy Infrastructure Resilience
+                </h3>
+              </div>
+              <ArrowUpRight className="w-4 h-4 flex-shrink-0 opacity-0 group-hover:opacity-60 transition-opacity" style={{ color: '#0B5FA5' }} />
+            </div>
+          </Link>
 
-            {/* Publication 3 */}
-            <Card className="section-card hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3">
-                  <span className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0" style={{ background: 'var(--accent)' }}></span>
-                  <div>
-                    <h3 className="text-base font-semibold leading-relaxed" style={{ color: 'var(--text)' }}>
-                      The Equity Implications of Pecuniary Externalities on an Electric Grid
-                    </h3>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          {/* Publication 2 */}
+          <Link 
+            href="/publications/electric-power-reliability-energy-burdens-and-climate-change-beliefs-in-the-united-states.pdf" 
+            target="_blank"
+            className="group block bg-white rounded-lg border border-transparent hover:border-slate-200 hover:shadow-sm transition-all"
+            style={{ borderLeft: '3px solid #0B5FA5' }}
+          >
+            <div className="flex items-center gap-4 md:gap-6 px-5 md:px-6 py-4">
+              <div className="flex-shrink-0 w-9 h-9 rounded-md flex items-center justify-center" style={{ background: 'rgba(11, 95, 165, 0.08)' }}>
+                <FileText className="w-4 h-4" style={{ color: '#0B5FA5' }} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-[15px] font-semibold leading-snug group-hover:text-[#0B5FA5] transition-colors" style={{ color: '#0c2340' }}>
+                  Electric Power Reliability, Energy Burdens, and Climate Change Beliefs in the United States
+                </h3>
+                <p className="text-xs mt-1" style={{ color: '#6b7280' }}>
+                  Environmental Science &amp; Technology
+                </p>
+              </div>
+              <ArrowUpRight className="w-4 h-4 flex-shrink-0 opacity-0 group-hover:opacity-60 transition-opacity" style={{ color: '#0B5FA5' }} />
+            </div>
+          </Link>
 
-            {/* Publication 4 */}
-            <Card className="section-card hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3">
-                  <span className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0" style={{ background: 'var(--accent)' }}></span>
-                  <div>
-                    <h3 className="text-base font-semibold leading-relaxed" style={{ color: 'var(--text)' }}>
-                      Health Co-Benefits and Low-Income Residential Weatherization in the United States
-                    </h3>
-                    <p className="text-sm mt-1" style={{ color: 'var(--muted)' }}>
-                      Report
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+          {/* Publication 3 */}
+          <Link 
+            href="/publications/Equity implications of pecuniary externalities on an electrid grid.pdf" 
+            target="_blank"
+            className="group block bg-white rounded-lg border border-transparent hover:border-slate-200 hover:shadow-sm transition-all"
+            style={{ borderLeft: '3px solid #0B5FA5' }}
+          >
+            <div className="flex items-center gap-4 md:gap-6 px-5 md:px-6 py-4">
+              <div className="flex-shrink-0 w-9 h-9 rounded-md flex items-center justify-center" style={{ background: 'rgba(11, 95, 165, 0.08)' }}>
+                <FileText className="w-4 h-4" style={{ color: '#0B5FA5' }} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-[15px] font-semibold leading-snug group-hover:text-[#0B5FA5] transition-colors" style={{ color: '#0c2340' }}>
+                  The Equity Implications of Pecuniary Externalities on an Electric Grid
+                </h3>
+              </div>
+              <ArrowUpRight className="w-4 h-4 flex-shrink-0 opacity-0 group-hover:opacity-60 transition-opacity" style={{ color: '#0B5FA5' }} />
+            </div>
+          </Link>
+
+          {/* Publication 4 */}
+          <Link 
+            href="/publications/Residential Weatherization Report Draft July 28 2025.pdf" 
+            target="_blank"
+            className="group block bg-white rounded-lg border border-transparent hover:border-slate-200 hover:shadow-sm transition-all"
+            style={{ borderLeft: '3px solid #0B5FA5' }}
+          >
+            <div className="flex items-center gap-4 md:gap-6 px-5 md:px-6 py-4">
+              <div className="flex-shrink-0 w-9 h-9 rounded-md flex items-center justify-center" style={{ background: 'rgba(11, 95, 165, 0.08)' }}>
+                <FileText className="w-4 h-4" style={{ color: '#0B5FA5' }} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-[15px] font-semibold leading-snug group-hover:text-[#0B5FA5] transition-colors" style={{ color: '#0c2340' }}>
+                  Health Co-Benefits and Low-Income Residential Weatherization in the United States
+                </h3>
+                <p className="text-xs mt-1" style={{ color: '#6b7280' }}>
+                  Report
+                </p>
+              </div>
+              <ArrowUpRight className="w-4 h-4 flex-shrink-0 opacity-0 group-hover:opacity-60 transition-opacity" style={{ color: '#0B5FA5' }} />
+            </div>
+          </Link>
+
+          {/* Publication 5 */}
+          <Link 
+            href="/publications/Coal PM2.5 and Health_Chen.pdf" 
+            target="_blank"
+            className="group block bg-white rounded-lg border border-transparent hover:border-slate-200 hover:shadow-sm transition-all"
+            style={{ borderLeft: '3px solid #0B5FA5' }}
+          >
+            <div className="flex items-center gap-4 md:gap-6 px-5 md:px-6 py-4">
+              <div className="flex-shrink-0 w-9 h-9 rounded-md flex items-center justify-center" style={{ background: 'rgba(11, 95, 165, 0.08)' }}>
+                <FileText className="w-4 h-4" style={{ color: '#0B5FA5' }} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-[15px] font-semibold leading-snug group-hover:text-[#0B5FA5] transition-colors" style={{ color: '#0c2340' }}>
+                  Coal PM2.5 and Health
+                </h3>
+              </div>
+              <ArrowUpRight className="w-4 h-4 flex-shrink-0 opacity-0 group-hover:opacity-60 transition-opacity" style={{ color: '#0B5FA5' }} />
+            </div>
+          </Link>
+
+        </div>
       </div>
     </div>
   )
