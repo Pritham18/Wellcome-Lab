@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { ExternalLink, Database, Home, CloudRain, Building, Heart } from 'lucide-react'
 
@@ -10,7 +10,7 @@ const sections = [
   { id: 'energy-housing', title: 'Energy & Housing', icon: Home },
   { id: 'climate-community-resilience', title: 'Climate & Community Resilience', icon: CloudRain },
   { id: 'clemson-networks', title: 'Clemson University Networks & Internal Resources', icon: Building },
-  { id: 'nonprofits', title: 'Non-profit Organizations', icon: Heart }
+  { id: 'community-engagement', title: 'Community Engagement Organizations', icon: Heart }
 ]
 
 // Resource Link Component
@@ -83,34 +83,7 @@ function SubsectionHeader({ title }) {
 }
 
 export default function ResourcesPage() {
-  const [activeSection, setActiveSection] = useState('')
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
-      { rootMargin: '-100px 0px -70% 0px' }
-    )
-
-    sections.forEach((section) => {
-      const element = document.getElementById(section.id)
-      if (element) observer.observe(element)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const [activeCategory, setActiveCategory] = useState('public-health-data')
 
   return (
     <div style={{ background: '#f8fafc' }} className="bg-gradient-mesh">
@@ -141,41 +114,79 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Section Navigation */}
-      <div 
-        className="sticky top-16 z-40 py-3 border-b"
-        style={{ 
-          background: 'rgba(255, 255, 255, 0.95)',
-          backdropFilter: 'blur(8px)',
-          borderColor: 'rgba(12, 35, 64, 0.1)'
-        }}
-      >
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
-          <nav className="flex flex-wrap gap-2">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
-                className="px-3 py-1.5 text-sm font-medium rounded-md transition-all focus:outline-none focus:ring-2 focus:ring-[#0B5FA5]"
-                style={{
-                  background: activeSection === section.id ? '#0B5FA5' : 'transparent',
-                  color: activeSection === section.id ? 'white' : '#4a5568',
-                  border: activeSection === section.id ? 'none' : '1px solid rgba(12, 35, 64, 0.15)'
-                }}
-              >
-                {section.title}
-              </button>
-            ))}
-          </nav>
-        </div>
-      </div>
-
-      {/* Main Content */}
+      {/* Two-Column Layout */}
       <div className="py-8 md:py-10">
         <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
           
+          {/* Mobile Category Selector */}
+          <div className="lg:hidden mb-6">
+            <label 
+              htmlFor="category-select" 
+              className="block text-sm font-medium mb-2"
+              style={{ color: '#4a5568' }}
+            >
+              Select Category
+            </label>
+            <select
+              id="category-select"
+              value={activeCategory}
+              onChange={(e) => setActiveCategory(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-lg text-sm border focus:outline-none focus:ring-2 focus:ring-[#0B5FA5]"
+              style={{ 
+                background: 'white',
+                borderColor: 'rgba(12, 35, 64, 0.2)',
+                color: '#0c2340'
+              }}
+            >
+              {sections.map((section) => (
+                <option key={section.id} value={section.id}>
+                  {section.title}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="flex gap-8">
+            
+            {/* Left Sidebar Navigation */}
+            <aside className="w-[280px] flex-shrink-0 hidden lg:block">
+              <div className="sticky top-24">
+                <nav className="space-y-1">
+                  {sections.map((section) => {
+                    const IconComponent = section.icon
+                    const isActive = activeCategory === section.id
+                    
+                    return (
+                      <button
+                        key={section.id}
+                        onClick={() => setActiveCategory(section.id)}
+                        className="w-full text-left px-4 py-3 rounded-lg transition-all flex items-center gap-3 group"
+                        style={{
+                          background: isActive ? 'rgba(11, 95, 165, 0.08)' : 'transparent',
+                          borderLeft: isActive ? '3px solid #F56600' : '3px solid transparent',
+                          color: isActive ? '#0c2340' : '#4a5568'
+                        }}
+                      >
+                        <IconComponent 
+                          className="w-5 h-5 flex-shrink-0" 
+                          style={{ color: isActive ? '#0B5FA5' : '#9ca3af' }} 
+                        />
+                        <span className="text-sm font-medium leading-snug">
+                          {section.title}
+                        </span>
+                      </button>
+                    )
+                  })}
+                </nav>
+              </div>
+            </aside>
+
+            {/* Right Content Area */}
+            <div className="flex-1 min-w-0">
+          
           {/* Section 1: Public Health Data & Longitudinal Surveys */}
-          <section className="mb-12">
+          {activeCategory === 'public-health-data' && (
+          <section>
             <SectionBanner id="public-health-data" title="Public Health Data & Longitudinal Surveys" icon={Database} />
             
             <p 
@@ -208,9 +219,11 @@ export default function ResourcesPage() {
               />
             </div>
           </section>
+          )}
 
           {/* Section 2: Energy & Housing */}
-          <section className="mb-12">
+          {activeCategory === 'energy-housing' && (
+          <section>
             <SectionBanner id="energy-housing" title="Energy & Housing" icon={Home} />
             
             {/* A. Weatherization */}
@@ -429,9 +442,11 @@ export default function ResourcesPage() {
               />
             </div>
           </section>
+          )}
 
           {/* Section 3: Climate & Community Resilience */}
-          <section className="mb-12">
+          {activeCategory === 'climate-community-resilience' && (
+          <section>
             <SectionBanner id="climate-community-resilience" title="Climate & Community Resilience" icon={CloudRain} />
             
             <p 
@@ -546,33 +561,155 @@ export default function ResourcesPage() {
               />
             </div>
           </section>
+          )}
 
           {/* Section 4: Clemson University Networks & Internal Resources */}
-          <section className="mb-12">
+          {activeCategory === 'clemson-networks' && (
+          <section>
             <SectionBanner id="clemson-networks" title="Clemson University Networks & Internal Resources" icon={Building} />
             
-            <SubsectionHeader title="Clemson University Research Networks" />
             <p 
-              className="text-sm italic py-4"
-              style={{ color: '#6b7280' }}
+              className="text-base leading-7"
+              style={{ color: '#4a5568' }}
             >
-              Need more information.
-            </p>
-
-            <SubsectionHeader title="Internal Data / Collaboration Platforms" />
-            <p 
-              className="text-sm italic py-4"
-              style={{ color: '#6b7280' }}
-            >
-              Need more information.
+              Additional Clemson-specific research networks, internal data platforms, and collaboration resources will be added here.
             </p>
           </section>
+          )}
 
-          {/* Section 5: Non-profit Organizations */}
-          <section className="mb-8">
-            <SectionBanner id="nonprofits" title="Non-profit Organizations" icon={Heart} />
+          {/* Section 5: Community Engagement Organizations */}
+          {activeCategory === 'community-engagement' && (
+          <section>
+            <SectionBanner id="community-engagement" title="Community Engagement Organizations" icon={Heart} />
             
+            <p 
+              className="text-base leading-7 mb-6"
+              style={{ color: '#4a5568' }}
+            >
+              Our research engages directly with community-based organizations, nonprofits, and advocacy groups committed to environmental justice, climate equity, and public health. These partners are central to our participatory research approach and help ensure that research outcomes benefit the communities most affected.
+            </p>
+
             <div>
+              {/* Metanoia */}
+              <div 
+                className="py-4"
+                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
+              >
+                <a 
+                  href="https://www.metanoiacdc.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
+                  style={{ color: '#0B5FA5' }}
+                >
+                  Metanoia
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </a>
+                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
+                  Community development and housing organization in Charleston.
+                </p>
+              </div>
+
+              {/* Charleston Promise Neighborhood */}
+              <div 
+                className="py-4"
+                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
+              >
+                <a 
+                  href="https://www.charlestonpromise.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
+                  style={{ color: '#0B5FA5' }}
+                >
+                  Charleston Promise Neighborhood
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </a>
+                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
+                  Comprehensive neighborhood revitalization initiative in North Charleston.
+                </p>
+              </div>
+
+              {/* Engage Appalachia */}
+              <div 
+                className="py-4"
+                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
+              >
+                <a 
+                  href="https://engageappalachia.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
+                  style={{ color: '#0B5FA5' }}
+                >
+                  Engage Appalachia
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </a>
+                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
+                  Grassroots advocacy network focused on environmental and economic justice in Appalachia.
+                </p>
+              </div>
+
+              {/* HOPE Credit Union (Formerly HOPE Policy Institute) */}
+              <div 
+                className="py-4"
+                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
+              >
+                <a 
+                  href="https://hopecu.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
+                  style={{ color: '#0B5FA5' }}
+                >
+                  HOPE Credit Union (Formerly HOPE Policy Institute)
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </a>
+                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
+                  Financial services and advocacy for historically underserved communities in the Deep South.
+                </p>
+              </div>
+
+              {/* Tennessee Interfaith Power & Light */}
+              <div 
+                className="py-4"
+                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
+              >
+                <a 
+                  href="https://www.tnipl.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
+                  style={{ color: '#0B5FA5' }}
+                >
+                  Tennessee Interfaith Power & Light
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </a>
+                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
+                  Faith-based climate and environmental justice coalition.
+                </p>
+              </div>
+
+              {/* Lowcountry Alliance for Model Communities */}
+              <div 
+                className="py-4"
+                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
+              >
+                <a 
+                  href="https://www.lamcnet.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
+                  style={{ color: '#0B5FA5' }}
+                >
+                  Lowcountry Alliance for Model Communities
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </a>
+                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
+                  Community development and affordable housing advocacy in the South Carolina Lowcountry.
+                </p>
+              </div>
+
               {/* Woodwell Climate Research Center */}
               <div 
                 className="py-4"
@@ -589,111 +726,18 @@ export default function ResourcesPage() {
                   <ExternalLink className="w-3.5 h-3.5 opacity-60" />
                 </a>
                 <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
-                  Climate science for change.
-                </p>
-              </div>
-
-              {/* Coastal Conservation Association */}
-              <div 
-                className="py-4"
-                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
-              >
-                <a 
-                  href="https://www.ccasouthcarolina.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
-                  style={{ color: '#0B5FA5' }}
-                >
-                  Coastal Conservation Association (CCA)
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-                </a>
-                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
-                  CCA South Carolina
-                </p>
-              </div>
-
-              {/* South Carolina Environmental Law Project */}
-              <div 
-                className="py-4"
-                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
-              >
-                <a 
-                  href="https://www.scelp.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
-                  style={{ color: '#0B5FA5' }}
-                >
-                  South Carolina Environmental Law Project
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-                </a>
-                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
-                  SCELP
-                </p>
-              </div>
-
-              {/* Clean Air Task Force */}
-              <div 
-                className="py-4"
-                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
-              >
-                <a 
-                  href="https://www.catf.us/about/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
-                  style={{ color: '#0B5FA5' }}
-                >
-                  Clean Air Task Force
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-                </a>
-                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
-                  The Clean Air Task Force (CATF) is a non-profit organization that was founded in 1995. The mission of the CATF is to reduce air pollution and its harmful effects on human health and the environment.
-                </p>
-              </div>
-
-              {/* Clean Energy Innovation Program */}
-              <div 
-                className="py-4"
-                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
-              >
-                <a 
-                  href="https://itif.org/clean-energy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
-                  style={{ color: '#0B5FA5' }}
-                >
-                  Clean Energy Innovation Program
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-                </a>
-                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
-                  To accelerate the transition of domestic and global energy systems to low-carbon resources.
-                </p>
-              </div>
-
-              {/* Climate Emergency Fund */}
-              <div 
-                className="py-4"
-                style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
-              >
-                <a 
-                  href="https://www.climateemergencyfund.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-base font-semibold mb-1 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
-                  style={{ color: '#0B5FA5' }}
-                >
-                  Climate Emergency Fund
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-                </a>
-                <p className="text-sm mt-1" style={{ color: '#4a5568' }}>
-                  To support the activists who are transforming climate politics.
+                  Independent climate science research center focused on addressing climate risks.
                 </p>
               </div>
             </div>
           </section>
+          )}
+
+            </div>
+            {/* End Right Content Area */}
+            
+          </div>
+          {/* End Two-Column Layout */}
 
         </div>
       </div>

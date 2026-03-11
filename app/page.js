@@ -125,95 +125,51 @@ export default function Home() {
             }}
           >
             
-            {/* Section Header */}
-            <div className="mb-5 md:mb-6">
-              <div className="accent-bar mb-3" />
-              <h2 
-                className="text-xl md:text-2xl font-bold"
-                style={{ color: '#0c2340' }}
-              >
-                Overview
-              </h2>
-            </div>
-            
-            {/* Lead Paragraph - Slightly larger, engaging */}
-            <p 
-              className="text-lg md:text-xl leading-relaxed mb-5"
-              style={{ color: '#1e293b', lineHeight: '1.7', fontWeight: '400' }}
-            >
-              EMPOWER HEALTH is a community-centered research initiative advancing health, resilience, and energy efficiency in low- and moderate-income communities. We generate actionable evidence to inform policy and accelerate equitable energy transitions.
-            </p>
-
-            {/* At a Glance - Inline Summary */}
-            <div 
-              className="mb-5 py-3 px-4 rounded-lg"
-              style={{ 
-                background: 'rgba(11, 95, 165, 0.04)',
-                borderLeft: '3px solid #0B5FA5',
-              }}
-            >
-              <p 
-                className="text-sm mb-1.5"
-                style={{ color: '#475569' }}
-              >
-                <span className="font-semibold" style={{ color: '#0c2340' }}>Domains:</span>{' '}
-                Weatherization · Electrification · Microgrids · Indoor Air Quality
-              </p>
-              <p 
-                className="text-sm"
-                style={{ color: '#475569' }}
-              >
-                <span className="font-semibold" style={{ color: '#0c2340' }}>Methods:</span>{' '}
-                Community co-design · Mixed methods · Evaluation · Policy translation
-              </p>
-            </div>
-
-            {/* Key Statement Callout */}
-            <blockquote 
-              className="mb-6 py-3 pl-4 pr-3"
-              style={{ 
-                borderLeft: '4px solid #F56600',
-                background: 'linear-gradient(90deg, rgba(245, 102, 0, 0.04) 0%, transparent 100%)',
-              }}
-            >
-              <p 
-                className="text-base italic leading-relaxed"
-                style={{ color: '#374151' }}
-              >
-                "Through home electrification, weatherization, and community microgrids, our transdisciplinary team partners with researchers, local governments, utilities, and residents to reduce energy burdens, cut carbon emissions, and improve health outcomes."
-              </p>
-            </blockquote>
-
-            {/* Structured Content Blocks - Tighter spacing */}
-            <div className="space-y-5">
+            {/* Mission Section */}
+            <div className="mb-8">
+              <div className="mb-5 md:mb-6">
+                <div className="accent-bar mb-3" />
+                <h2 
+                  className="text-xl md:text-2xl font-bold"
+                  style={{ color: '#0c2340' }}
+                >
+                  Mission
+                </h2>
+              </div>
               
-              {/* Objectives */}
+              <p 
+                className="text-base leading-7 mb-4"
+                style={{ color: '#374151' }}
+              >
+                EMPOWER-HEALTH is a community-centered research initiative advancing health, resilience, and energy efficiency in low- and moderate-income communities. The project generates actionable evidence to inform policy and accelerate equitable energy transitions.
+              </p>
+
               <p 
                 className="text-base leading-7"
                 style={{ color: '#374151' }}
               >
-                <strong className="font-semibold" style={{ color: '#0c2340' }}>Objectives.</strong>{' '}
-                We aim to reduce household energy burdens while lowering greenhouse gas emissions through clean energy adoption. We seek to strengthen physical and mental health outcomes by improving indoor environments and generate evidence-based policy recommendations that support equitable transitions. We also build community capacity for resilience during extreme weather and foster lasting partnerships across sectors.
+                Our work focuses on understanding how weatherization, building electrification, and community microgrids influence household energy burdens, environmental health, and climate resilience.
               </p>
+            </div>
 
-              {/* Focus Areas */}
+            {/* Methodology Section */}
+            <div>
+              <div className="mb-5 md:mb-6">
+                <div className="accent-bar mb-3" />
+                <h2 
+                  className="text-xl md:text-2xl font-bold"
+                  style={{ color: '#0c2340' }}
+                >
+                  Methodology
+                </h2>
+              </div>
+              
               <p 
                 className="text-base leading-7"
                 style={{ color: '#374151' }}
               >
-                <strong className="font-semibold" style={{ color: '#0c2340' }}>Focus areas.</strong>{' '}
-                Our research spans four interconnected domains: weatherization and energy efficiency, improving home insulation and reducing energy consumption; building electrification, transitioning structures to clean electric systems; microgrids and resilience, developing community-scale energy systems for reliability during outages; and indoor air quality and health, measuring and improving air quality to protect well-being.
+                EMPOWER-HEALTH uses community-centered and mixed-methods research approaches to design and evaluate energy interventions that improve health and resilience outcomes. The initiative combines community co-design, interdisciplinary research, and program evaluation to assess the impacts of weatherization, electrification, microgrids, and indoor environmental quality improvements. Findings are translated into evidence-based insights that inform policy and support equitable energy transitions.
               </p>
-
-              {/* Approach */}
-              <p 
-                className="text-base leading-7"
-                style={{ color: '#374151' }}
-              >
-                <strong className="font-semibold" style={{ color: '#0c2340' }}>Approach.</strong>{' '}
-                Our work is grounded in community-centered, participatory methods. We discover needs through engagement with local leaders and residents, co-design solutions reflecting community priorities, and implement interventions in partnership with local organizations. We rigorously evaluate outcomes to build the evidence base, then share learnings with policymakers and practitioners to inform broader energy transition efforts.
-              </p>
-
             </div>
 
           </div>
@@ -264,12 +220,6 @@ export default function Home() {
       {/* Our Partners Section - Tighter */}
       <section className="py-8 md:py-12 bg-pattern-dots" style={{ background: 'linear-gradient(180deg, #f1f5f9 0%, #e8eef3 100%)' }}>
         <div className="mx-auto px-5 md:px-6" style={{ maxWidth: '1400px' }}>
-          <p 
-            className="text-xs font-semibold uppercase tracking-wider mb-2"
-            style={{ color: '#F56600' }}
-          >
-            Collaboration
-          </p>
           <h2 
             className="text-xl md:text-2xl font-bold mb-3"
             style={{ color: '#0c2340' }}

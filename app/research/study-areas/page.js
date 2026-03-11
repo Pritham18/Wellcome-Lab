@@ -198,20 +198,6 @@ function StudyAreaCard({ area }) {
                   </ul>
                 </div>
                 
-                {/* Research Approach */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-3" style={{ color: 'var(--text)' }}>Research Approach</h3>
-                  <div className="flex flex-wrap gap-3">
-                    {area.researchApproach.map((item, idx) => (
-                      <span key={idx} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium"
-                            style={{ background: 'var(--surface)', color: 'var(--text)' }}>
-                        <item.icon className="w-3.5 h-3.5" style={{ color: 'var(--accent)' }} />
-                        {item.label}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
                 {/* Broader Impact */}
                 <div className="p-4 rounded-lg" style={{ background: 'var(--surface)' }}>
                   <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
@@ -232,10 +218,11 @@ const studyAreas = [
   {
     id: 'tennessee',
     name: 'State of Tennessee',
-    summary: 'Following the Center for Neighborhood Technology (CNT) housing cost-burden threshold, we define low- and moderate-income (LMI) households as those with incomes at or below 80% of area median income (AMI). AMI is the midpoint of a region\'s income distribution.',
+    summary: 'Following the Center for Neighborhood Technology (CNT) housing cost-burden threshold, we define low- and moderate-income (LMI) households as those with incomes at or below 80% of area median income (AMI).',
     mapImage: 'https://customer-assets.emergentagent.com/job_empower-research-1/artifacts/zrci20lm_image.png',
     overviewParagraphs: [
-      'Following the Center for Neighborhood Technology (CNT) housing cost-burden threshold, we define low- and moderate-income (LMI) households as those with incomes at or below 80% of area median income (AMI). AMI is the midpoint of a region\'s income distribution.'
+      'Following the Center for Neighborhood Technology (CNT) housing cost-burden threshold, we define low- and moderate-income (LMI) households as those with incomes at or below 80% of area median income (AMI). AMI is the midpoint of a region\'s income distribution.',
+      'Tennessee is a key study region for understanding how energy burden intersects with housing quality, public health, and climate vulnerability across diverse urban and rural settings. County-level data reveal substantial variation in household energy burden, with many communities—particularly rural areas and older housing markets—spending a disproportionately high share of income on electricity and heating.'
     ],
     focalCommunity: {
       title: 'Knoxville, Tennessee (TN)',
@@ -252,13 +239,6 @@ const studyAreas = [
       'Increasing exposure to extreme heat and storms',
       'Elevated health risks for vulnerable populations'
     ],
-    researchApproach: [
-      { icon: MapPin, label: 'County-level mapping' },
-      { icon: Users, label: 'Household surveys' },
-      { icon: Activity, label: 'Indoor air quality monitoring' },
-      { icon: Zap, label: 'Building & HVAC modeling' },
-      { icon: Target, label: 'Health vulnerability analysis' }
-    ],
     broaderImpact: 'Findings from Tennessee support the development of scalable, evidence-based strategies that advance equitable clean energy transitions and measurable health benefits across the Southeast.'
   },
   {
@@ -273,10 +253,10 @@ const studyAreas = [
     focalCommunity: {
       title: 'Charleston, South Carolina (SC)',
       paragraphs: [
-        'Charleston County contains 212,589 housing units and 181,680 households, with renter households accounting for a substantial share. Between 2010 and 2020, the county\'s population increased by approximately 16%, while the greater Charleston metropolitan area has grown by about 46% since 2000, representing a net increase of roughly 250,000 residents. Rapid population growth combined with rising housing demand has intensified housing affordability pressures, with particularly pronounced impacts on low-income and renter households, intersecting with long-standing patterns of uneven development documented in Charleston\'s planning and resilience processes.',
-        'Energy costs pose a persistent challenge for low-income households. The U.S. Department of Energy\'s Weatherization and Intergovernmental Programs (WIP) reports that the average energy burden for all households in South Carolina is approximately 4.33%, while the burden for low-income households rises to about 8.36%; in Charleston County, low-income households experience an energy burden of approximately 8.5%, substantially higher than the national average. This elevated burden is closely associated with the region\'s hot and humid climate, older housing stock, and housing energy efficiency conditions. State-level assessments by the American Council for an Energy-Efficient Economy (ACEEE) further note that energy burdens for low-income households in South Carolina are among the highest in the United States, with some estimates reaching approximately 13%, and emphasize that insufficient energy efficiency can amplify health and economic risks during periods of extreme heat. These challenges are explicitly acknowledged in South Carolina\'s LIHEAP Model State Plan, which identifies persistent energy insecurity among low-income households and the need for both short-term assistance and longer-term efficiency interventions.',
-        'Charleston is among the coastal cities in the southeastern United States most vulnerable to flooding and sea level rise. Peer-reviewed research indicates that relative sea level at the Charleston tide gauge has risen by approximately 1.07 feet (about 0.3 meters) over the past 100 years, with a markedly accelerated rate in recent decades. City-level assessments document a sharp increase in high-tide flooding frequency: between 2012 and 2021, Charleston experienced an average of approximately 50 high-tide flooding events per year reaching 7 feet (MLLW), more than twice the frequency observed between 2002 and 2011; in 2019 alone, 89 such events were recorded, indicating frequent inundation of roads, residences, and public infrastructure even in the absence of major storms. County-scale climate risk assessments project that future sea level rise and extreme precipitation will further expand flood extent and depth across low-lying areas of Charleston County, consistent with regional analyses showing that sea level rise disproportionately affects low-income and racially marginalized communities across the Carolinas.',
-        'Critically, these physical climate risks strongly overlap with social and environmental inequalities. Environmental justice research in Charleston indicates that low-income and minority communities are more likely to be located in low-lying areas with inadequate drainage, proximity to major transportation corridors, or nearby pollution sources, and consequently bear disproportionate burdens from flooding, infrastructure disruption, and health risks. Empirical findings by Taylor et al. (2022) further show that communities adjacent to the proposed flood protection seawall—predominantly composed of African American and low-income residents—have long experienced compounded exposure to flooding, transportation-related fragmentation, and cumulative pollution, with residents expressing concerns related to poor drainage, health impacts, exclusion from decision-making processes, and potential displacement pressures. A systematic analysis of Charleston\'s planning and resilience documents indicates that under simulated storm surge scenarios, approximately 96% of highly vulnerable residential units are located within communities characterized by high social vulnerability, and about 99% of public housing units are exposed to significant flood risk, highlighting the unequal social distribution of climate-related hazards.'
+        'Charleston County contains 212,589 housing units and 181,680 households, with renter households accounting for a substantial share. Between 2010 and 2020, the county\'s population increased by approximately 16%, while the greater Charleston metropolitan area has grown by about 46% since 2000, representing a net increase of roughly 250,000 residents. Rapid population growth combined with rising housing demand has intensified housing affordability pressures, with particularly pronounced impacts on low-income and renter households.',
+        'Energy costs pose a persistent challenge for low-income households. The U.S. Department of Energy\'s Weatherization and Intergovernmental Programs (WIP) reports that the average energy burden for all households in South Carolina is approximately 4.33%, while the burden for low-income households rises to about 8.36%; in Charleston County, low-income households experience an energy burden of approximately 8.5%, substantially higher than the national average. State-level assessments by the American Council for an Energy-Efficient Economy (ACEEE) further note that energy burdens for low-income households in South Carolina are among the highest in the United States, with some estimates reaching approximately 13%.',
+        'Charleston is among the coastal cities in the southeastern United States most vulnerable to flooding and sea level rise. Peer-reviewed research indicates that relative sea level at the Charleston tide gauge has risen by approximately 1.07 feet (about 0.3 meters) over the past 100 years, with a markedly accelerated rate in recent decades. Between 2012 and 2021, Charleston experienced an average of approximately 50 high-tide flooding events per year reaching 7 feet (MLLW), more than twice the frequency observed between 2002 and 2011.',
+        'Environmental justice research indicates that low-income and minority communities are more likely to be located in low-lying areas with inadequate drainage, proximity to major transportation corridors, or nearby pollution sources. Taylor et al. (2022) show that communities adjacent to the proposed flood protection seawall have long experienced compounded exposure to flooding, transportation-related fragmentation, and cumulative pollution. A systematic analysis indicates that under simulated storm surge scenarios, approximately 96% of highly vulnerable residential units are located within communities characterized by high social vulnerability, and about 99% of public housing units are exposed to significant flood risk.'
       ]
     },
     challenges: [
@@ -287,20 +267,12 @@ const studyAreas = [
       'Environmental justice disparities',
       'Compounded health risks from climate hazards'
     ],
-    researchApproach: [
-      { icon: MapPin, label: 'County-level mapping' },
-      { icon: Users, label: 'Household surveys' },
-      { icon: Activity, label: 'Indoor air quality sensors' },
-      { icon: Zap, label: 'Utility & Census data' },
-      { icon: Target, label: 'Health vulnerability analysis' }
-    ],
-    broaderImpact: 'South Carolina functions as a living laboratory for scalable, equitable energy–health solutions, informing regional strategies applicable across the southeastern United States.'
+    broaderImpact: 'South Carolina functions as a living laboratory for scalable, equitable energy-health solutions, informing regional strategies applicable across the southeastern United States.'
   }
 ]
 
 export default function StudyAreasPage() {
   const [showReferences, setShowReferences] = useState(false)
-  const [showTennesseeReferences, setShowTennesseeReferences] = useState(false)
 
   return (
     <div style={{ background: 'var(--bg)' }} className="bg-gradient-mesh">
@@ -336,80 +308,7 @@ export default function StudyAreasPage() {
       <div className="mx-auto px-4 md:px-6 py-8 md:py-10" style={{ maxWidth: '1400px' }}>
         <div className="space-y-6">
           {studyAreas.map((area) => (
-            <div key={area.id}>
-              <StudyAreaCard area={area} />
-              
-              {/* Tennessee References Card */}
-              {area.id === 'tennessee' && (
-                <div className="mt-6">
-                  <div 
-                    className="rounded-xl overflow-hidden"
-                    style={{ 
-                      background: 'white',
-                      border: '1px solid rgba(12, 35, 64, 0.1)',
-                    }}
-                  >
-                    <button
-                      onClick={() => setShowTennesseeReferences(!showTennesseeReferences)}
-                      className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
-                    >
-                      <h2 
-                        className="text-xl md:text-2xl font-bold"
-                        style={{ color: '#0c2340' }}
-                      >
-                        References
-                      </h2>
-                      {showTennesseeReferences ? (
-                        <ChevronUp className="w-5 h-5" style={{ color: '#4a5568' }} />
-                      ) : (
-                        <ChevronDown className="w-5 h-5" style={{ color: '#4a5568' }} />
-                      )}
-                    </button>
-                    
-                    {showTennesseeReferences && (
-                      <div className="px-6 pb-6">
-                        <div className="space-y-5">
-                          <div className="flex gap-3">
-                            <span className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(11, 95, 165, 0.1)', color: '#0B5FA5' }}>[1]</span>
-                            <p className="text-sm leading-7" style={{ color: '#4a5568' }}>
-                              O. Ma et al, "Low-Income Energy Affordability Data (LEAD) Tool," Office of Energy Efficiency and Renewable Energy, 2019.
-                            </p>
-                          </div>
-                          
-                          <div className="flex gap-3">
-                            <span className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(11, 95, 165, 0.1)', color: '#0B5FA5' }}>[2]</span>
-                            <p className="text-sm leading-7" style={{ color: '#4a5568' }}>
-                              U.S. Census Bureau, "Quick Facts: Knoxville City, Tennessee; Knox County, United States."
-                            </p>
-                          </div>
-                          
-                          <div className="flex gap-3">
-                            <span className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(11, 95, 165, 0.1)', color: '#0B5FA5' }}>[3]</span>
-                            <p className="text-sm leading-7" style={{ color: '#4a5568' }}>
-                              C. Chen, J. Feng, N. Luke, C.-P. Kuo, and J. S. Fu, "Localized energy burden, concentrated disadvantage, and the feminization of energy poverty," <em>iScience</em>, vol. 25, no. 4, p. 104139, Apr. 2022, doi: <a href="https://doi.org/10.1016/j.isci.2022.104139" target="_blank" rel="noopener noreferrer" className="text-[#0B5FA5] hover:underline break-all">https://doi.org/10.1016/j.isci.2022.104139</a>.
-                            </p>
-                          </div>
-                          
-                          <div className="flex gap-3">
-                            <span className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(11, 95, 165, 0.1)', color: '#0B5FA5' }}>[4]</span>
-                            <p className="text-sm leading-7" style={{ color: '#4a5568' }}>
-                              Center for Neighborhood Technology Housing and Transportation Index Data, "Figure 1: Cumulative Change in Average Commute Times (Percent) Figure 2: Comparing Housing Affordability using Different Definitions."
-                            </p>
-                          </div>
-                          
-                          <div className="flex gap-3">
-                            <span className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(11, 95, 165, 0.1)', color: '#0B5FA5' }}>[5]</span>
-                            <p className="text-sm leading-7" style={{ color: '#4a5568' }}>
-                              L. Alexander, L. K. Bender, and D. Van Vleet, "State of the Air," 2018.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
+            <StudyAreaCard key={area.id} area={area} />
           ))}
         </div>
 

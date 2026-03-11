@@ -18,7 +18,7 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">Contact</h3>
               <div className="space-y-2 text-sm">
-                <p style={{ color: 'rgba(255,255,255,0.9)' }}>EMPOWER-ALL Research Initiative</p>
+                <p style={{ color: 'rgba(255,255,255,0.9)' }}>EMPOWER-HEALTH Research Initiative</p>
                 <p style={{ color: 'rgba(255,255,255,0.9)' }}>Clemson University</p>
                 <p style={{ color: 'rgba(255,255,255,0.7)' }}>
                   Email: <a href="mailto:liaow@clemson.edu" className="hover:text-[#39D6D6] transition-colors">liaow@clemson.edu</a>
@@ -84,7 +84,7 @@ export default function Footer() {
           {/* Bottom Bar: Copyright + Institutional Links */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
             <p className="text-xs text-gray-500">
-              &copy; {new Date().getFullYear()} EMPOWER-ALL Research Initiative. All rights reserved.
+              &copy; {new Date().getFullYear()} EMPOWER-HEALTH Research Initiative. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-xs text-gray-500">
               <a href="https://www.clemson.edu" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">

@@ -17,21 +17,15 @@ export default function ResearchObjectivesPage() {
       >
         <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1100px' }}>
           <div className="accent-bar mb-4" />
-          <p 
-            className="text-sm font-bold uppercase tracking-wider mb-2" 
-            style={{ color: '#F56600', fontFamily: 'inherit' }}
-          >
-            Research
-          </p>
           <h1 
             className="text-2xl md:text-3xl font-bold mb-3 leading-tight"
-            style={{ color: '#0c2340', fontFamily: 'inherit' }}
+            style={{ color: '#0c2340' }}
           >
             Research Objectives
           </h1>
           <p 
             className="text-base leading-relaxed"
-            style={{ color: '#64748b', fontFamily: 'inherit' }}
+            style={{ color: '#64748b' }}
           >
             Our project goals for advancing equitable clean energy transitions and community health.
           </p>
@@ -46,7 +40,7 @@ export default function ResearchObjectivesPage() {
           <section className="mb-10 md:mb-12">
             <h2 
               className="text-lg md:text-xl font-bold mb-4 pb-2 border-b"
-              style={{ color: '#0c2340', borderColor: 'rgba(12, 35, 64, 0.1)', fontFamily: 'inherit' }}
+              style={{ color: '#0c2340', borderColor: 'rgba(12, 35, 64, 0.1)' }}
             >
               Overview
             </h2>
@@ -54,7 +48,7 @@ export default function ResearchObjectivesPage() {
             {/* Intro Paragraph */}
             <p 
               className="text-base leading-7 mb-6"
-              style={{ color: '#374151', fontFamily: 'inherit', maxWidth: '75ch' }}
+              style={{ color: '#374151', maxWidth: '75ch' }}
             >
               This project develops a community-centered sociotechnical framework and decision-support tool to help policymakers and researchers assess the multidimensional impacts of extreme weather on low- and moderate-income (LMI) communities. Using participatory approaches and mixed methods, we advance equitable clean energy transitions while building long-term capacity for community resilience and health improvement.
             </p>
@@ -66,7 +60,7 @@ export default function ResearchObjectivesPage() {
             >
               <h3 
                 className="text-sm font-bold uppercase tracking-wide mb-3"
-                style={{ color: '#0B5FA5', fontFamily: 'inherit' }}
+                style={{ color: '#0B5FA5' }}
               >
                 Key Elements
               </h3>
@@ -86,8 +80,8 @@ export default function ResearchObjectivesPage() {
                       style={{ background: '#0B5FA5' }}
                     />
                     <span 
-                      className="text-sm leading-6"
-                      style={{ color: '#475569', fontFamily: 'inherit' }}
+                      className="text-base leading-6"
+                      style={{ color: '#475569' }}
                     >
                       {item}
                     </span>
@@ -104,7 +98,7 @@ export default function ResearchObjectivesPage() {
           <section>
             <h2 
               className="text-lg md:text-xl font-bold mb-5 pb-2 border-b"
-              style={{ color: '#0c2340', borderColor: 'rgba(12, 35, 64, 0.1)', fontFamily: 'inherit' }}
+              style={{ color: '#0c2340', borderColor: 'rgba(12, 35, 64, 0.1)' }}
             >
               Specific Objectives
             </h2>
@@ -127,15 +121,15 @@ export default function ResearchObjectivesPage() {
                   <div className="flex-1 min-w-0">
                     <h3 
                       className="text-sm font-semibold mb-1 leading-snug"
-                      style={{ color: '#0c2340', fontFamily: 'inherit' }}
+                      style={{ color: '#0c2340' }}
                     >
                       Identify & Explain Bundled Disadvantages
                     </h3>
                     <p 
                       className="text-sm leading-relaxed"
-                      style={{ color: '#64748b', fontFamily: 'inherit', maxWidth: '55ch' }}
+                      style={{ color: '#64748b', maxWidth: '55ch' }}
                     >
-                      Identify and explain the bundled disadvantages linking extreme weather exposure, household energy burdens, power outages, the built environment, and health-related infrastructure challenges in urban and rural LMI communities. Define and operationalize the socioeconomic, behavioral, and environmental dimensions of health.
+                      Examine how extreme weather exposure, household energy burdens, power outages, and built environment challenges combine to affect health outcomes in low- and moderate-income communities. The study operationalizes socioeconomic, behavioral, and environmental dimensions of vulnerability.
                     </p>
                   </div>
                 </div>
@@ -156,15 +150,15 @@ export default function ResearchObjectivesPage() {
                   <div className="flex-1 min-w-0">
                     <h3 
                       className="text-sm font-semibold mb-1 leading-snug"
-                      style={{ color: '#0c2340', fontFamily: 'inherit' }}
+                      style={{ color: '#0c2340' }}
                     >
                       Co-Develop Climate Mitigation Solutions
                     </h3>
                     <p 
                       className="text-sm leading-relaxed"
-                      style={{ color: '#64748b', fontFamily: 'inherit', maxWidth: '55ch' }}
+                      style={{ color: '#64748b', maxWidth: '55ch' }}
                     >
-                      Co-develop climate mitigation solutions grounded in clean energy and community priorities, collect multi-scale data, and model the health co-benefits of integrated weatherization, electrification, and community microgrid acceptance for environmental and public health.
+                      Work with communities to design clean-energy strategies and evaluate the health co-benefits of integrated weatherization, electrification, and community microgrid adoption.
                     </p>
                   </div>
                 </div>
@@ -185,15 +179,15 @@ export default function ResearchObjectivesPage() {
                   <div className="flex-1 min-w-0">
                     <h3 
                       className="text-sm font-semibold mb-1 leading-snug"
-                      style={{ color: '#0c2340', fontFamily: 'inherit' }}
+                      style={{ color: '#0c2340' }}
                     >
                       Create Community Co-Designed Pathways
                     </h3>
                     <p 
                       className="text-sm leading-relaxed"
-                      style={{ color: '#64748b', fontFamily: 'inherit', maxWidth: '55ch' }}
+                      style={{ color: '#64748b', maxWidth: '55ch' }}
                     >
-                      Create a community co-designed clean-energy pathway and resilience engagement plan that centers local voices in policy implementation and develop a scalable research-to-practice model expanding from local demonstration to regional and national relevance.
+                      Develop participatory implementation pathways that center local priorities while scaling successful models from local demonstration projects to regional and national applications.
                     </p>
                   </div>
                 </div>
@@ -214,15 +208,15 @@ export default function ResearchObjectivesPage() {
                   <div className="flex-1 min-w-0">
                     <h3 
                       className="text-sm font-semibold mb-1 leading-snug"
-                      style={{ color: '#0c2340', fontFamily: 'inherit' }}
+                      style={{ color: '#0c2340' }}
                     >
                       Apply Evidence-Based Principles
                     </h3>
                     <p 
                       className="text-sm leading-relaxed"
-                      style={{ color: '#64748b', fontFamily: 'inherit', maxWidth: '55ch' }}
+                      style={{ color: '#64748b', maxWidth: '55ch' }}
                     >
-                      Apply evidence-based and place-based principles to ensure meaningful participation of people from diverse backgrounds across the research team and community engagement process, strengthening representativeness, accountability, and shared benefits.
+                      Ensure meaningful participation across diverse communities by integrating equity, representation, and accountability into research design and community engagement.
                     </p>
                   </div>
                 </div>

@@ -60,12 +60,6 @@ export default function ThrustDetailPage({ params }) {
       {/* Page Header */}
       <section className="border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
         <div className="container max-w-6xl px-6 py-6 md:py-10">
-          <div 
-            className="text-sm font-bold uppercase tracking-wider mb-2"
-            style={{ color: 'var(--accent)' }}
-          >
-            Thrust {thrust.number}
-          </div>
           <h1 
             className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-3"
             style={{ color: 'var(--brand)', maxWidth: '56rem' }}
@@ -242,13 +236,13 @@ export default function ThrustDetailPage({ params }) {
             </div>
           </section>
 
-          {/* Current Work & Findings */}
+          {/* Current Work */}
           <section>
             <h2 
               className="text-xl font-bold mb-4 pb-2 border-b"
               style={{ color: 'var(--text)', borderColor: 'var(--border)' }}
             >
-              Current Work & Findings
+              Current Work
             </h2>
             <p className="text-base leading-7" style={{ color: 'var(--text)' }}>
               {thrust.currentWork}
