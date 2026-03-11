@@ -81,7 +81,6 @@ export default function ThrustsPage() {
         style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
       >
         <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
-          <p className="text-sm font-bold uppercase tracking-wider mb-2" style={{ color: '#F56600' }}>Research</p>
           <h1 
             className="text-3xl md:text-4xl font-bold mb-3"
             style={{ color: '#0c2340' }}
