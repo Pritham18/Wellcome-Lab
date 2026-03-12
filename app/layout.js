@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'EMPOWER-ALL | Research Initiative',
+  title: 'Empower Health | Research Initiative',
   description: 'Environmental-Health, Electrification, Microgrids, and Power-saving Efficiency for Resilience-ALL',
 }
 

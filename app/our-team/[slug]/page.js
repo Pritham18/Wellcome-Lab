@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
     return { title: 'Team Member Not Found' }
   }
   return {
-    title: `${member.name} | EMPOWER-ALL Team`,
+    title: `${member.name} | Empower Health Team`,
     description: member.bio?.substring(0, 160) || `Profile of ${member.name}`
   }
 }
@@ -223,7 +223,7 @@ export default function TeamMemberPage({ params }) {
                 {/* Role in Project */}
                 <div className="mt-6 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
                   <h3 className="text-sm font-semibold uppercase mb-2" style={{ color: 'var(--accent)' }}>
-                    Role in EMPOWER-ALL
+                    Role in Empower Health
                   </h3>
                   <p className="text-base" style={{ color: 'var(--foreground)' }}>
                     {member.roleLabel}

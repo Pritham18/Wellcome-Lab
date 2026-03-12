@@ -1,11 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function Home() {
+  const [showFullMessage, setShowFullMessage] = useState(false)
+
   return (
     <div style={{ background: 'var(--bg)' }}>
       {/* Hero Section - Full-width image with left text overlay */}
@@ -141,7 +145,7 @@ export default function Home() {
                 className="text-base leading-7 mb-4"
                 style={{ color: '#374151' }}
               >
-                EMPOWER-HEALTH is a community-centered research initiative advancing health, resilience, and energy efficiency in low- and moderate-income communities. The project generates actionable evidence to inform policy and accelerate equitable energy transitions.
+                Empower Health is a community-centered research initiative advancing health, resilience, and energy efficiency in low- and moderate-income communities. The project generates actionable evidence to inform policy and accelerate equitable energy transitions.
               </p>
 
               <p 
@@ -168,7 +172,7 @@ export default function Home() {
                 className="text-base leading-7"
                 style={{ color: '#374151' }}
               >
-                EMPOWER-HEALTH uses community-centered and mixed-methods research approaches to design and evaluate energy interventions that improve health and resilience outcomes. The initiative combines community co-design, interdisciplinary research, and program evaluation to assess the impacts of weatherization, electrification, microgrids, and indoor environmental quality improvements. Findings are translated into evidence-based insights that inform policy and support equitable energy transitions.
+                Empower Health uses community-centered and mixed-methods research approaches to design and evaluate energy interventions that improve health and resilience outcomes. The initiative combines community co-design, interdisciplinary research, and program evaluation to assess the impacts of weatherization, electrification, microgrids, and indoor environmental quality improvements. Findings are translated into evidence-based insights that inform policy and support equitable energy transitions.
               </p>
             </div>
 
@@ -180,35 +184,70 @@ export default function Home() {
       {/* Divider */}
       <div className="section-divider" />
 
-      {/* Message from Dr. Chen Section - Tighter */}
-      <section className="py-8 md:py-12 bg-pattern-grid" style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)' }}>
-        <div className="mx-auto px-5 md:px-6" style={{ maxWidth: '1400px' }}>
-          <div className="grid md:grid-cols-[220px_1fr] gap-6 md:gap-10 items-start">
-            {/* Left: Dr. Chen Image */}
-            <div className="flex justify-center md:justify-start">
-              <div 
-                className="w-full max-w-[200px] rounded-lg overflow-hidden"
-                style={{ aspectRatio: '3/4' }}
-              >
+      {/* Message from Dr. Chen */}
+      <section className="py-10 md:py-14" style={{ background: 'white' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1400px' }}>
+          <div className="accent-bar mb-3" />
+          <h2 className="text-xl md:text-2xl font-bold mb-8" style={{ color: '#0c2340' }}>
+            From the Principal Investigator
+          </h2>
+
+          <div 
+            className="rounded-xl overflow-hidden"
+            style={{ background: '#f8fafc', border: '1px solid rgba(12,35,64,0.08)' }}
+          >
+            <div className="grid md:grid-cols-[260px_1fr] lg:grid-cols-[300px_1fr] items-start">
+              {/* Photo - fixed height */}
+              <div className="relative hidden md:block md:sticky md:top-0" style={{ height: '360px' }}>
                 <img 
                   src="https://customer-assets.emergentagent.com/job_empower-research/artifacts/2alyqhm7_Chien-fei%20Chen%20.jpeg" 
-                  alt="Portrait of Dr. Chen"
-                  className="w-full h-full object-cover"
+                  alt="Dr. Chien-fei Chen"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-            </div>
+              {/* Mobile photo */}
+              <div className="md:hidden">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_empower-research/artifacts/2alyqhm7_Chien-fei%20Chen%20.jpeg" 
+                  alt="Dr. Chien-fei Chen"
+                  className="w-full object-cover"
+                  style={{ maxHeight: '300px' }}
+                />
+              </div>
 
-            {/* Right: Message Content - Full width */}
-            <div>
-              <h2 
-                className="text-xl md:text-2xl font-bold mb-4"
-                style={{ color: '#0c2340' }}
-              >
-                Welcome Message from Dr. Chen (Principal Investigator)
-              </h2>
-              <p className="text-sm leading-relaxed" style={{ color: '#4a5568', lineHeight: '1.75' }}>
-                Through my years of work on energy transitions, energy burdens, the social determinants of health, and community resilience, I am energized, and humbled, to lead this project on the environmental health impacts of energy transition and electrification. We partner with researchers, local governments, utilities, community organizations, and residents to provide practical support as communities work to reduce energy burdens, cut carbon emissions, and improve health outcomes through an equitable clean energy transition. Our goal is to help design and implement community microgrids, weatherization, and electrification in ways that are shaped by, and deliver meaningful benefits to, the people most affected by high energy costs and escalating extreme weather risks. Our transdisciplinary team brings together expertise in public and population health, electrical and industrial engineering, public policy, the social sciences, and community practice. We will draw on our shared knowledge, tools, and creativity to strengthen local capacity, build trust, and support community-led solutions that advance clean energy, climate resilience, and community well-being. This work will be grounded in the priorities and lived realities of the communities we serve. We will meet local leaders, residents, and organizations where they are, recognizing the challenges, resource gaps, and urgent needs they face. Together, we will identify barriers to clean energy acceptance and the conditions that enable adoption across households and communities. We will create spaces for dialogue and shared learning so communities can guide decisions and shape a healthier future that is practical, and locally meaningful.
-              </p>
+              {/* Content */}
+              <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+                <div className="mb-4">
+                  <h3 className="text-lg font-bold" style={{ color: '#0c2340' }}>Dr. Chien-fei Chen</h3>
+                </div>
+
+                <p className="text-base leading-7 mb-4" style={{ color: '#374151' }}>
+                  Through my years of work on energy transitions, energy burdens, the social determinants of health, and community resilience, I am energized, and humbled, to lead this project on the environmental health impacts of energy transition and electrification. We partner with researchers, local governments, utilities, community organizations, and residents to provide practical support as communities work to reduce energy burdens, cut carbon emissions, and improve health outcomes through an equitable clean energy transition.
+                </p>
+
+                {showFullMessage && (
+                  <div className="space-y-4 mb-4 animate-in slide-in-from-top-2 duration-200">
+                    <p className="text-base leading-7" style={{ color: '#374151' }}>
+                      Our goal is to help design and implement community microgrids, weatherization, and electrification in ways that are shaped by, and deliver meaningful benefits to, the people most affected by high energy costs and escalating extreme weather risks. Our transdisciplinary team brings together expertise in public and population health, electrical and industrial engineering, public policy, the social sciences, and community practice.
+                    </p>
+                    <p className="text-base leading-7" style={{ color: '#374151' }}>
+                      This work will be grounded in the priorities and lived realities of the communities we serve. We will meet local leaders, residents, and organizations where they are, recognizing the challenges, resource gaps, and urgent needs they face. Together, we will identify barriers to clean energy acceptance and the conditions that enable adoption across households and communities. We will create spaces for dialogue and shared learning so communities can guide decisions and shape a healthier future that is practical, and locally meaningful.
+                    </p>
+                  </div>
+                )}
+
+                <button
+                  onClick={() => setShowFullMessage(!showFullMessage)}
+                  className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline self-start"
+                  style={{ color: '#0B5FA5' }}
+                >
+                  {showFullMessage ? (
+                    <>Read less <ChevronUp className="w-4 h-4" /></>
+                  ) : (
+                    <>Continue reading <ChevronDown className="w-4 h-4" /></>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -357,7 +396,7 @@ export default function Home() {
                   lineHeight: '1.7',
                 }}
               >
-                EMPOWER-ALL is funded by the Wellcome Trust under the project{' '}
+                Empower Health is funded by the Wellcome Trust under the project{' '}
                 <em style={{ fontStyle: 'italic', color: 'rgba(255, 255, 255, 0.9)' }}>
                   "Advancing climate mitigation policy solutions with health co-benefits in G7 countries"
                 </em>{' '}

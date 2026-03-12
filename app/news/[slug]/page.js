@@ -27,7 +27,7 @@ const articles = {
   'new-research-publication': {
     title: 'New Research Published on Health Benefits of Home Electrification',
     date: 'December 20, 2025',
-    author: 'EMPOWER-ALL Research Team',
+    author: 'Empower Health Research Team',
     category: 'Research',
     content: `
       <p>We are pleased to share our latest peer-reviewed research demonstrating significant respiratory health improvements following home electrification upgrades.</p>
@@ -45,12 +45,12 @@ const articles = {
     `
   },
   'partnership-announcement': {
-    title: 'EMPOWER-ALL Announces Partnership with Local Utility',
+    title: 'Empower Health Announces Partnership with Local Utility',
     date: 'November 8, 2025',
     author: 'Communications Team',
     category: 'Partnership',
     content: `
-      <p>EMPOWER-ALL is proud to announce a strategic partnership with Regional Energy Services to expand weatherization and electrification programs across our study areas.</p>
+      <p>Empower Health is proud to announce a strategic partnership with Regional Energy Services to expand weatherization and electrification programs across our study areas.</p>
       
       <h2>Partnership Scope</h2>
       <p>This collaboration will enable us to reach an additional 500 low-income households with comprehensive home energy upgrades over the next two years.</p>
@@ -85,7 +85,7 @@ const articles = {
     `
   },
   'funding-award-announcement': {
-    title: 'EMPOWER-ALL Receives Additional Funding for Expansion',
+    title: 'Empower Health Receives Additional Funding for Expansion',
     date: 'October 5, 2025',
     author: 'Dr. Chen',
     category: 'Funding',

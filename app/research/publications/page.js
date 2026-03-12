@@ -69,7 +69,7 @@ export default function PublicationsPage() {
             className="text-sm md:text-base"
             style={{ color: 'rgba(255,255,255,0.7)' }}
           >
-            Academic publications and research papers from the EMPOWER-ALL project.
+            Academic publications and research papers from the Empower Health project.
           </p>
         </div>
       </section>

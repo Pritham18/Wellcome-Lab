@@ -21,7 +21,7 @@ const newsArticles = [
   },
   {
     slug: 'partnership-announcement',
-    title: 'EMPOWER-ALL Announces Partnership with Local Utility',
+    title: 'Empower Health Announces Partnership with Local Utility',
     excerpt: 'Strategic partnership will expand weatherization and electrification programs to reach 500 additional low-income households.',
     date: 'November 8, 2025',
     category: 'Partnership'
@@ -35,7 +35,7 @@ const newsArticles = [
   },
   {
     slug: 'funding-award-announcement',
-    title: 'EMPOWER-ALL Receives Additional Funding for Expansion',
+    title: 'Empower Health Receives Additional Funding for Expansion',
     excerpt: 'New grant will support expansion of research activities and community engagement across three additional regions.',
     date: 'October 5, 2025',
     category: 'Funding'

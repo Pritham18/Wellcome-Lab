@@ -122,7 +122,7 @@ export default function Header() {
               </div>
             </Link>
 
-            {/* RIGHT SIDE: EMPOWER HEALTH Logo - Perfect circle, no clipping */}
+            {/* RIGHT SIDE: Empower Health Logo - Perfect circle, no clipping */}
             <Link 
               href="/" 
               className="flex items-center no-underline group focus:outline-none"

@@ -10,16 +10,18 @@ const newsData = [
     id: 1,
     category: 'Workshops',
     date: 'Feb 26–27, 2026',
-    title: 'Powering Resilience and Health Workshop Explores Links Between Energy Transitions, Community Resilience and Health Benefits',
-    preview: 'On February 26–27, 2026, Clemson University hosted an interdisciplinary workshop bringing together researchers, community leaders, public health practitioners, engineers, and policymakers to explore how energy transitions can advance community resilience and health equity.',
+    title: 'Powering Resilience and Health: Energy Transition and Healthy Environments',
+    preview: 'Researchers, policymakers, industry leaders, and community organizations gathered at Clemson University\'s Charleston Innovation Campus to explore how energy transitions can strengthen community resilience and improve public health.',
     fullContent: (
       <>
-        <p className="text-base font-medium mb-4" style={{ color: '#0c2340' }}>
-          Interdisciplinary gathering examines community-engaged approaches to energy transitions, health outcomes, and climate resilience
+        {/* Subtitle */}
+        <p className="text-sm font-semibold mb-5" style={{ color: '#0B5FA5', letterSpacing: '0.02em' }}>
+          Highlights Microgrids, Electrification, and Health Co-Benefits
         </p>
-        
+
+        {/* Overview */}
         <p>
-          On February 26–27, 2026, Clemson University hosted "Powering Resilience and Health: Energy Transition and Healthy Built Environments," a two-day interdisciplinary workshop convening researchers, community leaders, public health practitioners, engineers, planners, and local decision-makers. The workshop explored how community-engaged energy transitions can advance resilience, reduce energy burdens, and improve both physical and mental health outcomes in vulnerable communities across the Southeast.
+          Organized by Clemson University's Greater Resilience, Innovation and Transformation (GRIT) Laboratory and funded by the Wellcome Trust, this two-day interdisciplinary workshop brought together more than 35 participants — both in person and virtually — representing universities, nonprofit organizations, utilities, government agencies, and community groups. The event featured over a dozen expert presentations across five thematic panels.
         </p>
 
         <div className="my-5 flex justify-center">
@@ -31,35 +33,49 @@ const newsData = [
               style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
             />
             <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
-              Workshop participants at Clemson University, February 26–27, 2026
+              Workshop participants at Clemson University's Charleston Innovation Campus
             </p>
           </div>
         </div>
 
-        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
-          Workshop Participation and Goals
+        {/* Opening & Leadership */}
+        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: '#0c2340' }}>
+          Research Leadership
         </h3>
         <p>
-          The workshop brought together a diverse group of stakeholders from academia, community organizations, public health agencies, energy systems engineering, urban planning, and local government. Participants included researchers with expertise in environmental sociology, energy justice, climate resilience, environmental health, and health policy, alongside practitioners working directly in energy transition programs and community-based resilience initiatives.
+          The event opened with remarks from Dr. Chien-Fei Chen, professor of sociology at Clemson University and director of the GRIT Laboratory. The workshop was supported by an interdisciplinary team of co-principal investigators:
         </p>
+        <ul className="list-none pl-0 mt-3 space-y-1.5">
+          <li className="flex items-start gap-2">
+            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#0B5FA5' }} />
+            <span><strong>Dr. Mingzhou Jin</strong> (University of Tennessee) — smart energy systems and energy infrastructure</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#0B5FA5' }} />
+            <span><strong>Dr. Bruce Tonn</strong> (Three3, Inc.) — energy policy, weatherization programs, and health co-benefits</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#0B5FA5' }} />
+            <span><strong>Dr. Gary Adamkiewicz</strong> (Harvard University) — indoor environmental quality and environmental health</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#0B5FA5' }} />
+            <span><strong>Dr. Kristina Kintziger</strong> (University of Nebraska Medical Center) — climate, energy, and population health</span>
+          </li>
+        </ul>
         <p className="mt-3">
-          The event was designed to facilitate meaningful exchange across sectors and disciplines, with a focus on co-developing practical frameworks for equitable energy transitions that center community voices and improve health outcomes. Through lightning talks, interactive breakout sessions, and case-based discussions, participants examined how energy infrastructure investments can simultaneously address energy burden, climate resilience, and public health disparities.
+          Together, this team advances research on the energy–climate–health nexus, focusing on how microgrids, electrification, and building retrofits can improve resilience and health outcomes for low-income and climate-vulnerable communities.
         </p>
 
-        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
-          Key Topics and Discussions
+        {/* Thematic Panels */}
+        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: '#0c2340' }}>
+          Key Themes
         </h3>
         <p>
-          Workshop sessions covered a broad range of interconnected topics relevant to community-engaged energy transitions and health co-benefits. Participants explored weatherization and building envelope improvements as strategies to reduce energy costs and improve indoor environmental quality in low-income housing. Discussions emphasized that weatherization not only lowers utility bills but also reduces exposure to indoor air pollutants, mold, and temperature extremes, contributing to respiratory health, cardiovascular outcomes, and mental well-being.
+          Sessions explored community microgrids, building electrification, weatherization, indoor environmental quality, and the health co-benefits of energy transitions. Researchers and practitioners discussed strategies for integrating battery storage, distributed energy resources, and community-scale microgrids to strengthen grid reliability and support critical services during emergencies.
         </p>
         <p className="mt-3">
-          Electrification pathways—including the transition from fossil fuel-based heating and appliances to electric heat pumps, induction stoves, and other clean energy technologies—were examined as mechanisms to improve indoor air quality by eliminating combustion byproducts inside the home. Participants discussed policy incentives, utility programs, and community education strategies to accelerate equitable electrification for vulnerable populations.
-        </p>
-        <p className="mt-3">
-          Microgrid development and distributed energy systems emerged as key topics for enhancing energy resilience in communities facing power outages due to extreme weather events. The discussions highlighted how mobile microgrids and community-scale energy systems can provide backup power during emergencies, reduce energy burden, and support health services and cooling centers during heatwaves. Participants considered both technical and social dimensions of microgrid deployment, including community ownership models and equitable siting decisions.
-        </p>
-        <p className="mt-3">
-          Additional topics included data collection and evaluation methods for tracking health and resilience outcomes, strategies for centering community voices in planning and implementation processes, and policy frameworks to scale solutions through cross-sector partnerships involving utilities, local governments, health departments, and community-based organizations.
+          Presentations from energy and public health researchers emphasized how improvements in home energy efficiency, electrification of appliances, and indoor air quality can produce important health co-benefits — particularly for low-income households.
         </p>
 
         <div className="my-5 flex justify-center">
@@ -76,24 +92,20 @@ const newsData = [
           </div>
         </div>
 
-        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
-          Research Leadership
+        {/* Regional Resilience */}
+        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: '#0c2340' }}>
+          Regional Resilience
         </h3>
         <p>
-          The workshop was organized as part of the EMPOWER-HEALTH Research Initiative, led by <strong>Dr. Chien-fei Chen</strong> (Principal Investigator, Clemson University) in collaboration with Co-Principal Investigators <strong>Dr. Olufemi Omitaomu</strong> (Oak Ridge National Laboratory), <strong>Dr. Perry Sheffield</strong> (Icahn School of Medicine at Mount Sinai), and <strong>Dr. Miranda Waggoner</strong> (Florida State University). This interdisciplinary team brings expertise in environmental sociology, energy systems engineering, environmental health, and health policy to advance equity-centered approaches to climate resilience and public health.
-        </p>
-        <p className="mt-3">
-          The research initiative builds on regional partnerships including collaborations with the South Carolina Sea Grant Consortium and coastal resilience networks, reflecting a commitment to place-based, community-driven research that addresses local vulnerabilities while contributing to broader knowledge on energy transitions and health equity.
+          Shu-Mei Huang from the South Carolina Sea Grant Consortium presented the organization's Coastal Resilience Program, which supports climate and weather-driven disaster adaptation and resilience planning in coastal communities across South Carolina. Additional speakers from the South Carolina Office of Resilience, Southeast Energy Efficiency Alliance, and community organizations contributed perspectives on policy development, workforce training, and community engagement.
         </p>
 
-        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
-          Collaboration and Future Impact
+        {/* Cross-Sector Collaboration */}
+        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: '#0c2340' }}>
+          Cross-Sector Collaboration
         </h3>
         <p>
-          Key outcomes from the workshop include the development of a community-engagement playbook, a shared set of health and resilience indicators, and a partnership roadmap to support future pilot projects and research collaborations. Participants emphasized the importance of centering community voices in decision-making processes, integrating health metrics into energy planning and policy, and fostering sustained cross-sector partnerships that include utilities, housing agencies, health departments, and community organizations.
-        </p>
-        <p className="mt-3">
-          The discussions underscored the need for policy frameworks that support equitable energy transitions, including funding mechanisms that prioritize frontline communities, workforce development programs that create local employment opportunities, and regulatory reforms that align climate and health goals. Moving forward, workshop participants committed to ongoing collaboration to ensure that energy transitions contribute to health equity, environmental justice, and climate resilience.
+          Through cross-sector dialogue and collaboration, the workshop strengthened partnerships among researchers, policymakers, and community leaders working to advance equitable energy transitions, resilient infrastructure, and healthier communities.
         </p>
       </>
     )
@@ -320,7 +332,7 @@ export default function NewsPage() {
             className="text-base leading-relaxed"
             style={{ color: '#4a5568', maxWidth: '90ch' }}
           >
-            Latest updates and announcements from the EMPOWER-ALL project.
+            Latest updates and announcements from the Empower Health project.
           </p>
         </div>
       </section>

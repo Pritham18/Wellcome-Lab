@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
     return { title: 'Thrust Not Found' }
   }
   return {
-    title: `Thrust ${thrust.number}: ${thrust.title} | EMPOWER-ALL Research`,
+    title: `Thrust ${thrust.number}: ${thrust.title} | Empower Health Research`,
     description: thrust.summary
   }
 }

@@ -1,15 +1,30 @@
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { getTeamByCategory, categories } from '@/lib/teamData'
 
 // Minimal team card component
 function TeamCard({ member }) {
   return (
-    <Card className="section-card overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full">
-      {/* Photo - 4:5 Portrait Aspect Ratio */}
-      <div className="relative overflow-hidden" style={{ aspectRatio: '4/5' }}>
+    <Card className="section-card overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full rounded-lg">
+      {/* Role Badge - Above Photo (only for Leadership) */}
+      {(member.role === 'PI' || member.role === 'CO-PI') && (
+      <div className="flex justify-end px-2 pt-1.5 pb-0.5">
+        <span
+          className="inline-block px-2.5 py-0.5 rounded-full font-semibold whitespace-nowrap"
+          style={{ 
+            background: member.badgeColor, 
+            color: 'white', 
+            fontSize: '13px'
+          }}
+        >
+          {member.role}
+        </span>
+      </div>
+      )}
+
+      {/* Photo - fills card width */}
+      <div className="relative overflow-hidden" style={{ aspectRatio: '1/1' }}>
         <img
           src={member.photo}
           alt={member.name}
@@ -19,30 +34,20 @@ function TeamCard({ member }) {
             objectPosition: '50% 20%'
           }}
         />
-        <div className="absolute top-3 right-3">
-          <span
-            className="inline-block px-3 py-1 rounded-full text-xs font-semibold"
-            style={{ background: member.badgeColor, color: 'white' }}
-          >
-            {member.role}
-          </span>
-        </div>
       </div>
 
-      {/* Content - Minimal: Name + Button only */}
-      <CardContent className="p-5 flex flex-col flex-grow">
-        <h3 className="text-lg font-bold mb-4">{member.name}</h3>
+      {/* Content */}
+      <CardContent className="px-3 pt-3 pb-3 flex flex-col flex-grow">
+        <h3 className="text-base font-bold leading-snug mb-3">{member.name}</h3>
         
         <div className="mt-auto">
-          <Button
-            asChild
-            className="w-full rounded-lg"
+          <Link 
+            href={`/our-team/${member.slug}`}
+            className="inline-block text-sm font-semibold px-4 py-1.5 rounded-md"
             style={{ background: 'var(--accent)', color: 'white' }}
           >
-            <Link href={`/our-team/${member.slug}`}>
-              View full profile
-            </Link>
-          </Button>
+            View profile
+          </Link>
         </div>
       </CardContent>
     </Card>
@@ -56,12 +61,12 @@ function TeamSection({ category }) {
   if (members.length === 0) return null
 
   return (
-    <section className={category.id !== 'leadership' ? 'mt-16' : ''}>
-      <div className="mb-8">
-        <div className="section-eyebrow mb-3">{category.label}</div>
+    <section className={category.id !== 'leadership' ? 'mt-12' : ''}>
+      <div className="mb-6">
+        <div className="section-eyebrow mb-2">{category.label}</div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {members.map((member) => (
           <TeamCard key={member.slug} member={member} />
         ))}

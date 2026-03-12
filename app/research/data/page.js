@@ -75,7 +75,7 @@ export default function DataPage() {
             className="text-base leading-relaxed"
             style={{ color: '#64748b' }}
           >
-            Research datasets, tools, and data sources supporting the EMPOWER-ALL project.
+            Research datasets, tools, and data sources supporting the Empower Health project.
           </p>
         </div>
       </section>

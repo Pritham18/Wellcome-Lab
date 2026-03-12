@@ -109,7 +109,7 @@ export default function ResourcesPage() {
             className="text-lg leading-relaxed"
             style={{ color: '#4a5568' }}
           >
-            External tools, programs, educational materials, and organizations related to EMPOWER-ALL topics.
+            External tools, programs, educational materials, and organizations related to Empower Health topics.
           </p>
         </div>
       </section>

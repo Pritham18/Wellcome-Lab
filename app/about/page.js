@@ -22,7 +22,7 @@ export default function AboutPage() {
           <div className="max-w-4xl">
             <div className="section-eyebrow mb-2">About the Initiative</div>
             <h1 className="mb-3" style={{ fontSize: '2.5rem', lineHeight: '1.2' }}>
-              EMPOWER-ALL
+              Empower Health
             </h1>
             <p className="text-lg leading-7" style={{ color: 'var(--muted)' }}>
               Environmental-Health, Electrification, Microgrids, and Power-saving Efficiency for Resilience-ALL
@@ -40,7 +40,7 @@ export default function AboutPage() {
               <div className="section-card">
                 <h2 className="mb-6">Mission</h2>
                 <p className="text-base leading-7 mb-4" style={{ color: 'var(--text)' }}>
-                  EMPOWER-HEALTH is a community-centered research initiative advancing environmental health, energy resilience, and energy affordability in low- and moderate-income communities. The initiative integrates interdisciplinary research in weatherization, building electrification, and community microgrids to understand how energy systems influence household health outcomes, energy burdens, and climate resilience.
+                  Empower Health is a community-centered research initiative advancing environmental health, energy resilience, and energy affordability in low- and moderate-income communities. The initiative integrates interdisciplinary research in weatherization, building electrification, and community microgrids to understand how energy systems influence household health outcomes, energy burdens, and climate resilience.
                 </p>
                 <p className="text-base leading-7" style={{ color: 'var(--text)' }}>
                   Through collaborative partnerships with communities, local governments, utilities, and public health researchers, the project generates actionable evidence that informs policy and supports equitable energy transitions.
@@ -53,7 +53,7 @@ export default function AboutPage() {
               <div className="section-card">
                 <h2 className="mb-6">Methodology</h2>
                 <p className="text-base leading-7 mb-4" style={{ color: 'var(--text)' }}>
-                  EMPOWER-HEALTH employs interdisciplinary and mixed-methods research approaches to evaluate the impacts of energy interventions on health, resilience, and energy affordability. Our work integrates community co-design, program evaluation, environmental health assessment, and policy analysis.
+                  Empower Health employs interdisciplinary and mixed-methods research approaches to evaluate the impacts of energy interventions on health, resilience, and energy affordability. Our work integrates community co-design, program evaluation, environmental health assessment, and policy analysis.
                 </p>
                 <p className="text-base leading-7" style={{ color: 'var(--text)' }}>
                   Through partnerships with residents, utilities, and policymakers, we assess the effectiveness of weatherization programs, building electrification, and community-scale microgrids. Findings are translated into evidence-based policy recommendations that support resilient, equitable energy systems and healthier indoor environments.
