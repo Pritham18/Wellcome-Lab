@@ -233,15 +233,15 @@ function ResourceCard({ title, url, description }) {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-start gap-2 text-[15px] font-semibold leading-snug transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
+          className="inline-flex items-start gap-2 text-base font-semibold leading-snug transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B5FA5] rounded"
           style={{ color: '#0B5FA5' }}
         >
           <span className="flex-1">{title}</span>
           <ExternalLink className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 opacity-40 group-hover:opacity-80 transition-opacity" />
         </a>
         <p
-          className="text-sm leading-relaxed mt-2"
-          style={{ color: '#4a5568' }}
+          className="text-base leading-relaxed mt-1.5"
+          style={{ color: 'var(--muted)' }}
         >
           {description}
         </p>
@@ -254,19 +254,19 @@ function SubcategoryPill({ label, isActive, count, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-medium transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#0B5FA5]"
+      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#0B5FA5]"
       style={{
-        background: isActive ? '#0B5FA5' : 'white',
-        color: isActive ? 'white' : '#4a5568',
-        border: isActive ? '1px solid #0B5FA5' : '1px solid rgba(12, 35, 64, 0.15)',
+        background: isActive ? 'var(--brand)' : 'white',
+        color: isActive ? 'white' : 'var(--muted)',
+        border: isActive ? '1px solid var(--brand)' : '1px solid var(--border)',
       }}
     >
       {label}
       <span
         className="text-xs rounded-full px-1.5 py-0.5"
         style={{
-          background: isActive ? 'rgba(255,255,255,0.2)' : 'rgba(12, 35, 64, 0.06)',
-          color: isActive ? 'rgba(255,255,255,0.9)' : '#6b7280',
+          background: isActive ? 'rgba(255,255,255,0.2)' : 'var(--surface)',
+          color: isActive ? 'rgba(255,255,255,0.9)' : 'var(--muted)',
         }}
       >
         {count}
@@ -299,24 +299,20 @@ export default function ResourcesPage() {
     section.subcategories.reduce((sum, sub) => sum + sub.resources.length, 0)
 
   return (
-    <div style={{ background: '#f8fafc' }}>
+    <div style={{ background: 'var(--bg)' }} className="bg-gradient-mesh">
       <Breadcrumbs items={[{ label: 'Resources' }]} />
 
       {/* Page Header */}
-      <section
-        className="py-6 md:py-10"
-        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
-      >
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1200px' }}>
+      <section className="page-hero">
+        <div className="container max-w-7xl px-6">
+          <div className="accent-bar mb-4" />
           <h1
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: '#0c2340' }}
+            className="page-hero-title mb-3"
           >
             Resources
           </h1>
           <p
-            className="text-lg leading-relaxed"
-            style={{ color: '#4a5568', maxWidth: '720px' }}
+            className="page-hero-description"
           >
             External tools, programs, educational materials, and organizations related to Empower Health topics.
           </p>
@@ -325,14 +321,14 @@ export default function ResourcesPage() {
 
       {/* Main Layout */}
       <div className="py-8 md:py-10">
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1200px' }}>
+        <div className="container max-w-7xl px-6">
 
           {/* Mobile Category Selector */}
           <div className="lg:hidden mb-6">
             <label
               htmlFor="category-select"
               className="block text-sm font-medium mb-2"
-              style={{ color: '#4a5568' }}
+              style={{ color: 'var(--muted)' }}
             >
               Select Category
             </label>
@@ -340,11 +336,11 @@ export default function ResourcesPage() {
               id="category-select"
               value={activeCategory}
               onChange={(e) => setActiveCategory(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-lg text-sm border focus:outline-none focus:ring-2 focus:ring-[#0B5FA5]"
+              className="w-full px-4 py-2.5 rounded-lg text-sm border focus:outline-none focus:ring-2 focus:ring-[var(--focus)]"
               style={{
                 background: 'white',
-                borderColor: 'rgba(12, 35, 64, 0.2)',
-                color: '#0c2340',
+                borderColor: 'var(--border)',
+                color: 'var(--text)',
               }}
             >
               {resourceData.map((section) => (
@@ -362,7 +358,7 @@ export default function ResourcesPage() {
               <div className="sticky top-24">
                 <p
                   className="text-xs font-semibold uppercase tracking-wider mb-3 px-3"
-                  style={{ color: '#9ca3af' }}
+                  style={{ color: 'var(--muted)' }}
                 >
                   Categories
                 </p>
@@ -380,19 +376,19 @@ export default function ResourcesPage() {
                         style={{
                           background: isActive ? 'rgba(11, 95, 165, 0.07)' : 'transparent',
                           borderLeft: isActive ? '3px solid #F56600' : '3px solid transparent',
-                          color: isActive ? '#0c2340' : '#4a5568',
+                          color: isActive ? 'var(--text)' : 'var(--muted)',
                         }}
                       >
                         <IconComponent
                           className="w-4 h-4 flex-shrink-0"
-                          style={{ color: isActive ? '#0B5FA5' : '#9ca3af' }}
+                          style={{ color: isActive ? 'var(--brand)' : 'var(--muted)' }}
                         />
                         <span className="text-sm font-medium leading-snug flex-1">
                           {section.title}
                         </span>
                         <span
                           className="text-xs tabular-nums"
-                          style={{ color: isActive ? '#0B5FA5' : '#9ca3af' }}
+                          style={{ color: isActive ? 'var(--brand)' : 'var(--muted)' }}
                         >
                           {count}
                         </span>
@@ -412,19 +408,19 @@ export default function ResourcesPage() {
                     <div className="flex items-center gap-3 mb-3">
                       <currentSection.icon
                         className="w-5 h-5 flex-shrink-0"
-                        style={{ color: '#0B5FA5' }}
+                        style={{ color: 'var(--brand)' }}
                       />
                       <h2
                         className="text-xl md:text-2xl font-bold"
-                        style={{ color: '#0c2340' }}
+                        style={{ color: 'var(--text)' }}
                       >
                         {currentSection.title}
                       </h2>
                     </div>
                     {currentSection.description && (
                       <p
-                        className="text-[15px] leading-7"
-                        style={{ color: '#4a5568' }}
+                        className="text-base leading-relaxed"
+                        style={{ color: 'var(--muted)' }}
                       >
                         {currentSection.description}
                       </p>
@@ -434,8 +430,8 @@ export default function ResourcesPage() {
                   {/* Subcategory Pills \u2014 only shown when >1 subcategory */}
                   {currentSection.subcategories.length > 1 && (
                     <div
-                      className="flex flex-wrap gap-2 pb-5 mb-6"
-                      style={{ borderBottom: '1px solid rgba(12, 35, 64, 0.08)' }}
+                      className="flex flex-wrap gap-2 pb-4 mb-6"
+                      style={{ borderBottom: '1px solid var(--border)' }}
                     >
                       {currentSection.subcategories.map((sub) => (
                         <SubcategoryPill
@@ -462,8 +458,8 @@ export default function ResourcesPage() {
                         {/* Subcategory description */}
                         {sub.description && (
                           <p
-                            className="text-[15px] leading-7 mb-5"
-                            style={{ color: '#4a5568' }}
+                            className="text-base leading-relaxed mb-5"
+                            style={{ color: 'var(--muted)' }}
                           >
                             {sub.description}
                           </p>
@@ -472,8 +468,8 @@ export default function ResourcesPage() {
                         {/* Cross-reference */}
                         {sub.crossReference && (
                           <p
-                            className="text-[15px] leading-7 mb-5"
-                            style={{ color: '#4a5568' }}
+                            className="text-base leading-relaxed mb-5"
+                            style={{ color: 'var(--muted)' }}
                           >
                             See{' '}
                             <button

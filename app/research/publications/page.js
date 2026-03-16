@@ -44,7 +44,7 @@ const publications = [
 
 export default function PublicationsPage() {
   return (
-    <div style={{ background: '#f8fafc' }}>
+    <div style={{ background: 'var(--bg)' }}>
       <Breadcrumbs 
         items={[
           { label: 'Research', href: '/research/study-areas' },
@@ -53,21 +53,16 @@ export default function PublicationsPage() {
       />
       
       {/* Page Hero */}
-      <section 
-        className="py-8 md:py-10"
-        style={{ background: '#0c2340' }}
-      >
-        <div className="mx-auto px-6 md:px-10 lg:px-16" style={{ maxWidth: '1400px' }}>
-          <div className="mb-4" style={{ width: '40px', height: '3px', background: '#F56600', borderRadius: '2px' }} />
+      <section className="page-hero">
+        <div className="container max-w-7xl px-6">
+          <div className="accent-bar mb-4" />
           <h1 
-            className="text-3xl md:text-4xl font-bold mb-2"
-            style={{ color: '#ffffff' }}
+            className="page-hero-title mb-3"
           >
             Publications
           </h1>
           <p 
-            className="text-sm md:text-base"
-            style={{ color: 'rgba(255,255,255,0.7)' }}
+            className="page-hero-description"
           >
             Academic publications and research papers from the Empower Health project.
           </p>
@@ -75,7 +70,7 @@ export default function PublicationsPage() {
       </section>
 
       {/* Publication List */}
-      <div className="mx-auto px-6 md:px-10 lg:px-16 py-8 md:py-10" style={{ maxWidth: '1400px' }}>
+      <div className="container max-w-7xl px-6 py-8 md:py-10">
         <div className="space-y-4">
           {publications.map((pub) => (
             <article
@@ -93,11 +88,11 @@ export default function PublicationsPage() {
                   <FileText className="w-4 h-4" style={{ color: '#0B5FA5' }} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-[15px] md:text-base font-semibold leading-snug group-hover:text-[#0B5FA5] transition-colors" style={{ color: '#0c2340' }}>
+                  <h3 className="text-[15px] md:text-base font-semibold leading-snug group-hover:text-[#0B5FA5] transition-colors" style={{ color: 'var(--text)' }}>
                     {pub.title}
                   </h3>
                   {pub.journal && (
-                    <p className="text-xs mt-1 italic" style={{ color: '#6b7280' }}>{pub.journal}</p>
+                    <p className="text-xs mt-1 italic" style={{ color: 'var(--muted)' }}>{pub.journal}</p>
                   )}
                 </div>
                 <ArrowUpRight className="w-4 h-4 mt-1 flex-shrink-0 opacity-0 group-hover:opacity-60 transition-opacity" style={{ color: '#0B5FA5' }} />
@@ -106,7 +101,7 @@ export default function PublicationsPage() {
               {/* Authors */}
               <div className="flex items-start gap-4 md:gap-5 px-5 md:px-6 pb-1">
                 <div className="w-9 flex-shrink-0" />
-                <p className="text-xs leading-relaxed" style={{ color: '#6b7280' }}>
+                <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
                   <Users className="w-3 h-3 inline-block mr-1 -mt-px" style={{ color: '#9ca3af' }} />
                   {pub.authors}
                 </p>
@@ -119,7 +114,7 @@ export default function PublicationsPage() {
                   <summary className="text-xs font-medium cursor-pointer select-none hover:text-[#0B5FA5] transition-colors" style={{ color: '#0B5FA5' }}>
                     Abstract
                   </summary>
-                  <p className="text-xs leading-relaxed mt-2" style={{ color: '#4a5568' }}>
+                  <p className="text-xs leading-relaxed mt-2" style={{ color: 'var(--muted)' }}>
                     {pub.abstract}
                   </p>
                 </details>

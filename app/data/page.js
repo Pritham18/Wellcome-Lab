@@ -11,7 +11,7 @@ export default function DataPage() {
       {/* Page Hero */}
       <section className="border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
         <div className="container max-w-7xl px-6 py-6 md:py-10">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <div className="section-eyebrow mb-2">Data</div>
             <h1 className="mb-3">Data</h1>
             <p className="text-lg leading-7" style={{ color: 'var(--muted)' }}>
@@ -22,7 +22,7 @@ export default function DataPage() {
       </section>
 
       <div className="container max-w-7xl px-6 py-8 md:py-10">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-5xl mx-auto space-y-8">
           {/* Introduction */}
           <section className="section-card">
             <p className="text-lg leading-7">

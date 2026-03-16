@@ -16,7 +16,7 @@ export default function ResourcesPage() {
       {/* Page Hero */}
       <section className="border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
         <div className="container max-w-7xl px-6 py-10 md:py-16">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <div className="section-eyebrow mb-3">Research</div>
             <h1 className="mb-4">Resources</h1>
             <p className="text-lg leading-7" style={{ color: 'var(--muted)' }}>
@@ -27,7 +27,7 @@ export default function ResourcesPage() {
       </section>
 
       <div className="container max-w-7xl px-6 py-10 md:py-16">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="max-w-5xl mx-auto space-y-12">
           {/* Section 1: Our Publications */}
           <section>
             <h2 className="mb-8">Our Publications</h2>

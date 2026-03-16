@@ -74,7 +74,7 @@ export default function Home() {
                 maxWidth: '620px',
               }}
             >
-              A Community Co-Designed Weatherization and Microgrid Plan for Energy Security and Environmental Health
+              A Community Co-designed Weatherization and Microgrid Plan for Energy Security and Environmental Health
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function Home() {
           <p 
             className="text-base md:text-lg font-medium leading-snug"
             style={{
-              color: '#0B2C6B',
+              color: 'var(--text)',
             }}
           >
             Shape the Future of Environmental Health — Through Practice, Policy, and Partnership
@@ -112,7 +112,7 @@ export default function Home() {
       <section 
         id="overview"
         className="py-8 md:py-10"
-        style={{ background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)' }}
+        style={{ background: 'var(--bg)' }}
       >
         <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1400px' }}>
           
@@ -120,7 +120,7 @@ export default function Home() {
           <div 
             className="w-full mx-auto"
             style={{ 
-              maxWidth: '1000px',
+              maxWidth: '1120px',
               hyphens: 'none',
               WebkitHyphens: 'none',
               MozHyphens: 'none',
@@ -135,7 +135,7 @@ export default function Home() {
                 <div className="accent-bar mb-3" />
                 <h2 
                   className="text-xl md:text-2xl font-bold"
-                  style={{ color: '#0c2340' }}
+                  style={{ color: 'var(--text)' }}
                 >
                   Mission
                 </h2>
@@ -143,14 +143,14 @@ export default function Home() {
               
               <p 
                 className="text-base leading-7 mb-4"
-                style={{ color: '#374151' }}
+                style={{ color: 'var(--muted)' }}
               >
                 Empower Health is a community-centered research initiative dedicated to advancing health, resilience, and energy efficiency in low- and moderate-income communities. The project produces actionable evidence designed to inform policy decisions and support an equitable transition to clean energy.
               </p>
 
               <p 
                 className="text-base leading-7"
-                style={{ color: '#374151' }}
+                style={{ color: 'var(--muted)' }}
               >
                 Our research examines how weatherization, building electrification, and community microgrids affect household energy burdens, environmental health outcomes, and resilience to extreme weather events.
               </p>
@@ -162,7 +162,7 @@ export default function Home() {
                 <div className="accent-bar mb-3" />
                 <h2 
                   className="text-xl md:text-2xl font-bold"
-                  style={{ color: '#0c2340' }}
+                  style={{ color: 'var(--text)' }}
                 >
                   Approach
                 </h2>
@@ -170,7 +170,7 @@ export default function Home() {
               
               <p 
                 className="text-base leading-7"
-                style={{ color: '#374151' }}
+                style={{ color: 'var(--muted)' }}
               >
                 Empower Health uses community-centered and mixed-methods research approaches to design and evaluate energy interventions that improve health and resilience outcomes. The initiative combines community co-design, interdisciplinary research, and program evaluation to assess the impacts of weatherization, electrification, microgrids, and indoor environmental quality improvements. Findings are translated into evidence-based insights that inform policy and support equitable energy transitions.
               </p>
@@ -188,13 +188,13 @@ export default function Home() {
       <section className="py-10 md:py-14" style={{ background: 'white' }}>
         <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1400px' }}>
           <div className="accent-bar mb-3" />
-          <h2 className="text-xl md:text-2xl font-bold mb-8" style={{ color: '#0c2340' }}>
+          <h2 className="text-xl md:text-2xl font-bold mb-8" style={{ color: 'var(--text)' }}>
             From the Principal Investigator
           </h2>
 
           <div 
             className="rounded-xl overflow-hidden shadow-sm"
-            style={{ background: '#ffffff', border: '1px solid rgba(12,35,64,0.06)' }}
+            style={{ background: '#ffffff', border: '1px solid var(--border)' }}
           >
             <div className="grid md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr]">
               {/* Photo - stretches to fill card height */}
@@ -218,14 +218,14 @@ export default function Home() {
               {/* Content */}
               <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center">
                 <div className="mb-4">
-                  <h3 className="text-lg font-bold" style={{ color: '#0c2340' }}>Dr. Chien-fei Chen</h3>
+                  <h3 className="text-lg font-bold" style={{ color: 'var(--text)' }}>Dr. Chien-fei Chen</h3>
                 </div>
 
-                <p className="text-base leading-7 mb-4" style={{ color: '#374151' }}>
+                <p className="text-base leading-7 mb-4" style={{ color: 'var(--muted)' }}>
                   With over a decade of experience leading research projects centered on energy transitions, energy burdens, the social determinants of health, and community resilience, I am honored to lead this initiative advancing research at the intersection of energy transitions, environmental health, and community resilience. Building on years of work examining energy burdens and the social determinants of health, this project brings together researchers, local governments, utilities, community organizations, and residents to accelerate equitable clean energy solutions.
                 </p>
 
-                <p className="text-base leading-7" style={{ color: '#374151' }}>
+                <p className="text-base leading-7" style={{ color: 'var(--muted)' }}>
                   Our transdisciplinary team integrates expertise in public health, engineering, policy, and the social sciences to design and evaluate community-driven strategies, including microgrids, weatherization, and electrification, that reduce energy costs, improve health outcomes, and strengthen resilience to extreme weather. Grounded in community priorities and lived experiences, this project aims to generate practical solutions and evidence that support a just and inclusive energy transition.
                 </p>
               </div>
@@ -238,17 +238,17 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Our Partners Section - Tighter */}
-      <section className="py-8 md:py-12 bg-pattern-dots" style={{ background: 'linear-gradient(180deg, #f1f5f9 0%, #e8eef3 100%)' }}>
+      <section className="py-8 md:py-12 bg-pattern-dots" style={{ background: 'var(--surface)' }}>
         <div className="mx-auto px-5 md:px-6" style={{ maxWidth: '1400px' }}>
           <h2 
             className="text-xl md:text-2xl font-bold mb-3"
-            style={{ color: '#0c2340' }}
+            style={{ color: 'var(--text)' }}
           >
             Our Partners
           </h2>
           <p 
             className="mb-6 text-sm md:text-base leading-relaxed"
-            style={{ color: '#4a5568' }}
+            style={{ color: 'var(--muted)' }}
           >
             We collaborate with leading institutions, community organizations, and local governments to advance our mission.
           </p>
@@ -314,7 +314,7 @@ export default function Home() {
                 {/* Partner Name */}
                 <p 
                   className="text-center text-sm font-medium leading-snug mt-auto"
-                  style={{ color: '#475569' }}
+                  style={{ color: 'var(--muted)' }}
                 >
                   {partner.name}
                 </p>

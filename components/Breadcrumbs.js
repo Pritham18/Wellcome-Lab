@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react'
 export default function Breadcrumbs({ items }) {
   return (
     <nav aria-label="Breadcrumb" className="border-b" style={{ borderColor: 'var(--border)' }}>
-      <div className="container max-w-6xl px-6 py-4">
+      <div className="container max-w-7xl px-6 py-4">
         <ol className="flex items-center space-x-2 text-sm" style={{ color: 'var(--muted)' }}>
           <li>
             <Link 

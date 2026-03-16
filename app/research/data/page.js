@@ -50,7 +50,7 @@ const dataResources = [
 
 export default function DataPage() {
   return (
-    <div style={{ background: '#f8fafc' }}>
+    <div style={{ background: 'var(--bg)' }}>
       <Breadcrumbs 
         items={[
           { label: 'Research', href: '/research/study-areas' },
@@ -59,21 +59,16 @@ export default function DataPage() {
       />
       
       {/* Page Hero */}
-      <section 
-        className="py-5 md:py-6"
-        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
-      >
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1000px' }}>
-          <div className="accent-bar mb-3" />
+      <section className="page-hero">
+        <div className="container max-w-7xl px-6">
+          <div className="accent-bar mb-4" />
           <h1 
-            className="text-2xl md:text-3xl font-bold mb-2"
-            style={{ color: '#0c2340' }}
+            className="page-hero-title mb-3"
           >
             Data Resources
           </h1>
           <p 
-            className="text-base leading-relaxed"
-            style={{ color: '#64748b' }}
+            className="page-hero-description"
           >
             Research datasets, tools, and data sources supporting the Empower Health project.
           </p>
@@ -81,13 +76,13 @@ export default function DataPage() {
       </section>
 
       {/* Main Content */}
-      <div className="mx-auto px-4 md:px-6 py-6 md:py-8" style={{ maxWidth: '1000px' }}>
+      <div className="container max-w-7xl px-6 py-8 md:py-10">
         
         {/* Data Tools Section */}
         <section>
           <div className="flex items-center gap-2 mb-4">
             <Database className="w-5 h-5" style={{ color: '#0B5FA5' }} />
-            <h2 className="text-lg font-bold" style={{ color: '#0c2340' }}>Data Tools & Datasets</h2>
+            <h2 className="text-lg font-bold" style={{ color: 'var(--text)' }}>Data Tools & Datasets</h2>
           </div>
           
           {/* Compact Resource List */}
@@ -118,7 +113,7 @@ export default function DataPage() {
                 {/* Description */}
                 <p 
                   className="text-sm leading-relaxed mb-2.5"
-                  style={{ color: '#475569', lineHeight: '1.6' }}
+                  style={{ color: 'var(--muted)', lineHeight: '1.6' }}
                 >
                   {resource.description}
                 </p>

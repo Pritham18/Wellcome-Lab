@@ -68,7 +68,7 @@ function MapLightbox({ src, alt, areaName }) {
 /* ------------------------------------------------------------------ */
 function SectionHeading({ children }) {
   return (
-    <h3 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: '#0c2340', letterSpacing: '0.08em' }}>
+    <h3 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: 'var(--text)', letterSpacing: '0.08em' }}>
       <span className="pb-1" style={{ borderBottom: '2px solid #0B5FA5' }}>{children}</span>
     </h3>
   )
@@ -116,18 +116,14 @@ export default function StudyAreasPage() {
       />
 
       {/* ---- Hero ---- */}
-      <section
-        className="py-6 md:py-8"
-        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
-      >
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
+      <section className="page-hero">
+        <div className="container max-w-7xl px-6">
+          <div className="accent-bar mb-4" />
           <h1 
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: '#0c2340' }}
+            className="page-hero-title mb-3"
           >Study Areas</h1>
           <p 
-            className="text-base leading-relaxed"
-            style={{ color: '#4a5568' }}
+            className="page-hero-description"
           >
             The study uses a multi-scale design spanning community, state, regional, and national levels. Analyses will be tailored to the research objectives, study purpose, and data availability, with a primary emphasis on the U.S. Southeast{"\u2014"}particularly Tennessee and South Carolina. Our focal communities include Knoxville and Chattanooga, Tennessee (TN), and Charleston, South Carolina (SC).
           </p>
@@ -135,17 +131,17 @@ export default function StudyAreasPage() {
       </section>
 
       {/* ---- Content ---- */}
-      <div className="mx-auto px-4 md:px-6 py-8 md:py-10" style={{ maxWidth: '1400px' }}>
+      <div className="container max-w-7xl px-6 py-8 md:py-10">
 
         {/* ============================================================ */}
         {/*  TENNESSEE                                                   */}
         {/* ============================================================ */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#0c2340' }}>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: 'var(--text)' }}>
             State of Tennessee
           </h2>
 
-          <p className="text-base leading-7 mb-6" style={{ color: '#4a5568' }}>
+          <p className="text-base leading-7 mb-6" style={{ color: 'var(--muted)' }}>
             Following the Center for Neighborhood Technology (CNT) housing cost-burden threshold, we define low- and moderate-income (LMI) households as those with incomes at or below 80% of area median income (AMI). AMI is the midpoint of a region's income distribution.
           </p>
 
@@ -157,7 +153,7 @@ export default function StudyAreasPage() {
               areaName="Tennessee"
             />
             <div className="mt-2 pt-2" style={{ borderTop: '1px solid rgba(12,35,64,0.06)' }}>
-              <p className="text-xs" style={{ color: '#64748b' }}>
+              <p className="text-xs" style={{ color: 'var(--muted)' }}>
                 Data source:{' '}
                 <a
                   href="https://www.energy.gov/scep/slsc/lead-tool"
@@ -184,7 +180,7 @@ export default function StudyAreasPage() {
                 'Increasing exposure to extreme heat and storms',
                 'Elevated health risks for vulnerable populations'
               ].map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm leading-6" style={{ color: '#4a5568' }}>
+                <li key={i} className="flex items-start gap-2 text-sm leading-6" style={{ color: 'var(--muted)' }}>
                   <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={{ background: '#0B5FA5' }} />
                   {c}
                 </li>
@@ -214,7 +210,7 @@ export default function StudyAreasPage() {
 
           {/* Focal community - expandable */}
           <ExpandableSection title="Read about focal community: Knoxville, TN">
-            <div className="space-y-4 text-sm leading-7" style={{ color: '#4a5568' }}>
+            <div className="space-y-4 text-sm leading-7" style={{ color: 'var(--muted)' }}>
               <p>
                 Knoxville is one of the primary study sites for several reasons. First, 10.9% of the population lives in poverty. Second, households at or below 200% of the Federal Poverty Level experience elevated energy burdens (approximately 9% of income). Third, transportation costs are high: annual vehicle operating costs can reach 29.03% of household income, and Knoxville has experienced a cumulative increase in average commute times since 2014. Fourth, many households face substantial tradeoffs between transportation and housing expenses (65.52%). Fifth, Knoxville has a large veteran population (29,035 residents between 2016 and 2020). Housing insecurity further compounds these pressures. Knoxville has a high share of renters (54.1%), and renters spend roughly 55% of income on housing and transportation combined, in addition to utility costs.
               </p>
@@ -226,7 +222,7 @@ export default function StudyAreasPage() {
 
           {/* Broader impact */}
           <div className="p-4 rounded-lg mb-8" style={{ background: 'var(--surface)' }}>
-            <p className="text-sm leading-7" style={{ color: '#4a5568' }}>
+            <p className="text-sm leading-7" style={{ color: 'var(--muted)' }}>
               <strong style={{ color: 'var(--text)' }}>Broader Impact:</strong> Findings from Tennessee support the development of scalable, evidence-based strategies that advance equitable clean energy transitions and measurable health benefits across the Southeast.
             </p>
           </div>
@@ -237,11 +233,11 @@ export default function StudyAreasPage() {
               onClick={() => setShowTNReferences(!showTNReferences)}
               className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
             >
-              <h3 className="text-lg font-bold" style={{ color: '#0c2340' }}>References</h3>
+              <h3 className="text-lg font-bold" style={{ color: 'var(--text)' }}>References</h3>
               {showTNReferences ? (
-                <ChevronUp className="w-5 h-5" style={{ color: '#4a5568' }} />
+                <ChevronUp className="w-5 h-5" style={{ color: 'var(--muted)' }} />
               ) : (
-                <ChevronDown className="w-5 h-5" style={{ color: '#4a5568' }} />
+                <ChevronDown className="w-5 h-5" style={{ color: 'var(--muted)' }} />
               )}
             </button>
             {showTNReferences && (
@@ -264,11 +260,11 @@ export default function StudyAreasPage() {
         <section className="mb-16">
           <div className="mb-8 border-t pt-10" style={{ borderColor: 'rgba(12,35,64,0.1)' }} />
 
-          <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#0c2340' }}>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: 'var(--text)' }}>
             State of South Carolina
           </h2>
 
-          <p className="text-base leading-7 mb-6" style={{ color: '#4a5568' }}>
+          <p className="text-base leading-7 mb-6" style={{ color: 'var(--muted)' }}>
             South Carolina faces substantial combined coastal and inland climate risks, with sea level rise, tidal flooding, and extreme precipitation posing long-term pressures on coastal counties.
           </p>
 
@@ -280,7 +276,7 @@ export default function StudyAreasPage() {
               areaName="South Carolina"
             />
             <div className="mt-2 pt-2" style={{ borderTop: '1px solid rgba(12,35,64,0.06)' }}>
-              <p className="text-xs" style={{ color: '#64748b' }}>
+              <p className="text-xs" style={{ color: 'var(--muted)' }}>
                 Data source:{' '}
                 <a
                   href="https://www.energy.gov/scep/slsc/lead-tool"
@@ -307,7 +303,7 @@ export default function StudyAreasPage() {
                 'Environmental justice disparities',
                 'Compounded health risks from climate hazards'
               ].map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm leading-6" style={{ color: '#4a5568' }}>
+                <li key={i} className="flex items-start gap-2 text-sm leading-6" style={{ color: 'var(--muted)' }}>
                   <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={{ background: '#0B5FA5' }} />
                   {c}
                 </li>
@@ -337,7 +333,7 @@ export default function StudyAreasPage() {
 
           {/* Detailed overview - expandable */}
           <ExpandableSection title="Read detailed overview">
-            <div className="space-y-4 text-sm leading-7" style={{ color: '#4a5568' }}>
+            <div className="space-y-4 text-sm leading-7" style={{ color: 'var(--muted)' }}>
               <p>
                 South Carolina (SC) faces substantial combined coastal and inland climate risks, with sea level rise, tidal flooding, and extreme precipitation posing long-term pressures on coastal counties. State-level climate trend and resilience assessments indicate that these hazards are intensifying and are closely intertwined with social vulnerability, as low-income households are more likely to reside in lower-quality housing and infrastructure-constrained areas while simultaneously facing higher energy burdens and disaster-related impacts.
               </p>
@@ -349,7 +345,7 @@ export default function StudyAreasPage() {
 
           {/* Focal community - expandable */}
           <ExpandableSection title="Read about focal community: Charleston, SC">
-            <div className="space-y-4 text-sm leading-7" style={{ color: '#4a5568' }}>
+            <div className="space-y-4 text-sm leading-7" style={{ color: 'var(--muted)' }}>
               <p>
                 Charleston County contains 212,589 housing units and 181,680 households, with renter households accounting for a substantial share. Between 2010 and 2020, the county's population increased by approximately 16%, while the greater Charleston metropolitan area has grown by about 46% since 2000, representing a net increase of roughly 250,000 residents. Rapid population growth combined with rising housing demand has intensified housing affordability pressures, with particularly pronounced impacts on low-income and renter households.
               </p>
@@ -367,7 +363,7 @@ export default function StudyAreasPage() {
 
           {/* Broader impact */}
           <div className="p-4 rounded-lg mb-8" style={{ background: 'var(--surface)' }}>
-            <p className="text-sm leading-7" style={{ color: '#4a5568' }}>
+            <p className="text-sm leading-7" style={{ color: 'var(--muted)' }}>
               <strong style={{ color: 'var(--text)' }}>Broader Impact:</strong> South Carolina functions as a living laboratory for scalable, equitable energy{"\u2013"}health solutions, informing regional strategies applicable across the southeastern United States.
             </p>
           </div>
@@ -378,11 +374,11 @@ export default function StudyAreasPage() {
               onClick={() => setShowSCReferences(!showSCReferences)}
               className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
             >
-              <h3 className="text-lg font-bold" style={{ color: '#0c2340' }}>References</h3>
+              <h3 className="text-lg font-bold" style={{ color: 'var(--text)' }}>References</h3>
               {showSCReferences ? (
-                <ChevronUp className="w-5 h-5" style={{ color: '#4a5568' }} />
+                <ChevronUp className="w-5 h-5" style={{ color: 'var(--muted)' }} />
               ) : (
-                <ChevronDown className="w-5 h-5" style={{ color: '#4a5568' }} />
+                <ChevronDown className="w-5 h-5" style={{ color: 'var(--muted)' }} />
               )}
             </button>
             {showSCReferences && (
@@ -425,7 +421,7 @@ function RefItem({ n, children }) {
   return (
     <div className="flex gap-3">
       <span className="flex-shrink-0 w-7 h-7 rounded-md flex items-center justify-center text-xs font-bold" style={{ background: 'rgba(11,95,165,0.1)', color: '#0B5FA5' }}>[{n}]</span>
-      <p className="text-sm leading-7" style={{ color: '#4a5568' }}>{children}</p>
+      <p className="text-sm leading-7" style={{ color: 'var(--muted)' }}>{children}</p>
     </div>
   )
 }

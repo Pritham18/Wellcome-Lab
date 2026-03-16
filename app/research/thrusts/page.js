@@ -10,7 +10,7 @@ function ThrustCard({ thrust }) {
     <Link href={`/research/thrusts/${thrust.slug}`} className="block group h-full">
       <Card 
         className="section-card overflow-hidden transition-all duration-200 hover:shadow-lg h-full flex flex-col"
-        style={{ borderLeft: '4px solid var(--accent)', backgroundColor: '#E6F1F4' }}
+        style={{ borderLeft: '4px solid var(--accent)', backgroundColor: 'var(--surface)' }}
       >
         <CardContent className="p-6 md:p-8 flex flex-col flex-grow">
           <div className="flex items-start justify-between gap-4 flex-grow">
@@ -26,7 +26,7 @@ function ThrustCard({ thrust }) {
               {/* Title */}
               <h2 
                 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-[var(--accent)] transition-colors"
-                style={{ color: '#1a365d' }}
+                style={{ color: 'var(--text)' }}
               >
                 {thrust.title}
               </h2>
@@ -76,27 +76,23 @@ export default function ThrustsPage() {
       />
       
       {/* Page Hero */}
-      <section 
-        className="py-6 md:py-8"
-        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
-      >
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
+      <section className="page-hero">
+        <div className="container max-w-7xl px-6">
+          <div className="accent-bar mb-4" />
           <h1 
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: '#0c2340' }}
+            className="page-hero-title mb-3"
           >
             Research Thrusts
           </h1>
           <p 
-            className="text-base leading-relaxed"
-            style={{ color: '#4a5568', maxWidth: '72ch' }}
+            className="page-hero-description"
           >
             Six integrated research directions advancing equitable clean energy transitions and measurable health benefits. Select a thrust to explore our approach in detail.
           </p>
         </div>
       </section>
 
-      <div className="mx-auto px-4 md:px-6 py-8 md:py-10" style={{ maxWidth: '1120px' }}>
+      <div className="container max-w-7xl px-6 py-8 md:py-10">
         {/* Thrust Cards - 2-column grid on tablet/desktop, 1-column on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
           {thrusts.map((thrust) => (

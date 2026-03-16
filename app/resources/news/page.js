@@ -32,14 +32,14 @@ const newsData = [
               className="w-full rounded-lg"
               style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
             />
-            <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
+            <p className="text-xs text-center mt-2 italic" style={{ color: 'var(--muted)' }}>
               Workshop participants at Clemson University's Charleston Innovation Campus
             </p>
           </div>
         </div>
 
         {/* Opening & Leadership */}
-        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: '#0c2340' }}>
+        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: 'var(--text)' }}>
           Research Leadership
         </h3>
         <p>
@@ -68,7 +68,7 @@ const newsData = [
         </p>
 
         {/* Thematic Panels */}
-        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: '#0c2340' }}>
+        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: 'var(--text)' }}>
           Key Themes
         </h3>
         <p>
@@ -86,14 +86,14 @@ const newsData = [
               className="w-full rounded-lg"
               style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
             />
-            <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
+            <p className="text-xs text-center mt-2 italic" style={{ color: 'var(--muted)' }}>
               Breakout session discussions at the workshop
             </p>
           </div>
         </div>
 
         {/* Regional Resilience */}
-        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: '#0c2340' }}>
+        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: 'var(--text)' }}>
           Regional Resilience
         </h3>
         <p>
@@ -101,7 +101,7 @@ const newsData = [
         </p>
 
         {/* Cross-Sector Collaboration */}
-        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: '#0c2340' }}>
+        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: 'var(--text)' }}>
           Cross-Sector Collaboration
         </h3>
         <p>
@@ -124,7 +124,7 @@ const newsData = [
         <p>
           Dr. Chen's research bridges social science, environmental health, and energy transitions, deepening scholarly understanding of how socio-technical systems interact with community resilience and equitable environmental outcomes.
         </p>
-        <p className="font-medium" style={{ color: '#0c2340' }}>
+        <p className="font-medium" style={{ color: 'var(--text)' }}>
           Among her recent and impactful publications are studies that explore critical dimensions of energy systems and equity:
         </p>
         <ul className="list-disc pl-6 space-y-2">
@@ -227,7 +227,7 @@ function NewsItem({
       <div className="flex flex-wrap items-center gap-3 mb-3">
         <span 
           className="inline-flex items-center gap-1.5 text-sm font-medium"
-          style={{ color: '#4a5568' }}
+          style={{ color: 'var(--muted)' }}
         >
           <Icon className="w-4 h-4" style={{ color: style.iconColor }} />
           {date}
@@ -243,7 +243,7 @@ function NewsItem({
       {/* Title */}
       <h2 
         className="text-lg md:text-xl font-bold mb-3 leading-tight"
-        style={{ color: '#0c2340' }}
+        style={{ color: 'var(--text)' }}
       >
         {title}
       </h2>
@@ -251,7 +251,7 @@ function NewsItem({
       {/* Preview (always shown) */}
       <p 
         className="text-sm leading-relaxed mb-3"
-        style={{ color: '#4a5568', maxWidth: '90ch' }}
+        style={{ color: 'var(--muted)', maxWidth: '90ch' }}
       >
         {preview}
       </p>
@@ -288,7 +288,7 @@ function NewsItem({
           {/* Full Content */}
           <div 
             className="space-y-4 text-sm leading-7"
-            style={{ color: '#4a5568', maxWidth: '90ch' }}
+            style={{ color: 'var(--muted)', maxWidth: '90ch' }}
           >
             {fullContent}
           </div>
@@ -308,7 +308,7 @@ export default function NewsPage() {
   const categories = ['Workshops', 'Seminars', 'Recognition']
 
   return (
-    <div style={{ background: '#f8fafc' }}>
+    <div style={{ background: 'var(--bg)' }}>
       <Breadcrumbs 
         items={[
           { label: 'Resources', href: '/resources' },
@@ -317,20 +317,16 @@ export default function NewsPage() {
       />
       
       {/* Page Hero */}
-      <section 
-        className="py-6 md:py-8"
-        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
-      >
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
+      <section className="page-hero">
+        <div className="container max-w-7xl px-6">
+          <div className="accent-bar mb-4" />
           <h1 
-            className="text-3xl md:text-4xl font-bold mb-2"
-            style={{ color: '#0c2340' }}
+            className="page-hero-title mb-3"
           >
             News
           </h1>
           <p 
-            className="text-base leading-relaxed"
-            style={{ color: '#4a5568', maxWidth: '90ch' }}
+            className="page-hero-description"
           >
             Latest updates and announcements from the Empower Health project.
           </p>
@@ -338,8 +334,8 @@ export default function NewsPage() {
       </section>
 
       {/* Main Content Area with Sidebar */}
-      <div className="py-6 md:py-8">
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
+      <div className="py-8 md:py-10">
+        <div className="container max-w-7xl px-6">
           
           {/* Mobile Category Dropdown */}
           <div className="mb-6 lg:hidden">
@@ -353,7 +349,7 @@ export default function NewsPage() {
               className="w-full px-4 py-2.5 rounded-lg border text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0B5FA5]"
               style={{ 
                 borderColor: 'rgba(12, 35, 64, 0.2)',
-                color: '#0c2340'
+                color: 'var(--text)'
               }}
             >
               {categories.map((cat) => (
@@ -379,7 +375,7 @@ export default function NewsPage() {
                         style={{
                           background: isActive ? 'rgba(11, 95, 165, 0.08)' : 'transparent',
                           borderLeft: isActive ? '3px solid #F56600' : '3px solid transparent',
-                          color: isActive ? '#0c2340' : '#4a5568',
+                          color: isActive ? 'var(--text)' : 'var(--muted)',
                           fontWeight: isActive ? '600' : '500'
                         }}
                       >
@@ -409,7 +405,7 @@ export default function NewsPage() {
                   />
                 ))
               ) : (
-                <p className="text-sm italic" style={{ color: '#6b7280' }}>
+                <p className="text-sm italic" style={{ color: 'var(--muted)' }}>
                   No news items in this category yet.
                 </p>
               )}

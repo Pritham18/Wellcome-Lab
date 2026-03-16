@@ -125,7 +125,7 @@ export default function NewsArticlePage({ params }) {
       {/* Article Header */}
       <section className="border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
         <div className="container max-w-7xl px-6 py-6 md:py-10">
-          <article className="max-w-3xl">
+          <article className="max-w-4xl">
             <div className="flex items-center gap-3 mb-3">
               <span 
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
@@ -154,7 +154,7 @@ export default function NewsArticlePage({ params }) {
       </section>
 
       <div className="container max-w-7xl px-6 py-8 md:py-10">
-        <article className="max-w-3xl mx-auto">
+        <article className="max-w-4xl mx-auto">
           {/* Article Content */}
           <div 
             className="prose prose-lg max-w-none section-card"

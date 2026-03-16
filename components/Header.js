@@ -122,28 +122,33 @@ export default function Header() {
               </div>
             </Link>
 
-            {/* RIGHT SIDE: Empower Health Logo - Perfect circle, no clipping */}
+            {/* RIGHT SIDE: Empower Health Title + Logo */}
             <Link 
               href="/" 
-              className="flex items-center no-underline group focus:outline-none"
+              className="flex items-center gap-3 no-underline group focus:outline-none"
             >
-              {/* 
-                Logo Wrapper - Fixed square dimensions for perfect circle
-                - Uses explicit width/height to ensure square aspect ratio
-                - rounded-full + overflow-hidden creates the circle mask
-                - No padding, border, ring, or background to avoid crescent/moon clipping
-              */}
+              <span
+                className="hidden sm:block text-lg md:text-xl lg:text-2xl"
+                style={{
+                  color: '#ffffff',
+                  fontWeight: '700',
+                  letterSpacing: '0.01em',
+                  lineHeight: '1.2',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Empower Health
+              </span>
               <div 
                 className="flex-shrink-0 rounded-full overflow-hidden p-0 border-0 shadow-none bg-transparent transition-transform duration-200 ease-out group-hover:scale-[1.04] w-[64px] h-[64px] sm:w-[72px] sm:h-[72px] md:w-[84px] md:h-[84px] lg:w-[100px] lg:h-[100px]"
               >
                 <Image
-                  src="https://customer-assets.emergentagent.com/job_a15d2051-9508-4eae-90be-49973a68d0a8/artifacts/0lzpxdlt_Untitled%20design-modified.png"
+                  src="/images/empower-health-logo.png"
                   alt="Empower Health logo"
                   width={200}
                   height={200}
                   className="w-full h-full object-cover object-center block"
                   priority
-                  unoptimized
                 />
               </div>
             </Link>
@@ -192,7 +197,7 @@ export default function Header() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/research/objectives"
-                              className="block select-none rounded-md px-3 py-2 header-nav-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
+                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
                               style={{ color: 'var(--text)' }}
                             >
                               Research Objectives
@@ -203,7 +208,7 @@ export default function Header() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/research/study-areas"
-                              className="block select-none rounded-md px-3 py-2 header-nav-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
+                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
                               style={{ color: 'var(--text)' }}
                             >
                               Study Areas
@@ -214,7 +219,7 @@ export default function Header() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/research/thrusts"
-                              className="block select-none rounded-md px-3 py-2 header-nav-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
+                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
                               style={{ color: 'var(--text)' }}
                             >
                               Thrusts
@@ -225,7 +230,7 @@ export default function Header() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/research/data"
-                              className="block select-none rounded-md px-3 py-2 header-nav-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
+                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
                               style={{ color: 'var(--text)' }}
                             >
                               Data
@@ -236,7 +241,7 @@ export default function Header() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/research/publications"
-                              className="block select-none rounded-md px-3 py-2 header-nav-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
+                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
                               style={{ color: 'var(--text)' }}
                             >
                               Publications
@@ -271,7 +276,7 @@ export default function Header() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/resources"
-                              className="block select-none rounded-md px-3 py-2 header-nav-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)]"
+                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)]"
                               style={{ color: 'var(--text)' }}
                             >
                               Resources
@@ -282,7 +287,7 @@ export default function Header() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/resources/news"
-                              className="block select-none rounded-md px-3 py-2 header-nav-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)]"
+                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)]"
                               style={{ color: 'var(--text)' }}
                             >
                               News

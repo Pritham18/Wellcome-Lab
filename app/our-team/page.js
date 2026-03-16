@@ -81,20 +81,16 @@ export default function OurTeamPage() {
       <Breadcrumbs items={[{ label: 'Our Team' }]} />
 
       {/* Page Hero */}
-      <section 
-        className="py-6 md:py-8"
-        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
-      >
-        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
+      <section className="page-hero">
+        <div className="container max-w-7xl px-6">
+          <div className="accent-bar mb-4" />
           <h1 
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{ color: '#0c2340' }}
+            className="page-hero-title mb-3"
           >
             Our Team
           </h1>
           <p 
-            className="text-base leading-relaxed"
-            style={{ color: '#4a5568', maxWidth: '72ch' }}
+            className="page-hero-description"
           >
             Our team is an interdisciplinary group of researchers with expertise in public health, social science, engineering, and environmental studies. We collaborate across universities and research institutions to examine the interactions between energy systems, the built environment, climate, and health outcomes.
           </p>
@@ -102,7 +98,7 @@ export default function OurTeamPage() {
       </section>
 
       {/* Team Sections */}
-      <div className="mx-auto px-4 md:px-6 py-8 md:py-10" style={{ maxWidth: '1120px' }}>
+      <div className="container max-w-7xl px-6 py-8 md:py-10">
         {categories.map((category) => (
           <TeamSection key={category.id} category={category} />
         ))}

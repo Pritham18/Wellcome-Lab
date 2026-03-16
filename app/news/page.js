@@ -50,7 +50,7 @@ export default function NewsPage() {
       {/* Page Hero */}
       <section className="border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
         <div className="container max-w-7xl px-6 py-6 md:py-10">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <div className="section-eyebrow mb-2">News</div>
             <h1 className="mb-3">News & Updates</h1>
             <p className="text-lg leading-7" style={{ color: 'var(--muted)' }}>
@@ -61,7 +61,7 @@ export default function NewsPage() {
       </section>
 
       <div className="container max-w-7xl px-6 py-8 md:py-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="space-y-6">
             {newsArticles.map((article) => (
               <Card key={article.slug} className="section-card hover:shadow-lg transition-shadow">
