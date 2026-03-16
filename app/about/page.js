@@ -1,12 +1,13 @@
 'use client'
 
+import Image from 'next/image'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import OnThisPage from '@/components/OnThisPage'
 import { Card, CardContent } from '@/components/ui/card'
 
 const sections = [
   { id: 'mission', label: 'Mission' },
-  { id: 'methodology', label: 'Methodology' },
+  { id: 'approach', label: 'Approach' },
   { id: 'team', label: 'Our Team' },
   { id: 'partners', label: 'Our Partners' },
 ]
@@ -16,15 +17,76 @@ export default function AboutPage() {
     <div style={{ background: 'var(--bg)' }}>
       <Breadcrumbs items={[{ label: 'About' }]} />
 
-      {/* Page Hero */}
-      <section className="border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
-        <div className="container max-w-7xl px-6 py-6 md:py-10">
-          <div className="max-w-4xl">
-            <div className="section-eyebrow mb-2">About the Initiative</div>
-            <h1 className="mb-3" style={{ fontSize: '2.5rem', lineHeight: '1.2' }}>
+      {/* Page Hero - Full-width image with text overlay */}
+      <section 
+        className="relative w-full min-h-[350px] md:min-h-[420px] lg:min-h-[480px] flex items-center overflow-hidden"
+        aria-label="About page hero section"
+      >
+        {/* Full-width Background Image */}
+        <Image
+          src="/clemson-campus-hero.png"
+          alt="Clemson University campus aerial view"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        
+        {/* Gradient overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to right, rgba(11, 95, 165, 0.75) 0%, rgba(11, 95, 165, 0.55) 25%, rgba(11, 95, 165, 0.25) 45%, transparent 65%)'
+          }}
+        />
+        
+        {/* Hero Text Content - Left aligned */}
+        <div className="relative z-10 w-full px-6 md:px-10 lg:px-16 py-12 md:py-16 lg:py-20">
+          <div style={{ maxWidth: '680px' }}>
+            {/* Orange accent line */}
+            <div 
+              className="mb-5"
+              style={{ 
+                width: '48px', 
+                height: '4px', 
+                background: '#F56600',
+                borderRadius: '2px',
+              }}
+            />
+            
+            {/* Eyebrow */}
+            <div 
+              className="text-sm font-semibold uppercase tracking-wider mb-3"
+              style={{ color: 'rgba(255,255,255,0.85)' }}
+            >
+              About the Initiative
+            </div>
+            
+            {/* Main Heading */}
+            <h1 
+              className="font-extrabold tracking-tight mb-3"
+              style={{
+                fontSize: 'clamp(32px, 4.5vw, 50px)',
+                lineHeight: '1.1',
+                color: '#ffffff',
+                letterSpacing: '-0.025em',
+                textShadow: '0 2px 8px rgba(0,0,0,0.15), 0 0 30px rgba(255,255,255,0.1)',
+              }}
+            >
               Empower Health
             </h1>
-            <p className="text-lg leading-7" style={{ color: 'var(--muted)' }}>
+            
+            {/* Subtitle */}
+            <p 
+              className="font-semibold"
+              style={{
+                fontSize: 'clamp(16px, 2vw, 22px)',
+                lineHeight: '1.35',
+                color: '#ffffff',
+                textShadow: '0 1px 4px rgba(0,0,0,0.2)',
+                maxWidth: '620px',
+              }}
+            >
               Environmental-Health, Electrification, Microgrids, and Power-saving Efficiency for Resilience-ALL
             </p>
           </div>
@@ -40,23 +102,20 @@ export default function AboutPage() {
               <div className="section-card">
                 <h2 className="mb-6">Mission</h2>
                 <p className="text-base leading-7 mb-4" style={{ color: 'var(--text)' }}>
-                  Empower Health is a community-centered research initiative advancing environmental health, energy resilience, and energy affordability in low- and moderate-income communities. The initiative integrates interdisciplinary research in weatherization, building electrification, and community microgrids to understand how energy systems influence household health outcomes, energy burdens, and climate resilience.
+                  Empower Health is a community-centered research initiative dedicated to advancing health, resilience, and energy efficiency in low- and moderate-income communities. The project produces actionable evidence designed to inform policy decisions and support an equitable transition to clean energy.
                 </p>
                 <p className="text-base leading-7" style={{ color: 'var(--text)' }}>
-                  Through collaborative partnerships with communities, local governments, utilities, and public health researchers, the project generates actionable evidence that informs policy and supports equitable energy transitions.
+                  Our research examines how weatherization, building electrification, and community microgrids affect household energy burdens, environmental health outcomes, and resilience to extreme weather events.
                 </p>
               </div>
             </section>
 
-            {/* Research Methodology */}
-            <section id="methodology" className="scroll-mt-24">
+            {/* Research Approach */}
+            <section id="approach" className="scroll-mt-24">
               <div className="section-card">
-                <h2 className="mb-6">Methodology</h2>
-                <p className="text-base leading-7 mb-4" style={{ color: 'var(--text)' }}>
-                  Empower Health employs interdisciplinary and mixed-methods research approaches to evaluate the impacts of energy interventions on health, resilience, and energy affordability. Our work integrates community co-design, program evaluation, environmental health assessment, and policy analysis.
-                </p>
+                <h2 className="mb-6">Approach</h2>
                 <p className="text-base leading-7" style={{ color: 'var(--text)' }}>
-                  Through partnerships with residents, utilities, and policymakers, we assess the effectiveness of weatherization programs, building electrification, and community-scale microgrids. Findings are translated into evidence-based policy recommendations that support resilient, equitable energy systems and healthier indoor environments.
+                  Empower Health uses community-centered and mixed-methods research approaches to design and evaluate energy interventions that improve health and resilience outcomes. The initiative combines community co-design, interdisciplinary research, and program evaluation to assess the impacts of weatherization, electrification, microgrids, and indoor environmental quality improvements. Findings are translated into evidence-based insights that inform policy and support equitable energy transitions.
                 </p>
               </div>
             </section>
