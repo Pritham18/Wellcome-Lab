@@ -139,23 +139,70 @@ export default function AboutPage() {
                 <p className="mb-8" style={{ color: 'var(--muted)' }}>
                   We collaborate with leading institutions, community organizations, and local governments to advance our mission.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {[1, 2, 3, 4, 5, 6].map((i) => (
-                    <div
-                      key={i}
-                      className="rounded-xl p-6 border transition-shadow hover:shadow-md"
-                      style={{
-                        background: 'var(--surface)',
-                        borderColor: 'var(--border)'
-                      }}
-                    >
-                      <div className="flex items-center justify-center h-20">
-                        <div className="text-center text-sm font-medium" style={{ color: 'var(--muted)' }}>
-                          Partner {i}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {[
+                    {
+                      name: 'Three3, Inc. (ThreeCubed)',
+                      logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/1upt974p_3.png',
+                    },
+                    {
+                      name: 'The University of Tennessee, Knoxville',
+                      logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/r66r4sm4_Tenesse.svg',
+                    },
+                    {
+                      name: 'Harvard T.H. Chan School of Public Health',
+                      logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/mw7avxk3_Harvard.png',
+                    },
+                    {
+                      name: 'University of Nebraska Medical Center',
+                      logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/vovmk270_Nebraska.png',
+                    },
+                    {
+                      name: 'Nurse-Family Partnership®',
+                      logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/gork4bvu_Nurse.png',
+                    },
+                    {
+                      name: 'Clemson University',
+                      logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/qloox89b_Clemson.png',
+                    },
+                    {
+                      name: 'Southeast Energy Efficiency Alliance (SEEA)',
+                      logo: '/images/partners/seea.png',
+                    },
+                    {
+                      name: 'Clemson University Charleston',
+                      logo: '/images/partners/clemson-charleston.jpg',
+                      href: 'https://www.clemson.edu/innovation-campuses/charleston/',
+                    },
+                  ].map((partner, i) => {
+                    const card = (
+                      <div
+                        className="rounded-xl p-5 md:p-6 border transition-all hover:shadow-md flex flex-col items-center justify-between"
+                        style={{
+                          background: 'white',
+                          borderColor: 'var(--border)',
+                          minHeight: '180px',
+                        }}
+                      >
+                        <div className="w-full flex items-center justify-center mb-4" style={{ height: '90px' }}>
+                          <img
+                            src={partner.logo}
+                            alt={`${partner.name} logo`}
+                            className="block"
+                            style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
+                          />
                         </div>
+                        <p className="text-center text-sm font-medium leading-snug mt-auto" style={{ color: 'var(--muted)' }}>
+                          {partner.name}
+                        </p>
                       </div>
-                    </div>
-                  ))}
+                    );
+                    return partner.href ? (
+                      <a key={i} href={partner.href} target="_blank" rel="noopener noreferrer" className="block">
+                        {card}
+                      </a>
+                    ) : <div key={i}>{card}</div>;
+                  })}
                 </div>
               </div>
             </section>

@@ -283,10 +283,15 @@ export default function Home() {
               {
                 name: 'Southeast Energy Efficiency Alliance (SEEA)',
                 logo: '/images/partners/seea.png'
+              },
+              {
+                name: 'Clemson University Charleston',
+                logo: '/images/partners/clemson-charleston.jpg',
+                href: 'https://www.clemson.edu/innovation-campuses/charleston/'
               }
-            ].map((partner, index) => (
+            ].map((partner, index) => {
+              const card = (
               <div 
-                key={index}
                 className="flex flex-col items-center justify-between p-5 md:p-6 rounded-xl transition-all hover:shadow-lg card-professional"
                 style={{ 
                   background: 'white',
@@ -319,7 +324,13 @@ export default function Home() {
                   {partner.name}
                 </p>
               </div>
-            ))}
+              );
+              return partner.href ? (
+                <a key={index} href={partner.href} target="_blank" rel="noopener noreferrer" className="block">
+                  {card}
+                </a>
+              ) : <div key={index}>{card}</div>;
+            })}
           </div>
         </div>
       </section>
