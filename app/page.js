@@ -308,11 +308,14 @@ export default function Home() {
                     alt={`${partner.name} logo`}
                     className="block"
                     style={{ 
-                      maxWidth: '100%',
-                      maxHeight: '100%',
-                      width: 'auto',
-                      height: 'auto',
+                      maxWidth: '120px',
+                      maxHeight: '60px',
+                      width: '100%',
+                      height: '60px',
                       objectFit: 'contain',
+                      objectPosition: 'center',
+                      margin: '0 auto',
+                      display: 'block',
                     }}
                   />
                 </div>

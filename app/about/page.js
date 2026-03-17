@@ -189,7 +189,16 @@ export default function AboutPage() {
                             src={partner.logo}
                             alt={`${partner.name} logo`}
                             className="block"
-                            style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
+                            style={{
+                              maxWidth: '120px',
+                              maxHeight: '60px',
+                              width: '100%',
+                              height: '60px',
+                              objectFit: 'contain',
+                              objectPosition: 'center',
+                              margin: '0 auto',
+                              display: 'block',
+                            }}
                           />
                         </div>
                         <p className="text-center text-sm font-medium leading-snug mt-auto" style={{ color: 'var(--muted)' }}>
