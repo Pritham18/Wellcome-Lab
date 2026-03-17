@@ -18,7 +18,7 @@ const dataResources = [
     ]
   },
   {
-    title: 'South Carolina Office of Regulatory Staff — SSRRRP Progress Tools',
+    title: 'Resilience Plan Updates and Progress (SCOR)',
     description: 'A state-level public resource showing progress, reports, and data visualizations from the South Carolina State Energy Office\'s SSRRRP initiative. This tool helps users track regulatory, resilience, and energy reliability efforts, including metrics relevant to community energy planning.',
     links: [
       { label: 'View Progress', url: 'https://scor.sc.gov/SSRRRP/Progress' }

@@ -181,7 +181,7 @@ export default function ResourcesPage() {
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <h3 className="text-xl font-semibold flex-1">
-                      South Carolina Office of Regulatory Staff — SSRRRP Progress Tools
+                      Resilience Plan Updates and Progress (SCOR)
                     </h3>
                     <Button 
                       asChild

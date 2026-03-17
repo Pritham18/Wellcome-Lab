@@ -282,50 +282,41 @@ export default function Home() {
               },
               {
                 name: 'Southeast Energy Efficiency Alliance (SEEA)',
-                logo: '/images/partners/seea.png'
+                logo: '/images/partners/seea.png',
               },
               {
                 name: 'Clemson University Charleston',
-                logo: '/images/partners/clemson-charleston.jpg',
-                href: 'https://www.clemson.edu/innovation-campuses/charleston/'
+                logo: '/images/partners/cic-hero.jpg',
+                href: 'https://www.clemson.edu/innovation-campuses/charleston/',
+                isPhoto: true,
               }
             ].map((partner, index) => {
               const card = (
               <div 
-                className="flex flex-col items-center justify-between p-5 md:p-6 rounded-xl transition-all hover:shadow-lg card-professional"
+                className="rounded-xl transition-all hover:shadow-lg card-professional flex flex-col items-center"
                 style={{ 
                   background: 'white',
-                  minHeight: '180px',
+                  height: '200px',
+                  padding: '20px 16px 16px',
                 }}
               >
-                {/* Logo Container - Larger, fixed height, auto width */}
-                <div 
-                  className="w-full flex items-center justify-center mb-4"
-                  style={{ height: '90px' }}
-                >
+                {/* Logo Container */}
+                <div style={{ width: '100%', height: '110px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <img 
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="block"
-                    style={{ 
-                      maxWidth: '120px',
-                      maxHeight: '60px',
-                      width: '100%',
-                      height: '60px',
-                      objectFit: 'contain',
-                      objectPosition: 'center',
-                      margin: '0 auto',
-                      display: 'block',
-                    }}
+                    style={partner.isPhoto
+                      ? { width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }
+                      : { width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }
+                    }
                   />
                 </div>
                 {/* Partner Name */}
-                <p 
-                  className="text-center text-sm font-medium leading-snug mt-auto"
-                  style={{ color: 'var(--muted)' }}
-                >
-                  {partner.name}
-                </p>
+                <div style={{ height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '8px', overflow: 'hidden' }}>
+                  <p style={{ color: 'var(--muted)', fontSize: '12px', fontWeight: 500, lineHeight: '1.3', textAlign: 'center', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                    {partner.name}
+                  </p>
+                </div>
               </div>
               );
               return partner.href ? (
