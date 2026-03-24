@@ -66,7 +66,7 @@ export default function Header() {
                 }}
               >
                 <Image
-                  src="https://customer-assets.emergentagent.com/job_0d3c79a8-02be-453a-b90c-6e841ad238d1/artifacts/k8b6colz_Clemson_University_Seal.svg.png"
+                  src="/images/clemson-paw-logo.jpg"
                   alt="Clemson University seal"
                   width={90}
                   height={90}
