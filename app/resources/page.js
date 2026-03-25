@@ -289,6 +289,16 @@ const resourceData = [
         description: 'Resources developed by federal agencies to support climate risk assessment, resilience planning, and disaster preparedness and recovery. These materials include data tools, guidance documents, and policy frameworks that help communities, researchers, and policymakers understand climate risks, strengthen infrastructure, and implement strategies that enhance long-term environmental and community resilience.',
         resources: [
           {
+            title: 'NOAA Southeast Region Climate Resilience Toolkit',
+            url: 'https://www.noaa.gov/regions/southeast-region-on-climate-resilience-toolkit',
+            description: 'This NOAA toolkit provides region-specific climate data, tools, and case studies to support resilience planning in the Southeast U.S. It helps communities assess risks, understand climate impacts, and implement science-based adaptation strategies.',
+          },
+          {
+            title: 'U.S. Climate Resilience Toolkit (Southeast)',
+            url: 'https://toolkit.climate.gov/building-resilience-southeast',
+            description: 'This platform offers practical tools, datasets, and case studies to help communities prepare for climate risks. It focuses on regional partnerships, drought monitoring, and adaptation strategies that improve long-term resilience in the Southeast.',
+          },
+          {
             title: 'Building Community Resilience (Federal Emergency Management Agency, FEMA)',
             url: 'https://www.fema.gov/emergency-managers/risk-management/resilience',
             description: 'Guidance and tools developed by FEMA to help communities prepare for, respond to, and recover from climate-related disasters and extreme events. These resources support risk assessment, hazard mitigation planning, infrastructure protection, and community preparedness efforts that reduce disaster impacts and strengthen long-term resilience.',
@@ -305,6 +315,21 @@ const resourceData = [
         label: 'B. Planning & Community-Based Resilience Networks',
         description: 'Resources that support local governments, planners, and community organizations in developing equitable and place-based resilience strategies. These materials highlight collaborative planning approaches, community engagement methods, and policy tools that help address climate risks, strengthen local capacity, and promote inclusive resilience planning tailored to regional environmental and social conditions.',
         resources: [
+          {
+            title: 'Coastal Resilience Southeast U.S. Project',
+            url: 'https://coastalresilience.org/project/southeastus/',
+            description: 'This project provides interactive mapping tools and data to support coastal planning and conservation. It helps decision-makers evaluate risks such as flooding and sea-level rise, enabling more resilient land-use and infrastructure planning.',
+          },
+          {
+            title: 'SECOORA Disaster Resilience Report',
+            url: 'https://secoora.org/wp-content/uploads/2018/07/9a-DRC_TAMPA_Burger_public.pdf',
+            description: 'This report highlights regional collaboration efforts to improve disaster recovery and resilience. It emphasizes partnerships, planning frameworks, and strategies to strengthen preparedness and long-term recovery in Southeast coastal communities.',
+          },
+          {
+            title: 'South Carolina Disaster Recovery Portal (SCDRP)',
+            url: 'https://www.scdrp.secoora.org/',
+            description: 'This portal provides tools, datasets, and applications to support disaster recovery and resilience planning. It includes flood mapping, climate projections, and decision-support tools for communities, planners, and policymakers.',
+          },
           {
             title: 'Urban Sustainability Directors Network (USDN)',
             url: 'https://www.usdn.org',
@@ -335,6 +360,16 @@ const resourceData = [
         description: 'Place-based resources focused on resilience planning, policy development, and climate adaptation at the state and regional levels. These materials provide guidance, planning documents, and policy frameworks that support local governments, researchers, and community organizations in addressing climate risks, strengthening infrastructure, and advancing long-term resilience strategies across South Carolina.',
         resources: [
           {
+            title: 'SC Sea Grant \u2013 Tackles Resilience',
+            url: 'https://www.scseagrant.org/sc-sea-grant-consortium-tackles-resilience/',
+            description: 'This initiative showcases how the South Carolina Sea Grant Consortium supports resilience through research, education, and partnerships. It focuses on coastal challenges, climate risks, and collaborative solutions to strengthen community adaptation.',
+          },
+          {
+            title: 'SC Sea Grant \u2013 Resilience Planning',
+            url: 'https://www.scseagrant.org/resilience-planning/',
+            description: 'This resource outlines resilience planning efforts in South Carolina, offering tools, guidance, and community-based approaches. It helps local stakeholders develop strategies to address climate change, coastal hazards, and environmental challenges.',
+          },
+          {
             title: 'South Carolina Resilience Planning Archives (South Carolina Sea Grant Consortium)',
             url: 'https://www.scseagrant.org/resilience-planning/',
             description: 'A collection of resilience planning documents, proposals, and technical resources related to climate adaptation and hazard mitigation in South Carolina. These materials support researchers, planners, and community leaders in understanding regional climate risks, developing adaptation strategies, and advancing coordinated resilience efforts across coastal and inland communities.',
@@ -350,25 +385,24 @@ const resourceData = [
   },
   {
     id: 'clemson-networks',
-    title: 'Clemson University Networks & Internal Resources',
+    title: 'University Networks',
     icon: Building,
     description: null,
     subcategories: [
       {
-        id: 'clemson-internal',
-        label: 'Internal Resources',
+        id: 'university-networks',
+        label: 'All Networks',
         resources: [
+          {
+            title: 'Duke Nicholas Institute (Education / Research Network)',
+            url: 'https://nicholasinstitute.duke.edu/education',
+            description: 'The Nicholas Institute at Duke University conducts interdisciplinary research and policy analysis on environmental challenges. It supports resilience initiatives through data, education, and collaboration across academic, governmental, and community partners.',
+          },
           {
             title: 'Building Healthy Communities at Clemson',
             url: '',
             description:
-              'Building Healthy Communities is a college-wide effort to improve health and well-being in South Carolina by addressing the social determinants of health through research, partnerships, and community engagement.',
-          },
-          {
-            title: 'Clemson University Center for Public Health Modeling and Response',
-            url: '',
-            description:
-              "Tackles complex public health challenges with innovative solutions through collaborative approach, integrating the knowledge and skills to impactful research and deliver actionable insights for health organizations and communities.",
+              'Building Healthy Communities is a college-wide initiative to improve community health and well-being in South Carolina, works to improve lives through youth development and education access, social inclusion and community well-being, food security and the built environment, rural economic development, and access to health services.',
           },
         ],
       },
@@ -377,7 +411,7 @@ const resourceData = [
   },
   {
     id: 'community-engagement',
-    title: 'Community Engagement Organizations',
+    title: 'Community and Nonprofit Organizations',
     icon: Heart,
     description: null,
     subcategories: [
@@ -386,9 +420,24 @@ const resourceData = [
         label: 'All Organizations',
         resources: [
           {
-            title: 'Woodwell Climate Research Center',
-            url: 'https://www.woodwellclimate.org',
-            description: 'A nonprofit research organization dedicated to advancing climate science and informing solutions to climate change. Woodwell Climate Research Center conducts interdisciplinary research on carbon cycles, climate risks, ecosystems, and energy systems, while working with policymakers, communities, and organizations to translate scientific knowledge into practical climate action and environmental protection strategies.',
+            title: 'Trident United Way',
+            url: 'https://www.tuw.org',
+            description: 'Trident United Way works to improve education, financial stability, and health in South Carolina communities. It partners with local organizations to provide resources, strengthen resilience, and support vulnerable populations through targeted programs.',
+          },
+          {
+            title: 'Trident United Way \u2013 211 Helpline',
+            url: 'https://www.tuw.org/211-helpline',
+            description: 'The 211 Helpline connects individuals to essential services such as housing, food, healthcare, and crisis support. It serves as a critical resource for navigating community assistance and improving resilience during emergencies and daily challenges.',
+          },
+          {
+            title: 'United for ALICE',
+            url: 'https://www.unitedforalice.org/',
+            description: 'United for ALICE provides data and research on households that are working but struggling financially. It helps organizations and policymakers understand economic hardship and develop strategies to improve financial and community resilience.',
+          },
+          {
+            title: 'Gullah Geechee Chamber of Commerce',
+            url: 'https://www.gullahgeecheechamber.org/',
+            description: 'This organization supports economic development and cultural preservation within the Gullah Geechee community. It promotes entrepreneurship, heritage tourism, and business growth while strengthening resilience in historically underserved coastal populations.',
           },
           {
             title: 'Coastal Conservation Association (CCA) \u2013 South Carolina',
@@ -399,26 +448,6 @@ const resourceData = [
             title: 'South Carolina Environmental Law Project (SCELP)',
             url: 'https://www.scelp.org',
             description: 'A nonprofit public interest law organization dedicated to protecting South Carolina\u2019s natural resources and environmental quality. SCELP provides legal advocacy, policy analysis, and community support to address issues such as coastal protection, water quality, land conservation, and sustainable development while promoting environmental justice and responsible stewardship of the state\u2019s ecosystems.',
-          },
-          {
-            title: 'Clean Air Task Force (CATF)',
-            url: 'https://www.catf.us',
-            description: 'An international nonprofit organization focused on reducing air pollution and addressing climate change through science-based policy solutions. Founded in 1995, CATF works with governments, researchers, and industry partners to advance clean energy technologies, reduce greenhouse gas emissions, and protect public health by promoting policies that support a low-carbon energy transition.',
-          },
-          {
-            title: 'Clean Energy Innovation Program (ITIF)',
-            url: 'https://itif.org',
-            description: 'A program of the Information Technology and Innovation Foundation (ITIF) focused on accelerating the development and deployment of clean energy technologies. The program conducts research and policy analysis on energy innovation, technology commercialization, and energy system transformation to support economic growth, reduce emissions, and advance a sustainable energy future.',
-          },
-          {
-            title: 'Climate Emergency Fund',
-            url: 'https://www.climateemergencyfund.org',
-            description: 'A nonprofit organization that supports grassroots climate activism and movements advocating for urgent climate action. The Climate Emergency Fund provides funding, training, and strategic support to climate activists and organizations working to raise public awareness, influence policy, and accelerate responses to the global climate crisis.',
-          },
-          {
-            title: 'Natural Hazards Center (University of Colorado Boulder)',
-            url: 'https://hazards.colorado.edu',
-            description: 'A leading research and information hub dedicated to advancing knowledge on natural hazards, disasters, and risk reduction. The Natural Hazards Center connects researchers, practitioners, and policymakers to improve disaster preparedness, mitigation, response, and recovery through interdisciplinary research, data sharing, training programs, and collaboration that supports more resilient communities.',
           },
         ],
       },

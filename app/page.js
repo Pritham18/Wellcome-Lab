@@ -258,31 +258,38 @@ export default function Home() {
             {[
               {
                 name: 'Three3, Inc. (ThreeCubed)',
-                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/1upt974p_3.png'
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/1upt974p_3.png',
+                href: 'https://www.threecubed.org/',
               },
               {
                 name: 'The University of Tennessee, Knoxville',
-                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/r66r4sm4_Tenesse.svg'
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/r66r4sm4_Tenesse.svg',
+                href: 'https://www.utk.edu/',
               },
               {
                 name: 'Harvard T.H. Chan School of Public Health',
-                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/mw7avxk3_Harvard.png'
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/mw7avxk3_Harvard.png',
+                href: 'https://hsph.harvard.edu/',
               },
               {
                 name: 'University of Nebraska Medical Center',
-                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/vovmk270_Nebraska.png'
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/vovmk270_Nebraska.png',
+                href: 'https://www.unmc.edu/',
               },
               {
                 name: 'Nurse-Family Partnership®',
-                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/gork4bvu_Nurse.png'
+                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/gork4bvu_Nurse.png',
+                href: 'https://www.nursefamilypartnership.org/',
               },
               {
                 name: 'Clemson University',
-                logo: '/images/partners/clemson-tigers-logo.png'
+                logo: '/images/partners/clemson-tigers-logo.png',
+                href: 'https://www.clemson.edu/',
               },
               {
                 name: 'Southeast Energy Efficiency Alliance (SEEA)',
                 logo: '/images/partners/seea.png',
+                href: 'https://www.seealliance.org/',
               },
               {
                 name: 'Clemson University Charleston',
