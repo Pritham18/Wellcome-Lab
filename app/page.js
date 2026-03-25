@@ -278,7 +278,7 @@ export default function Home() {
               },
               {
                 name: 'Clemson University',
-                logo: 'https://customer-assets.emergentagent.com/job_empower-research/artifacts/qloox89b_Clemson.png'
+                logo: '/images/partners/clemson-tigers-logo.png'
               },
               {
                 name: 'Southeast Energy Efficiency Alliance (SEEA)',
