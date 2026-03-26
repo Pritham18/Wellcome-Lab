@@ -283,7 +283,7 @@ export default function Home() {
               },
               {
                 name: 'Clemson University',
-                logo: '/images/partners/clemson-tigers-logo.png',
+                logo: '/images/partners/clemson.png',
                 href: 'https://www.clemson.edu/',
               },
               {
@@ -292,7 +292,7 @@ export default function Home() {
                 href: 'https://www.seealliance.org/',
               },
               {
-                name: 'Clemson University Charleston',
+                name: 'Clemson Charleston Innovation Campus',
                 logo: '/images/partners/cic-hero.jpg',
                 href: 'https://www.clemson.edu/innovation-campuses/charleston/',
                 isPhoto: true,
