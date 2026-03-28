@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { Calendar, Award, ChevronDown, ChevronUp } from 'lucide-react'
+import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react'
 
 // News data organized by category
 const newsData = [
@@ -10,18 +11,16 @@ const newsData = [
     id: 1,
     category: 'Workshops',
     date: 'Feb 26–27, 2026',
-    title: 'Powering Resilience and Health: Energy Transition and Healthy Environments',
-    preview: 'Researchers, policymakers, industry leaders, and community organizations gathered at Clemson University\'s Charleston Innovation Campus to explore how energy transitions can strengthen community resilience and improve public health.',
+    title: 'Powering Resilience and Health Workshop Explores Links Between Energy Transitions, Community Resilience and Health Benefits',
+    preview: 'On February 26–27, 2026, Clemson University hosted an interdisciplinary workshop bringing together researchers, community leaders, public health practitioners, engineers, and policymakers to explore how energy transitions can advance community resilience and health equity.',
     fullContent: (
       <>
-        {/* Subtitle */}
-        <p className="text-sm font-semibold mb-5" style={{ color: '#0B5FA5', letterSpacing: '0.02em' }}>
-          Highlights Microgrids, Electrification, and Health Co-Benefits
+        <p className="text-base font-medium mb-4" style={{ color: '#0c2340' }}>
+          Interdisciplinary gathering examines community-engaged approaches to energy transitions, health outcomes, and climate resilience
         </p>
-
-        {/* Overview */}
+        
         <p>
-          Organized by Clemson University's Greater Resilience, Innovation and Transformation (GRIT) Laboratory and funded by the Wellcome Trust, this two-day interdisciplinary workshop brought together more than 35 participants — both in person and virtually — representing universities, nonprofit organizations, utilities, government agencies, and community groups. The event featured over a dozen expert presentations across five thematic panels.
+          On February 26–27, 2026, Clemson University hosted "Powering Resilience and Health: Energy Transition and Healthy Built Environments," a two-day interdisciplinary workshop convening researchers, community leaders, public health practitioners, engineers, planners, and local decision-makers. The workshop explored how community-engaged energy transitions can advance resilience, reduce energy burdens, and improve both physical and mental health outcomes in vulnerable communities across the Southeast.
         </p>
 
         <div className="my-5 flex justify-center">
@@ -32,50 +31,36 @@ const newsData = [
               className="w-full rounded-lg"
               style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
             />
-            <p className="text-xs text-center mt-2 italic" style={{ color: 'var(--muted)' }}>
-              Workshop participants at Clemson University's Charleston Innovation Campus
+            <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
+              Workshop participants at Clemson University, February 26–27, 2026
             </p>
           </div>
         </div>
 
-        {/* Opening & Leadership */}
-        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: 'var(--text)' }}>
-          Research Leadership
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Workshop Participation and Goals
         </h3>
         <p>
-          The event opened with remarks from Dr. Chien-Fei Chen, professor of sociology at Clemson University and director of the GRIT Laboratory. The workshop was supported by an interdisciplinary team of co-principal investigators:
+          The workshop brought together a diverse group of stakeholders from academia, community organizations, public health agencies, energy systems engineering, urban planning, and local government. Participants included researchers with expertise in environmental sociology, energy justice, climate resilience, environmental health, and health policy, alongside practitioners working directly in energy transition programs and community-based resilience initiatives.
         </p>
-        <ul className="list-none pl-0 mt-3 space-y-1.5">
-          <li className="flex items-start gap-2">
-            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#0B5FA5' }} />
-            <span><strong>Dr. Mingzhou Jin</strong> (University of Tennessee) — smart energy systems and energy infrastructure</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#0B5FA5' }} />
-            <span><strong>Dr. Bruce Tonn</strong> (Three3, Inc.) — energy policy, weatherization programs, and health co-benefits</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#0B5FA5' }} />
-            <span><strong>Dr. Gary Adamkiewicz</strong> (Harvard University) — indoor environmental quality and environmental health</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#0B5FA5' }} />
-            <span><strong>Dr. Kristina Kintziger</strong> (University of Nebraska Medical Center) — climate, energy, and population health</span>
-          </li>
-        </ul>
         <p className="mt-3">
-          Together, this team advances research on the energy–climate–health nexus, focusing on how microgrids, electrification, and building retrofits can improve resilience and health outcomes for low-income and climate-vulnerable communities.
+          The event was designed to facilitate meaningful exchange across sectors and disciplines, with a focus on co-developing practical frameworks for equitable energy transitions that center community voices and improve health outcomes. Through lightning talks, interactive breakout sessions, and case-based discussions, participants examined how energy infrastructure investments can simultaneously address energy burden, climate resilience, and public health disparities.
         </p>
 
-        {/* Thematic Panels */}
-        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: 'var(--text)' }}>
-          Key Themes
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Key Topics and Discussions
         </h3>
         <p>
-          Sessions explored community microgrids, building electrification, weatherization, indoor environmental quality, and the health co-benefits of energy transitions. Researchers and practitioners discussed strategies for integrating battery storage, distributed energy resources, and community-scale microgrids to strengthen grid reliability and support critical services during emergencies.
+          Workshop sessions covered a broad range of interconnected topics relevant to community-engaged energy transitions and health co-benefits. Participants explored weatherization and building envelope improvements as strategies to reduce energy costs and improve indoor environmental quality in low-income housing. Discussions emphasized that weatherization not only lowers utility bills but also reduces exposure to indoor air pollutants, mold, and temperature extremes, contributing to respiratory health, cardiovascular outcomes, and mental well-being.
         </p>
         <p className="mt-3">
-          Presentations from energy and public health researchers emphasized how improvements in home energy efficiency, electrification of appliances, and indoor air quality can produce important health co-benefits — particularly for low-income households.
+          Electrification pathways—including the transition from fossil fuel-based heating and appliances to electric heat pumps, induction stoves, and other clean energy technologies—were examined as mechanisms to improve indoor air quality by eliminating combustion byproducts inside the home. Participants discussed policy incentives, utility programs, and community education strategies to accelerate equitable electrification for vulnerable populations.
+        </p>
+        <p className="mt-3">
+          Microgrid development and distributed energy systems emerged as key topics for enhancing energy resilience in communities facing power outages due to extreme weather events. The discussions highlighted how mobile microgrids and community-scale energy systems can provide backup power during emergencies, reduce energy burden, and support health services and cooling centers during heatwaves. Participants considered both technical and social dimensions of microgrid deployment, including community ownership models and equitable siting decisions.
+        </p>
+        <p className="mt-3">
+          Additional topics included data collection and evaluation methods for tracking health and resilience outcomes, strategies for centering community voices in planning and implementation processes, and policy frameworks to scale solutions through cross-sector partnerships involving utilities, local governments, health departments, and community-based organizations.
         </p>
 
         <div className="my-5 flex justify-center">
@@ -86,26 +71,30 @@ const newsData = [
               className="w-full rounded-lg"
               style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
             />
-            <p className="text-xs text-center mt-2 italic" style={{ color: 'var(--muted)' }}>
+            <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
               Breakout session discussions at the workshop
             </p>
           </div>
         </div>
 
-        {/* Regional Resilience */}
-        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: 'var(--text)' }}>
-          Regional Resilience
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Research Leadership
         </h3>
         <p>
-          Shu-Mei Huang from the South Carolina Sea Grant Consortium presented the organization's Coastal Resilience Program, which supports climate and weather-driven disaster adaptation and resilience planning in coastal communities across South Carolina. Additional speakers from the South Carolina Office of Resilience, Southeast Energy Efficiency Alliance, and community organizations contributed perspectives on policy development, workforce training, and community engagement.
+          The workshop was organized as part of the EMPOWER-HEALTH Research Initiative, led by <strong>Dr. Chien-fei Chen</strong> (Principal Investigator, Clemson University) in collaboration with Co-Principal Investigators <strong>Dr. Olufemi Omitaomu</strong> (Oak Ridge National Laboratory), <strong>Dr. Perry Sheffield</strong> (Icahn School of Medicine at Mount Sinai), and <strong>Dr. Miranda Waggoner</strong> (Florida State University). This interdisciplinary team brings expertise in environmental sociology, energy systems engineering, environmental health, and health policy to advance equity-centered approaches to climate resilience and public health.
+        </p>
+        <p className="mt-3">
+          The research initiative builds on regional partnerships including collaborations with the South Carolina Sea Grant Consortium and coastal resilience networks, reflecting a commitment to place-based, community-driven research that addresses local vulnerabilities while contributing to broader knowledge on energy transitions and health equity.
         </p>
 
-        {/* Cross-Sector Collaboration */}
-        <h3 className="text-sm font-bold uppercase tracking-wider mt-6 mb-2" style={{ color: 'var(--text)' }}>
-          Cross-Sector Collaboration
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Collaboration and Future Impact
         </h3>
         <p>
-          Through cross-sector dialogue and collaboration, the workshop strengthened partnerships among researchers, policymakers, and community leaders working to advance equitable energy transitions, resilient infrastructure, and healthier communities.
+          Key outcomes from the workshop include the development of a community-engagement playbook, a shared set of health and resilience indicators, and a partnership roadmap to support future pilot projects and research collaborations. Participants emphasized the importance of centering community voices in decision-making processes, integrating health metrics into energy planning and policy, and fostering sustained cross-sector partnerships that include utilities, housing agencies, health departments, and community organizations.
+        </p>
+        <p className="mt-3">
+          The discussions underscored the need for policy frameworks that support equitable energy transitions, including funding mechanisms that prioritize frontline communities, workforce development programs that create local employment opportunities, and regulatory reforms that align climate and health goals. Moving forward, workshop participants committed to ongoing collaboration to ensure that energy transitions contribute to health equity, environmental justice, and climate resilience.
         </p>
       </>
     )
@@ -124,7 +113,7 @@ const newsData = [
         <p>
           Dr. Chen's research bridges social science, environmental health, and energy transitions, deepening scholarly understanding of how socio-technical systems interact with community resilience and equitable environmental outcomes.
         </p>
-        <p className="font-medium" style={{ color: 'var(--text)' }}>
+        <p className="font-medium" style={{ color: '#0c2340' }}>
           Among her recent and impactful publications are studies that explore critical dimensions of energy systems and equity:
         </p>
         <ul className="list-disc pl-6 space-y-2">
@@ -141,6 +130,17 @@ const newsData = [
         </p>
       </>
     )
+  },
+  {
+    id: 6,
+    category: 'Seminars',
+    date: 'April 6, 2026',
+    title: 'Exploring Community Impacts, Energy Transitions, and Conceptual Frontiers for Industrial Decarbonization and Net-Zero Societies',
+    preview: 'Join Dr. Benjamin K. Sovacool for a GRIT Lab seminar exploring the social, ethical, and political dimensions of industrial decarbonization—highlighting Just Transitions and equitable pathways to net-zero.',
+    detailPage: '/resources/news/benjamin-sovacool-industrial-decarbonization',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: null
   },
   {
     id: 3,
@@ -194,7 +194,8 @@ function NewsItem({
   preview, 
   fullContent,
   bannerImage,
-  bannerAlt 
+  bannerAlt,
+  detailPage
 }) {
   const [expanded, setExpanded] = useState(false)
 
@@ -227,7 +228,7 @@ function NewsItem({
       <div className="flex flex-wrap items-center gap-3 mb-3">
         <span 
           className="inline-flex items-center gap-1.5 text-sm font-medium"
-          style={{ color: 'var(--muted)' }}
+          style={{ color: '#4a5568' }}
         >
           <Icon className="w-4 h-4" style={{ color: style.iconColor }} />
           {date}
@@ -243,7 +244,7 @@ function NewsItem({
       {/* Title */}
       <h2 
         className="text-lg md:text-xl font-bold mb-3 leading-tight"
-        style={{ color: 'var(--text)' }}
+        style={{ color: '#0c2340' }}
       >
         {title}
       </h2>
@@ -251,20 +252,31 @@ function NewsItem({
       {/* Preview (always shown) */}
       <p 
         className="text-sm leading-relaxed mb-3"
-        style={{ color: 'var(--muted)', maxWidth: '90ch' }}
+        style={{ color: '#4a5568', maxWidth: '90ch' }}
       >
         {preview}
       </p>
 
       {/* View More Button */}
-      <button
-        onClick={() => setExpanded(!expanded)}
-        className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded px-1 -ml-1"
-        style={{ color: '#0B5FA5' }}
-      >
-        {expanded ? 'View less' : 'View more'}
-        {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-      </button>
+      {detailPage ? (
+        <Link
+          href={detailPage}
+          className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded px-1 -ml-1"
+          style={{ color: '#0B5FA5' }}
+        >
+          View event details
+          <ExternalLink className="w-3.5 h-3.5" />
+        </Link>
+      ) : (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 rounded px-1 -ml-1"
+          style={{ color: '#0B5FA5' }}
+        >
+          {expanded ? 'View less' : 'View more'}
+          {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+        </button>
+      )}
 
       {/* Expanded Content */}
       {expanded && (
@@ -288,7 +300,7 @@ function NewsItem({
           {/* Full Content */}
           <div 
             className="space-y-4 text-sm leading-7"
-            style={{ color: 'var(--muted)', maxWidth: '90ch' }}
+            style={{ color: '#4a5568', maxWidth: '90ch' }}
           >
             {fullContent}
           </div>
@@ -308,7 +320,7 @@ export default function NewsPage() {
   const categories = ['Workshops', 'Seminars', 'Recognition']
 
   return (
-    <div style={{ background: 'var(--bg)' }}>
+    <div style={{ background: '#f8fafc' }}>
       <Breadcrumbs 
         items={[
           { label: 'Resources', href: '/resources' },
@@ -317,25 +329,29 @@ export default function NewsPage() {
       />
       
       {/* Page Hero */}
-      <section className="page-hero">
-        <div className="container max-w-7xl px-6">
-          <div className="accent-bar mb-4" />
+      <section 
+        className="py-6 md:py-8"
+        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
+      >
+        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
           <h1 
-            className="page-hero-title mb-3"
+            className="text-3xl md:text-4xl font-bold mb-2"
+            style={{ color: '#0c2340' }}
           >
             News
           </h1>
           <p 
-            className="page-hero-description"
+            className="text-base leading-relaxed"
+            style={{ color: '#4a5568', maxWidth: '90ch' }}
           >
-            Latest updates and announcements from the Empower Health project.
+            Latest updates and announcements from the EMPOWER-ALL project.
           </p>
         </div>
       </section>
 
       {/* Main Content Area with Sidebar */}
-      <div className="py-8 md:py-10">
-        <div className="container max-w-7xl px-6">
+      <div className="py-6 md:py-8">
+        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1400px' }}>
           
           {/* Mobile Category Dropdown */}
           <div className="mb-6 lg:hidden">
@@ -349,7 +365,7 @@ export default function NewsPage() {
               className="w-full px-4 py-2.5 rounded-lg border text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0B5FA5]"
               style={{ 
                 borderColor: 'rgba(12, 35, 64, 0.2)',
-                color: 'var(--text)'
+                color: '#0c2340'
               }}
             >
               {categories.map((cat) => (
@@ -375,7 +391,7 @@ export default function NewsPage() {
                         style={{
                           background: isActive ? 'rgba(11, 95, 165, 0.08)' : 'transparent',
                           borderLeft: isActive ? '3px solid #F56600' : '3px solid transparent',
-                          color: isActive ? 'var(--text)' : 'var(--muted)',
+                          color: isActive ? '#0c2340' : '#4a5568',
                           fontWeight: isActive ? '600' : '500'
                         }}
                       >
@@ -402,10 +418,11 @@ export default function NewsPage() {
                     fullContent={item.fullContent}
                     bannerImage={item.bannerImage}
                     bannerAlt={item.bannerAlt}
+                    detailPage={item.detailPage}
                   />
                 ))
               ) : (
-                <p className="text-sm italic" style={{ color: 'var(--muted)' }}>
+                <p className="text-sm italic" style={{ color: '#6b7280' }}>
                   No news items in this category yet.
                 </p>
               )}
