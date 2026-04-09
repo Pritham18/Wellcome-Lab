@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
     return { title: 'Thrust Not Found' }
   }
   return {
-    title: `Thrust ${thrust.number}: ${thrust.title} | Empower Health Research`,
+    title: `Thrust ${thrust.number}: ${thrust.title} | EMPOWER-ALL Research`,
     description: thrust.summary
   }
 }
@@ -45,7 +45,7 @@ export default function ThrustDetailPage({ params }) {
 
       {/* Back Navigation */}
       <div className="border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
-        <div className="container max-w-7xl px-6 py-4">
+        <div className="container max-w-6xl px-6 py-4">
           <Link 
             href="/research/thrusts"
             className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
@@ -59,7 +59,7 @@ export default function ThrustDetailPage({ params }) {
 
       {/* Page Header */}
       <section className="border-b" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
-        <div className="container max-w-7xl px-6 py-6 md:py-10">
+        <div className="container max-w-6xl px-6 py-6 md:py-10">
           <h1 
             className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-3"
             style={{ color: 'var(--brand)', maxWidth: '56rem' }}
@@ -76,7 +76,7 @@ export default function ThrustDetailPage({ params }) {
       </section>
 
       {/* Main Content */}
-      <div className="container max-w-7xl px-6 py-8 md:py-10">
+      <div className="container max-w-6xl px-6 py-8 md:py-10">
         <article className="space-y-10">
           
           {/* Overview Section */}
@@ -167,7 +167,7 @@ export default function ThrustDetailPage({ params }) {
                     style={{ 
                       background: 'white',
                       padding: '14px',
-                      border: '1px solid var(--border)',
+                      border: '1px solid #D7E6F2',
                       boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
                     }}
                   >

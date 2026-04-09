@@ -2,7 +2,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default function ResearchObjectivesPage() {
   return (
-    <div style={{ background: 'var(--bg)' }}>
+    <div style={{ background: '#f8fafc' }}>
       <Breadcrumbs 
         items={[
           { label: 'Research', href: '/research/study-areas' },
@@ -11,26 +11,36 @@ export default function ResearchObjectivesPage() {
       />
       
       {/* Page Hero */}
-      <section className="page-hero">
-        <div className="container max-w-7xl px-6">
+      <section 
+        className="py-6 md:py-8"
+        style={{ background: 'white', borderBottom: '1px solid rgba(12, 35, 64, 0.1)' }}
+      >
+        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1100px' }}>
           <div className="accent-bar mb-4" />
           <h1 
-            className="page-hero-title mb-3"
+            className="text-2xl md:text-3xl font-bold mb-3 leading-tight"
+            style={{ color: '#0c2340' }}
           >
             Research Objectives
           </h1>
+          <p 
+            className="text-base leading-relaxed"
+            style={{ color: '#64748b' }}
+          >
+            Our project goals for advancing equitable clean energy transitions and community health.
+          </p>
         </div>
       </section>
 
       {/* Main Content */}
       <div className="py-8 md:py-12">
-        <div className="container max-w-7xl px-6">
+        <div className="mx-auto px-4 md:px-6" style={{ maxWidth: '1100px' }}>
           
           {/* Overview Section */}
           <section className="mb-10 md:mb-12">
             <h2 
               className="text-lg md:text-xl font-bold mb-4 pb-2 border-b"
-              style={{ color: 'var(--text)', borderColor: 'var(--border)' }}
+              style={{ color: '#0c2340', borderColor: 'rgba(12, 35, 64, 0.1)' }}
             >
               Overview
             </h2>
@@ -38,7 +48,7 @@ export default function ResearchObjectivesPage() {
             {/* Intro Paragraph */}
             <p 
               className="text-base leading-7 mb-6"
-              style={{ color: 'var(--muted)', maxWidth: '75ch' }}
+              style={{ color: '#374151', maxWidth: '75ch' }}
             >
               This project develops a community-centered sociotechnical framework and decision-support tool to help policymakers and researchers assess the multidimensional impacts of extreme weather on low- and moderate-income (LMI) communities. Using participatory approaches and mixed methods, we advance equitable clean energy transitions while building long-term capacity for community resilience and health improvement.
             </p>
@@ -71,7 +81,7 @@ export default function ResearchObjectivesPage() {
                     />
                     <span 
                       className="text-base leading-6"
-                      style={{ color: 'var(--muted)' }}
+                      style={{ color: '#475569' }}
                     >
                       {item}
                     </span>
@@ -88,7 +98,7 @@ export default function ResearchObjectivesPage() {
           <section>
             <h2 
               className="text-lg md:text-xl font-bold mb-5 pb-2 border-b"
-              style={{ color: 'var(--text)', borderColor: 'var(--border)' }}
+              style={{ color: '#0c2340', borderColor: 'rgba(12, 35, 64, 0.1)' }}
             >
               Specific Objectives
             </h2>
@@ -111,13 +121,13 @@ export default function ResearchObjectivesPage() {
                   <div className="flex-1 min-w-0">
                     <h3 
                       className="text-sm font-semibold mb-1 leading-snug"
-                      style={{ color: 'var(--text)' }}
+                      style={{ color: '#0c2340' }}
                     >
                       Identify & Explain Bundled Disadvantages
                     </h3>
                     <p 
                       className="text-sm leading-relaxed"
-                      style={{ color: 'var(--muted)', maxWidth: '72ch' }}
+                      style={{ color: '#64748b', maxWidth: '55ch' }}
                     >
                       Examine how extreme weather exposure, household energy burdens, power outages, and built environment challenges combine to affect health outcomes in low- and moderate-income communities. The study operationalizes socioeconomic, behavioral, and environmental dimensions of vulnerability.
                     </p>
@@ -140,13 +150,13 @@ export default function ResearchObjectivesPage() {
                   <div className="flex-1 min-w-0">
                     <h3 
                       className="text-sm font-semibold mb-1 leading-snug"
-                      style={{ color: 'var(--text)' }}
+                      style={{ color: '#0c2340' }}
                     >
                       Co-Develop Climate Mitigation Solutions
                     </h3>
                     <p 
                       className="text-sm leading-relaxed"
-                      style={{ color: 'var(--muted)', maxWidth: '72ch' }}
+                      style={{ color: '#64748b', maxWidth: '55ch' }}
                     >
                       Work with communities to design clean-energy strategies and evaluate the health co-benefits of integrated weatherization, electrification, and community microgrid adoption.
                     </p>
@@ -169,13 +179,13 @@ export default function ResearchObjectivesPage() {
                   <div className="flex-1 min-w-0">
                     <h3 
                       className="text-sm font-semibold mb-1 leading-snug"
-                      style={{ color: 'var(--text)' }}
+                      style={{ color: '#0c2340' }}
                     >
                       Create Community Co-Designed Pathways
                     </h3>
                     <p 
                       className="text-sm leading-relaxed"
-                      style={{ color: 'var(--muted)', maxWidth: '72ch' }}
+                      style={{ color: '#64748b', maxWidth: '55ch' }}
                     >
                       Develop participatory implementation pathways that center local priorities while scaling successful models from local demonstration projects to regional and national applications.
                     </p>
@@ -198,13 +208,13 @@ export default function ResearchObjectivesPage() {
                   <div className="flex-1 min-w-0">
                     <h3 
                       className="text-sm font-semibold mb-1 leading-snug"
-                      style={{ color: 'var(--text)' }}
+                      style={{ color: '#0c2340' }}
                     >
                       Apply Evidence-Based Principles
                     </h3>
                     <p 
                       className="text-sm leading-relaxed"
-                      style={{ color: 'var(--muted)', maxWidth: '72ch' }}
+                      style={{ color: '#64748b', maxWidth: '55ch' }}
                     >
                       Ensure meaningful participation across diverse communities by integrating equity, representation, and accountability into research design and community engagement.
                     </p>

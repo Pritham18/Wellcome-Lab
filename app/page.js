@@ -284,7 +284,7 @@ export default function Home() {
               {
                 name: 'Clemson University',
                 logo: '/images/partners/clemson.png',
-                href: 'https://www.clemson.edu/',
+                href: 'https://www.clemson.edu/cbshs/',
               },
               {
                 name: 'Southeast Energy Efficiency Alliance (SEEA)',

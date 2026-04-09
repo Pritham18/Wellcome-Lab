@@ -16,8 +16,8 @@ const resourceData = [
     description: 'This section highlights nationally representative longitudinal and population-based datasets widely used in public health and social science research. These resources support research on health behaviors, health outcomes, social determinants of health, and life-course dynamics, and are valuable for studies linking health, housing, energy, and environmental conditions.',
     subcategories: [
       {
-        id: 'ph-datasets',
-        label: 'All Datasets',
+        id: 'ph-national',
+        label: 'National Datasets',
         resources: [
           {
             title: 'National Longitudinal Study of Adolescent to Adult Health (Add Health)',
@@ -41,6 +41,17 @@ const resourceData = [
           },
         ],
       },
+      {
+        id: 'ph-state',
+        label: 'State Datasets',
+        resources: [
+          {
+            title: 'South Carolina Department of Public Health - SC Tracking',
+            url: 'https://scdhec.gov/',
+            description: 'The South Carolina (SC) Tracking Program\'s mission is to provide a network of integrated health and environmental data to reduce the burden of environmental health conditions on South Carolinians and their families.',
+          },
+        ],
+      },
     ],
   },
   {
@@ -56,12 +67,12 @@ const resourceData = [
         resources: [
           {
             title: 'How Weatherization Works',
-            url: 'https://www.energy.gov/scep/weatherization/how-weatherization-works',
+            url: 'https://www.energy.gov/scep/slsc/weatherization-assistance-program',
             description: 'An overview of common weatherization measures used to improve home energy performance and living conditions. These measures include insulation upgrades, air sealing, heating and cooling system improvements, and basic health and safety checks. Weatherization helps reduce energy loss, lower utility costs, improve indoor comfort, and support healthier housing environments for households.',
           },
           {
             title: 'Weatherization and Health & Safety',
-            url: 'https://www.energy.gov/scep/weatherization/health-and-safety',
+            url: 'https://www.energy.gov/scep/slsc/weatherization-assistance-program',
             description: 'Information on how the U.S. Department of Energy\u2019s Weatherization Assistance Program addresses health and safety concerns in homes. The program focuses on improving indoor air quality, managing moisture and mold risks, enhancing ventilation, and ensuring safe operation of heating systems, while protecting residents\u2019 health during energy efficiency upgrades and home improvements.',
           },
           {
@@ -83,7 +94,7 @@ const resourceData = [
           },
           {
             title: 'Indoor Air Quality Tools for Homes',
-            url: 'https://www.epa.gov/indoor-air-quality-iaq/iaq-tools-home',
+            url: 'https://www.epa.gov/iaq-schools',
             description: 'Practical guidance for reducing indoor pollutants, improving ventilation, and maintaining healthy living environments in residential buildings. These tools provide easy-to-use recommendations for identifying common indoor air contaminants, managing moisture and mold, improving airflow, and adopting everyday practices that support healthier homes and better indoor environmental quality for families.',
           },
           {
@@ -94,13 +105,13 @@ const resourceData = [
           },
           {
             title: 'Low-Income Energy Affordability Network (LEAN)',
-            url: 'https://www.li-en.org',
+            url: 'https://masslean.org/',
             description: 'A collaborative network that shares best practices, research, and practical resources to support energy affordability and efficiency programs for low-income households. LEAN connects policymakers, utilities, community organizations, and researchers to improve program design, expand access to energy assistance, and promote equitable energy efficiency and weatherization initiatives nationwide.',
           },
           {
             group: 'Reports & Evidence-Based Resources',
             title: 'Weatherization Plus Health Initiative (DOE)',
-            url: 'https://www.energy.gov/scep/weatherization/weatherization-plus-health',
+            url: 'https://www.energy.gov/eere/wap/weatherization-plus-health',
             description: 'A U.S. Department of Energy initiative that integrates home energy efficiency improvements with targeted health interventions. The program promotes collaboration between weatherization providers, public health agencies, and community organizations to address housing-related health risks, improve indoor environments, and maximize both energy savings and health benefits for vulnerable households.',
           },
           {
@@ -111,13 +122,25 @@ const resourceData = [
         ],
       },
       {
+        id: 'weatherization-state',
+        label: 'State Weatherization Resources',
+        description: 'State-level weatherization programs and assistance resources.',
+        resources: [
+          {
+            title: 'South Carolina Office of Economic Opportunity – Weatherization Assistance Program',
+            url: 'https://oepp.sc.gov/weatherization',
+            description: 'Provides resources and funds to help South Carolina residents adapt to healthy homes initiative.',
+          },
+        ],
+      },
+      {
         id: 'electrification',
         label: 'B. Electrification',
         description: 'Resources on building electrification, clean energy transitions, and household energy usage.',
         resources: [
           {
             title: 'Energy Saver Home Electrification',
-            url: 'https://www.energy.gov/energysaver/electrification',
+            url: 'https://www.energy.gov/energysaver/heat-pump-systems',
             description: 'Consumer-focused guidance from the U.S. Department of Energy on transitioning homes to electric technologies. The resource explains electric heating and cooling systems, induction cooking, water heating, and efficient appliances, while providing practical information on costs, benefits, and energy savings associated with residential electrification and cleaner home energy solutions.',
           },
           {
@@ -134,8 +157,20 @@ const resourceData = [
           },
           {
             title: 'ACEEE Building Electrification',
-            url: 'https://www.aceee.org/topic/building-electrification',
+            url: 'https://www.aceee.org/',
             description: 'Research and policy analysis from the American Council for an Energy-Efficient Economy (ACEEE) examining the impacts of building electrification on energy affordability, greenhouse gas emissions, and public health. These resources provide data-driven insights, policy recommendations, and technical analysis to support equitable, efficient, and low-carbon transitions in residential and commercial buildings.',
+          },
+        ],
+      },
+      {
+        id: 'electrification-state',
+        label: 'State Electrification Resources',
+        description: 'State and local policy databases and resources for building electrification.',
+        resources: [
+          {
+            title: 'American Council for an Energy-Efficient Economy State and Local Policy Database',
+            url: 'https://database.aceee.org/',
+            description: 'ACEEE\'s State and Local Policy Database includes comprehensive information on energy efficiency policies currently implemented at the state and local level. The database tracks policy activity across multiple sectors, including government, utilities, transportation, buildings, combined heat and power, and appliance standards. Click a state or city on the map to learn more about the policies that encourage energy efficiency in each area.',
           },
         ],
       },
@@ -152,25 +187,42 @@ const resourceData = [
           },
           {
             title: 'IAQ Tools for Homes',
-            url: 'https://www.epa.gov/indoor-air-quality-iaq/iaq-tools-homes',
+            url: 'https://www.epa.gov/indoor-air-quality-iaq',
             description: 'Practical, easy-to-use resources developed by the U.S. Environmental Protection Agency to help households and community educators understand and improve indoor air quality. These tools provide guidance on identifying common indoor pollutants, improving ventilation, controlling moisture and mold, and adopting everyday practices that support healthier home environments.',
           },
           {
             group: 'Centers for Disease Control and Prevention (CDC)',
             title: 'Healthy Homes',
-            url: 'https://www.cdc.gov/healthyhomes',
+            url: 'https://www.cdc.gov/healthyhomes/index.html',
             description: 'Resources from the Centers for Disease Control and Prevention (CDC) that provide information on housing-related health risks and strategies for creating safer home environments. These materials address issues such as mold, combustion pollutants, ventilation, pests, and chemical exposures, while offering guidance to reduce environmental hazards and protect residents\u2019 health.',
           },
           {
             group: 'Research & Public Health Resources',
             title: 'Harvard T.H. Chan \u2013 Indoor Air Quality & Health',
-            url: 'https://www.hsph.harvard.edu/iaq/',
+            url: 'https://www.hsph.harvard.edu/environmental-health/research/the-center-for-climate-health-and-the-global-environment/',
             description: 'Research and educational resources from the Harvard T.H. Chan School of Public Health examining the relationships between indoor environments, air pollution exposure, and human health outcomes. These materials highlight scientific studies on ventilation, indoor pollutants, and building conditions, providing evidence to support healthier homes, workplaces, and public buildings.',
           },
           {
             title: 'WHO Housing and Health Guidelines',
             url: 'https://www.who.int/publications/i/item/9789241550376',
             description: 'Evidence-based recommendations from the World Health Organization on how housing conditions influence health and well-being. The guidelines summarize global research on issues such as indoor air quality, temperature, crowding, noise, and building safety, providing policy guidance to support healthier housing environments and reduce health risks associated with poor living conditions.',
+          },
+        ],
+      },
+      {
+        id: 'iaq-state',
+        label: 'State Air Quality Resources',
+        description: 'State and regional air quality programs and resources.',
+        resources: [
+          {
+            title: 'South Carolina Department of Environmental Services – Bureau of Air Quality',
+            url: 'https://scdhec.gov/',
+            description: 'Protects and improves South Carolina\'s air quality through the development, implementation, and enforcement of state and federal air quality programs. BAQ oversees air permitting and regulatory compliance to reduce air pollution and protect public health, provides air quality construction and operating permits for industrial, commercial, and institutional facilities and supports these efforts with air quality modeling, technical assistance, and daily ozone forecasts.',
+          },
+          {
+            title: 'United States Environmental Protection Agency (EPA) Region 4 (Southeast)',
+            url: 'https://www.epa.gov/aboutepa/about-epa-region-4-southeast',
+            description: 'Provides resources, information and Service to the Southeast region including Alabama, Florida, Georgia, Kentucky, Mississippi, North Carolina, South Carolina, Tennessee and 7 Tribes.',
           },
         ],
       },
@@ -182,12 +234,12 @@ const resourceData = [
           {
             group: 'U.S. Department of Energy (DOE)',
             title: 'Community Microgrids',
-            url: 'https://www.energy.gov/oe/community-microgrids',
+            url: 'https://www.energy.gov/oe/microgrids-0',
             description: 'An overview of how community microgrids enhance energy resilience, reliability, and equity, particularly during extreme weather events and power outages. These resources explain how locally controlled energy systems\u2014often integrating renewable energy and storage\u2014can maintain critical services, support vulnerable communities, and strengthen grid reliability while advancing cleaner and more decentralized energy systems.',
           },
           {
             title: 'Office of Electricity \u2013 Microgrid Research',
-            url: 'https://www.energy.gov/oe/microgrids',
+            url: 'https://www.energy.gov/oe/microgrid-program',
             description: 'Research programs from the U.S. Department of Energy\u2019s Office of Electricity that support the planning, design, testing, and deployment of microgrid systems. These initiatives advance technologies, tools, and demonstration projects that improve grid reliability, integrate renewable energy, and strengthen energy resilience for communities, critical infrastructure, and essential services.',
           },
           {
@@ -198,7 +250,7 @@ const resourceData = [
           },
           {
             title: 'Resilient Energy Systems & Microgrids',
-            url: 'https://www.nrel.gov/resilience',
+            url: 'https://www.nrel.gov/grid/community-resilience.html',
             description: 'Research from the National Renewable Energy Laboratory (NREL) on how resilient energy systems and microgrids can support critical facilities and vulnerable communities. These resources examine strategies for integrating distributed energy, storage, and advanced controls to maintain power during disruptions, enhance grid resilience, and improve energy security in the face of extreme weather and climate risks.',
           },
           {
@@ -236,8 +288,8 @@ const resourceData = [
         resources: [
           {
             group: 'Federal & National Resources',
-            title: 'FEMA \u2013 Building Community Resilience',
-            url: 'https://www.fema.gov/emergency-managers/risk-management/resilience',
+            title: 'FEMA – Building Community Resilience',
+            url: 'https://www.fema.gov/emergency-managers/national-preparedness/frameworks/resilience',
             description: 'Guidance from the Federal Emergency Management Agency (FEMA) on preparing for, responding to, and recovering from climate-related disasters and extreme weather events. These resources provide tools and strategies for risk assessment, hazard mitigation, infrastructure planning, and community preparedness to strengthen long-term resilience and reduce the impacts of natural hazards.',
           },
           {
@@ -253,7 +305,7 @@ const resourceData = [
           },
           {
             title: 'American Planning Association \u2013 Resilience & Hazard Mitigation',
-            url: 'https://www.planning.org/knowledgebase/resilience/',
+            url: 'https://www.planning.org/planning/2020/fall/climate-resilience/',
             description: 'Resources from the American Planning Association that provide planning frameworks and best practices for integrating climate resilience and hazard mitigation into community planning. These materials highlight strategies that connect climate risks, public health, land use, and infrastructure planning to help communities prepare for and adapt to environmental hazards.',
           },
           {
@@ -300,7 +352,7 @@ const resourceData = [
           },
           {
             title: 'Building Community Resilience (Federal Emergency Management Agency, FEMA)',
-            url: 'https://www.fema.gov/emergency-managers/risk-management/resilience',
+            url: 'https://www.fema.gov/emergency-managers/national-preparedness/frameworks/resilience',
             description: 'Guidance and tools developed by FEMA to help communities prepare for, respond to, and recover from climate-related disasters and extreme events. These resources support risk assessment, hazard mitigation planning, infrastructure protection, and community preparedness efforts that reduce disaster impacts and strengthen long-term resilience.',
           },
           {
@@ -337,7 +389,7 @@ const resourceData = [
           },
           {
             title: 'Resilience & Hazard Mitigation (American Planning Association)',
-            url: 'https://www.planning.org/knowledgebase/resilience/',
+            url: 'https://www.planning.org/planning/2020/fall/climate-resilience/',
             description: 'Planning frameworks and best practices that integrate climate risks, public health considerations, and infrastructure resilience into local and regional planning processes. These resources support planners and policymakers in developing strategies that reduce hazard impacts, strengthen community preparedness, and promote sustainable, resilient development in the face of climate and environmental challenges.',
           },
         ],
@@ -399,8 +451,18 @@ const resourceData = [
             description: 'The Nicholas Institute at Duke University conducts interdisciplinary research and policy analysis on environmental challenges. It supports resilience initiatives through data, education, and collaboration across academic, governmental, and community partners.',
           },
           {
+            title: 'University of California - Berkeley Risk-Resilience Lab',
+            url: 'https://risk.berkeley.edu/',
+            description: 'Develops and promotes data driven insights for a healthier safer communities, improve justice, safety and well-being for people and communities at risk, through policy-relevant research.',
+          },
+          {
+            title: 'Natural Hazards Center (University of Colorado Boulder)',
+            url: 'https://hazards.colorado.edu/',
+            description: 'A leading research and information hub dedicated to advancing knowledge on natural hazards, disasters, and risk reduction. The Natural Hazards Center connects researchers, practitioners, and policymakers to improve disaster preparedness, mitigation, response, and recovery through interdisciplinary research, data sharing, training programs, and collaboration that supports more resilient communities.',
+          },
+          {
             title: 'Building Healthy Communities at Clemson',
-            url: '',
+            url: 'https://www.clemson.edu/cbshs/',
             description:
               'Building Healthy Communities is a college-wide initiative to improve community health and well-being in South Carolina, works to improve lives through youth development and education access, social inclusion and community well-being, food security and the built environment, rural economic development, and access to health services.',
           },

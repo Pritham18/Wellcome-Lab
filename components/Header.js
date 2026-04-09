@@ -4,16 +4,14 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Search } from 'lucide-react'
+import { Menu, X, Search, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu'
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import { Input } from '@/components/ui/input'
 import {
   Popover,
@@ -176,129 +174,109 @@ export default function Header() {
               </Link>
               
               {/* Research Dropdown */}
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger 
-                      className="header-nav-item font-medium bg-transparent nav-header-link"
-                      style={{ 
-                        color: isResearchActive() ? 'var(--header-fg)' : 'var(--header-fg-muted)',
-                        textDecoration: isResearchActive() ? 'underline' : 'none',
-                        textDecorationColor: 'rgba(255,255,255,0.9)',
-                        textDecorationThickness: '2px',
-                        textUnderlineOffset: '4px'
-                      }}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className="header-nav-item font-medium bg-transparent nav-header-link inline-flex items-center gap-1 cursor-pointer border-0 outline-none"
+                    style={{ 
+                      color: isResearchActive() ? 'var(--header-fg)' : 'var(--header-fg-muted)',
+                      textDecoration: isResearchActive() ? 'underline' : 'none',
+                      textDecorationColor: 'rgba(255,255,255,0.9)',
+                      textDecorationThickness: '2px',
+                      textUnderlineOffset: '4px'
+                    }}
+                  >
+                    Research
+                    <ChevronDown className="h-3 w-3" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-[240px] bg-white rounded-lg shadow-lg border" style={{ borderColor: 'var(--border)' }}>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="/research/objectives"
+                      className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap cursor-pointer"
+                      style={{ color: 'var(--text)' }}
                     >
-                      Research
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[240px] gap-0 p-2 bg-white rounded-lg shadow-lg border" style={{ borderColor: 'var(--border)' }}>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/research/objectives"
-                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
-                              style={{ color: 'var(--text)' }}
-                            >
-                              Research Objectives
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/research/study-areas"
-                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
-                              style={{ color: 'var(--text)' }}
-                            >
-                              Study Areas
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/research/thrusts"
-                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
-                              style={{ color: 'var(--text)' }}
-                            >
-                              Thrusts
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/research/data"
-                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
-                              style={{ color: 'var(--text)' }}
-                            >
-                              Data
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/research/publications"
-                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap"
-                              style={{ color: 'var(--text)' }}
-                            >
-                              Publications
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+                      Research Objectives
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="/research/study-areas"
+                      className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap cursor-pointer"
+                      style={{ color: 'var(--text)' }}
+                    >
+                      Study Areas
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="/research/thrusts"
+                      className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap cursor-pointer"
+                      style={{ color: 'var(--text)' }}
+                    >
+                      Thrusts
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="/research/data"
+                      className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap cursor-pointer"
+                      style={{ color: 'var(--text)' }}
+                    >
+                      Data
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="/research/publications"
+                      className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] whitespace-nowrap cursor-pointer"
+                      style={{ color: 'var(--text)' }}
+                    >
+                      Publications
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* Resources Dropdown */}
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger 
-                      className="header-nav-item font-medium bg-transparent nav-header-link"
-                      style={{ 
-                        color: isResourcesActive() ? 'var(--header-fg)' : 'var(--header-fg-muted)',
-                        textDecoration: isResourcesActive() ? 'underline' : 'none',
-                        textDecorationColor: 'rgba(255,255,255,0.9)',
-                        textDecorationThickness: '2px',
-                        textUnderlineOffset: '4px'
-                      }}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className="header-nav-item font-medium bg-transparent nav-header-link inline-flex items-center gap-1 cursor-pointer border-0 outline-none"
+                    style={{ 
+                      color: isResourcesActive() ? 'var(--header-fg)' : 'var(--header-fg-muted)',
+                      textDecoration: isResourcesActive() ? 'underline' : 'none',
+                      textDecorationColor: 'rgba(255,255,255,0.9)',
+                      textDecorationThickness: '2px',
+                      textUnderlineOffset: '4px'
+                    }}
+                  >
+                    Resources
+                    <ChevronDown className="h-3 w-3" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-[180px] bg-white rounded-lg shadow-lg border" style={{ borderColor: 'var(--border)' }}>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="/resources"
+                      className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] cursor-pointer"
+                      style={{ color: 'var(--text)' }}
                     >
                       Resources
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[180px] gap-0 p-2 bg-white rounded-lg shadow-lg border" style={{ borderColor: 'var(--border)' }}>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/resources"
-                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)]"
-                              style={{ color: 'var(--text)' }}
-                            >
-                              Resources
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/resources/news"
-                              className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)]"
-                              style={{ color: 'var(--text)' }}
-                            >
-                              News
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="/resources/news"
+                      className="block select-none rounded-md px-3 py-2 header-dropdown-item font-medium leading-none no-underline outline-none transition-colors hover:bg-[var(--surface)] cursor-pointer"
+                      style={{ color: 'var(--text)' }}
+                    >
+                      News
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* Our Team */}
               <Link 
