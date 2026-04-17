@@ -8,6 +8,17 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 7,
+    category: 'Project Updates',
+    date: 'April 10, 2026',
+    title: 'Healthy Home Visits and Indoor Air Quality Monitoring Now Underway',
+    preview: 'Our team has started in-home visits to assess indoor air quality and home environment conditions as part of the Healthy Home Intervention project.',
+    detailPage: '/resources/news/healthy-home-visits-indoor-air-quality-monitoring',
+    bannerImage: '/images/news/healthy-home-visits.jpg',
+    bannerAlt: 'Research team preparing for a Healthy Home visit.',
+    fullContent: null
+  },
+  {
     id: 1,
     category: 'Workshops',
     date: 'Feb 26–27, 2026',
@@ -311,13 +322,13 @@ function NewsItem({
 }
 
 export default function NewsPage() {
-  const [activeCategory, setActiveCategory] = useState('Seminars')
+  const [activeCategory, setActiveCategory] = useState('Project Updates')
 
   // Filter news by selected category
   const filteredNews = newsData.filter(item => item.category === activeCategory)
 
   // Category options
-  const categories = ['Workshops', 'Seminars', 'Recognition']
+  const categories = ['Project Updates', 'Workshops', 'Seminars', 'Recognition']
 
   return (
     <div style={{ background: '#f8fafc' }}>
