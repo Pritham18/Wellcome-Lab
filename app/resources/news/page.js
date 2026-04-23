@@ -15,7 +15,7 @@ const newsData = [
     preview: 'Our team has started in-home visits to assess indoor air quality and home environment conditions as part of the Healthy Home Intervention project.',
     detailPage: '/resources/news/healthy-home-visits-indoor-air-quality-monitoring',
     bannerImage: '/images/news/healthy-home-visits.jpg',
-    bannerAlt: 'Research team preparing for a Healthy Home visit.',
+    bannerAlt: 'Research team installing sensor',
     fullContent: null
   },
   {

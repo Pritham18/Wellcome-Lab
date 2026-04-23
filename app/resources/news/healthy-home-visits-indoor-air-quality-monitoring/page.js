@@ -58,12 +58,12 @@ export default function HealthyHomeVisitsPage() {
               <div className="md:sticky md:top-24 md:self-start">
                 <img 
                   src="/images/news/healthy-home-visits.jpg"
-                  alt="Research team preparing for a Healthy Home visit"
+                  alt="Research team installing sensor"
                   className="w-full rounded-lg shadow-sm"
                   style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
                 />
                 <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
-                  Research team preparing for a Healthy Home visit
+                  Research team installing sensor
                 </p>
               </div>
 
