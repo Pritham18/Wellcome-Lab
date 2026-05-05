@@ -8,6 +8,17 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 8,
+    category: 'Recognition',
+    date: 'April 16, 2026',
+    title: 'Congratulations to the 2026 Department Chair\'s Award Recipients',
+    preview: 'Congratulations to Colin Cunniff and Delaney Grimaldi, recipients of the 2026 Department Chair\'s Award from Clemson University\'s College of Behavioral, Social and Health Sciences. This recognition celebrates their outstanding contributions, academic excellence, and commitment to the department\'s mission.',
+    detailPage: '/resources/news/department-chairs-award-recipients-2026',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: null
+  },
+  {
     id: 7,
     category: 'Project Updates',
     date: 'April 10, 2026',
