@@ -389,11 +389,11 @@ export default function Home() {
                   lineHeight: '1.7',
                 }}
               >
-                Empower Health is funded by the Wellcome Trust under the project{' '}
+                Empower Health is funded by the Wellcome Trust under the program{' '}
                 <em style={{ fontStyle: 'italic', color: 'rgba(255, 255, 255, 0.9)' }}>
                   "Advancing climate mitigation policy solutions with health co-benefits in G7 countries"
                 </em>{' '}
-                (Project No. 227151/Z/23/Z).
+                (No. 227151/Z/23/Z).
               </p>
             </div>
           </div>

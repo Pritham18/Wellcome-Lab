@@ -233,7 +233,7 @@ export default function AboutPage() {
               </p>
               <div className="h-px mb-3" style={{ background: 'var(--border)' }} />
               <p className="text-sm leading-7" style={{ color: 'var(--muted)' }}>
-                <span className="font-semibold" style={{ color: 'var(--text)' }}>Funding Acknowledgement:</span> This project is funded by the Wellcome Trust under Advancing Climate Mitigation Policy Solutions with Health Co-benefits in G7 Countries (Project No 227151/Z/23/Z).
+                <span className="font-semibold" style={{ color: 'var(--text)' }}>Funding Acknowledgement:</span> This project is funded by the Wellcome Trust under Advancing Climate Mitigation Policy Solutions with Health Co-benefits in G7 Countries (Program No 227151/Z/23/Z).
               </p>
             </div>
           </div>
