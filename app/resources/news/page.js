@@ -8,6 +8,28 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 10,
+    category: 'Seminars',
+    date: 'May 21, 2026',
+    title: 'Dr. Chen Presented Built Environment, Energy Burden, Power Outages, and Health at the WM-NET ZERO Group at the University of Birmingham',
+    preview: 'Dr. Chen presented research on the multilevel links among the built environment, energy burden, power outages, and health outcomes to another Wellcome project group, WM-NET ZERO group, at the University of Birmingham on May 21, 2026.',
+    detailPage: '/resources/news/dr-chen-presented-built-environment-energy-burden-power-outages-and-health-at-the-wm-net-zero-group-at-the-university-of-birmingham',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: null
+  },
+  {
+    id: 9,
+    category: 'Research Updates',
+    date: 'May 2026',
+    title: 'Weatherization Research Highlights Health and Energy Benefits for Low-Income Households',
+    preview: 'A new report highlights how residential weatherization programs can improve indoor living conditions, reduce household energy burdens, and support long-term community resilience in low-income households across the United States.',
+    detailPage: '/resources/news/weatherization-research-highlights-health-and-energy-benefits-for-low-income-households',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: null
+  },
+  {
     id: 8,
     category: 'Recognition',
     date: 'April 16, 2026',
@@ -339,7 +361,7 @@ export default function NewsPage() {
   const filteredNews = newsData.filter(item => item.category === activeCategory)
 
   // Category options
-  const categories = ['Project Updates', 'Workshops', 'Seminars', 'Recognition']
+  const categories = ['Project Updates', 'Research Updates', 'Workshops', 'Seminars', 'Recognition']
 
   return (
     <div style={{ background: '#f8fafc' }}>
