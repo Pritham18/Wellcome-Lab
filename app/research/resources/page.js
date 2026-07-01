@@ -1,7 +1,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { FileText, ExternalLink } from 'lucide-react'
+import { FileText, ExternalLink, Download } from 'lucide-react'
 
 export default function ResourcesPage() {
   return (
@@ -32,7 +32,51 @@ export default function ResourcesPage() {
           <section>
             <h2 className="mb-8">Our Publications</h2>
             <div className="space-y-6">
-              {/* Publication 1 */}
+              {/* Publication — New 2026 */}
+              <Card className="section-card">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <FileText className="h-6 w-6" style={{ color: 'var(--brand)' }} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 leading-tight">
+                        Mapping climate-conditioned PM2.5 response under climate change in Taiwan using a high-resolution Geo-AI model
+                      </h3>
+                      <p className="text-sm mb-1" style={{ color: 'var(--muted)' }}>
+                        Journal of Environmental Management · 2026
+                      </p>
+                      <a href="/publications/pm25-geoai-taiwan-2026.pdf" target="_blank" rel="noopener noreferrer" className="text-xs hover:underline" style={{ color: 'var(--brand)' }}>
+                        Download PDF →
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Publication — New 2026 */}
+              <Card className="section-card">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <FileText className="h-6 w-6" style={{ color: 'var(--brand)' }} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 leading-tight">
+                        A utility-level analysis of residential electricity use: Governance, pricing, and incentive programs in the Southeastern U.S.
+                      </h3>
+                      <p className="text-sm mb-1" style={{ color: 'var(--muted)' }}>
+                        Energy Policy · 2026
+                      </p>
+                      <a href="/publications/utility-level-residential-electricity-use-2026.pdf" target="_blank" rel="noopener noreferrer" className="text-xs hover:underline" style={{ color: 'var(--brand)' }}>
+                        Download PDF →
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Publication 1 — existing */}
               <Card className="section-card">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
@@ -104,7 +148,94 @@ export default function ResourcesPage() {
             </div>
           </section>
 
-          {/* Section 2: Data Tools */}
+          {/* Section 3: Project Resources */}
+          <section>
+            <h2 className="mb-8">Project Resources</h2>
+
+            {/* Category: Energy & Housing */}
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text)' }}>
+              Energy &amp; Housing
+            </h3>
+            <div className="space-y-6 mb-10">
+              <Card className="section-card hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <FileText className="h-6 w-6" style={{ color: 'var(--brand)' }} />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold mb-2 leading-tight">
+                        TVA Home Uplift Metro Areas Final Report on Non-Energy Impacts (2022)
+                      </h4>
+                      <p className="text-sm mb-3 leading-relaxed" style={{ color: 'var(--muted)' }}>
+                        Final report evaluating non-energy impacts of the TVA Home Uplift weatherization pilot, including energy affordability, indoor environmental quality, household well-being, and health-related outcomes.
+                      </p>
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="rounded-lg"
+                        style={{ borderColor: 'var(--border)', color: 'var(--brand)' }}
+                      >
+                        <a
+                          href="/publications/tva-home-uplift-nei-final-report-2022.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2"
+                        >
+                          Download PDF
+                          <Download className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Category: Public Health Data & Longitudinal Surveys */}
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text)' }}>
+              Public Health Data &amp; Longitudinal Surveys
+            </h3>
+            <div className="space-y-6">
+              <Card className="section-card hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <FileText className="h-6 w-6" style={{ color: 'var(--brand)' }} />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold mb-2 leading-tight">
+                        TVA Home Uplift Survey for Residents – Round 2 Full Packet
+                      </h4>
+                      <p className="text-sm mb-3 leading-relaxed" style={{ color: 'var(--muted)' }}>
+                        Resident survey packet for evaluating non-energy impacts of the Home Uplift program, including household conditions, indoor temperature, energy security, and health-related survey measures.
+                      </p>
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="rounded-lg"
+                        style={{ borderColor: 'var(--border)', color: 'var(--brand)' }}
+                      >
+                        <a
+                          href="/publications/tva-home-uplift-survey-round-2-packet.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2"
+                        >
+                          Download PDF
+                          <Download className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
+          {/* Section 4: Data Tools */}
           <section>
             <h2 className="mb-8">Data Tools</h2>
             <div className="space-y-6">

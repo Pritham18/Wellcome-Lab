@@ -192,6 +192,57 @@ export default function ThrustDetailPage({ params }) {
             </section>
           )}
 
+          {/* Educational Materials & Tools Section for Thrust 5 */}
+          {thrust.educationalMaterialsSection && (
+            <section style={{ marginTop: '2.5rem' }}>
+              <h2 
+                className="text-xl font-bold mb-2 pb-2 border-b"
+                style={{ color: 'var(--text)', borderColor: 'var(--border)' }}
+              >
+                {thrust.educationalMaterialsSection.title}
+              </h2>
+              <p className="text-base leading-7 mb-6" style={{ color: 'var(--muted)' }}>
+                {thrust.educationalMaterialsSection.description}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {thrust.educationalMaterialsSection.resources.map((resource, index) => (
+                  <div
+                    key={index}
+                    className="rounded-xl overflow-hidden"
+                    style={{
+                      background: 'white',
+                      padding: '14px',
+                      border: '1px solid #D7E6F2',
+                      boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
+                    }}
+                  >
+                    <img
+                      src={resource.src}
+                      alt={resource.alt}
+                      className="w-full h-auto rounded-lg"
+                      style={{ maxWidth: '100%', objectFit: 'contain' }}
+                    />
+                    <p className="text-sm mt-2 text-center" style={{ color: 'var(--muted)' }}>
+                      {resource.caption}
+                    </p>
+                    {resource.downloadHref && (
+                      <div className="mt-3 text-center">
+                        <a
+                          href={resource.downloadHref}
+                          download
+                          className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-md transition-colors"
+                          style={{ background: 'rgba(11,95,165,0.08)', color: '#0B5FA5' }}
+                        >
+                          Download Flyer
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
           {/* Research Focus & Methods */}
           <section>
             <h2 

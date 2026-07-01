@@ -4,6 +4,59 @@ import { notFound } from 'next/navigation'
 
 // This would typically come from a CMS or database
 const articles = {
+  'iaq-educational-materials': {
+    title: 'Project Update: Indoor Air Quality Educational Materials Developed',
+    date: 'June 30, 2026',
+    author: 'Empower Health Research Team',
+    category: 'Project Updates',
+    image: '/images/iaq-flyer-final.png',
+    imageAlt: 'Indoor Air Quality Educational Flyer developed for the Healthy Home Intervention Project',
+    content: `
+      <p>The Healthy Home Intervention Project has developed a new educational resource to help participating households better understand indoor air quality (IAQ) and interpret the information collected by indoor environmental monitors.</p>
+      
+      <p>The guide explains common indoor air quality indicators—including PM₂.₅, CO₂, and volatile organic compounds (VOCs)—using clear language and practical examples. It also highlights common indoor pollutant sources, potential health impacts, and simple actions households can take to improve indoor air quality.</p>
+      
+      <p>By combining environmental monitoring with accessible educational materials, the project aims to support participants in making informed decisions about their home environment while promoting healthier homes and improved well-being.</p>
+      
+      <p>This work is part of the Wellcome-funded research program "Advancing Climate Mitigation Policy Solutions with Health Co-benefits in G7 Countries", which explores how healthy housing interventions can reduce energy burden while improving indoor environmental quality and health.</p>
+    `
+  },
+  'sc-gullah-geechee-summit': {
+    title: 'Community Partner Event: South Carolina Gullah Geechee Summit',
+    date: 'June 30, 2026',
+    author: 'Empower Health Research Team',
+    category: 'Workshops',
+    content: `
+      <p>We are pleased to share this event hosted by one of our valued community partners, the Gullah Geechee Cultural Heritage Corridor.</p>
+      
+      <p>The South Carolina Gullah Geechee Summit was scheduled for June 25–26, 2026, in Georgetown, South Carolina. The summit brought together community leaders, researchers, preservation professionals, and local organizations to discuss Gullah Geechee culture, language preservation, land stewardship, cultural tourism, and community resilience.</p>
+      
+      <p>The event will feature community workshops, panel discussions, networking opportunities, and a keynote address by Ron Daise, a nationally recognized advocate for Gullah Geechee heritage.</p>
+      
+      <p>As part of our commitment to community-engaged research and collaborative partnerships, we are excited to support and highlight events that strengthen cultural heritage and community resilience.</p>
+      
+      <p><strong>📅 Date:</strong> June 25–26, 2026<br/><strong>📍 Location:</strong> Georgetown, South Carolina</p>
+      
+      <p>For registration and additional information, please scan the QR code on the event flyer or visit the event registration page.</p>
+    `
+  },
+  'faculty-spotlight-chen-camhr': {
+    title: 'Faculty Spotlight: Dr. Chien-fei Chen Featured by Clemson CAMHR',
+    date: 'June 30, 2026',
+    author: 'Empower Health Research Team',
+    category: 'Recognition',
+    content: `
+      <p>We are delighted to share that Dr. Chien-fei Chen, Professor of Sociology at Clemson University and Director of the Greater Resilience, Innovation & Transformation (GRIT) Lab, has been featured by Clemson University's Center on Addiction and Mental Health Research (CAMHR) as one of its faculty affiliates.</p>
+      
+      <p>Dr. Chen's interdisciplinary research brings together climate change, energy systems, environmental justice, public health, and community resilience to address some of today's most pressing societal challenges. Her work examines how social, behavioral, technological, and built-environment factors influence energy insecurity, infrastructure resilience, environmental exposures, and health outcomes, particularly among underserved communities.</p>
+      
+      <p>Among her current research initiatives are community-based healthy home interventions, energy justice, climate resilience, power outages, microgrids, and the impacts of rapidly growing data centers on public and population health. Working closely with healthcare providers, nonprofit organizations, utilities, policymakers, and community partners, Dr. Chen's research supports evidence-based solutions that promote healthier, more resilient, and more equitable communities.</p>
+      
+      <p>Supported by organizations including the Wellcome Trust, the U.S. National Science Foundation (NSF), the U.S. Environmental Protection Agency (EPA), and the Alfred P. Sloan Foundation, Dr. Chen has led numerous interdisciplinary projects advancing climate mitigation and health co-benefits through research, community engagement, and policy innovation.</p>
+      
+      <p>We congratulate Dr. Chen on this recognition and look forward to continuing to share the impacts of our research through the Wellcome Climate–Energy–Health Resilience Project.</p>
+    `
+  },
   'community-microgrid-launch': {
     title: 'Community Microgrid Project Launches in Study Area 1',
     date: 'January 15, 2026',
@@ -155,6 +208,17 @@ export default function NewsArticlePage({ params }) {
 
       <div className="container max-w-7xl px-6 py-8 md:py-10">
         <article className="max-w-4xl mx-auto">
+          {/* Featured Image */}
+          {article.image && (
+            <div className="mb-8 rounded-xl overflow-hidden border" style={{ borderColor: 'var(--border)' }}>
+              <img
+                src={article.image}
+                alt={article.imageAlt || article.title}
+                className="w-full h-auto"
+                style={{ display: 'block' }}
+              />
+            </div>
+          )}
           {/* Article Content */}
           <div 
             className="prose prose-lg max-w-none section-card"
