@@ -6,27 +6,6 @@ import { Calendar } from 'lucide-react'
 
 const newsArticles = [
   {
-    slug: 'iaq-educational-materials',
-    title: 'Project Update: Indoor Air Quality Educational Materials Developed',
-    excerpt: 'The Healthy Home Intervention Project has developed a new educational resource to help participating households better understand indoor air quality and interpret information from indoor environmental monitors.',
-    date: 'June 30, 2026',
-    category: 'Project Updates'
-  },
-  {
-    slug: 'sc-gullah-geechee-summit',
-    title: 'Community Partner Event: South Carolina Gullah Geechee Summit',
-    excerpt: 'The South Carolina Gullah Geechee Summit was held June 25–26, 2026, in Georgetown, South Carolina, bringing together community leaders, researchers, and organizations to discuss cultural heritage and community resilience.',
-    date: 'June 30, 2026',
-    category: 'Workshops'
-  },
-  {
-    slug: 'faculty-spotlight-chen-camhr',
-    title: 'Faculty Spotlight: Dr. Chien-fei Chen Featured by Clemson CAMHR',
-    excerpt: 'Dr. Chien-fei Chen, Professor of Sociology at Clemson University and Director of the GRIT Lab, has been featured by Clemson University\'s Center on Addiction and Mental Health Research (CAMHR) as one of its faculty affiliates.',
-    date: 'June 30, 2026',
-    category: 'Recognition'
-  },
-  {
     slug: 'community-microgrid-launch',
     title: 'Community Microgrid Project Launches in Study Area 1',
     excerpt: 'We are excited to announce the launch of our first community microgrid demonstration project, bringing clean, reliable energy to 150 households.',

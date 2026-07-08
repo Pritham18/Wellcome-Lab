@@ -4,28 +4,6 @@ import Link from 'next/link'
 
 const publications = [
   {
-    id: 0,
-    badge: 'New Publication',
-    title: 'Mapping climate-conditioned PM2.5 response under climate change in Taiwan using a high-resolution Geo-AI model',
-    authors: 'Pei-Yi Wong, Wei-Lun Hsu, Chieh-Ying Chen, Chien-Fei Chen, Chia-Wei Hsu, Shih-Chun Candice Lung, Ta-Chih Hsiao, Chia-Pin Yu, Wan-Yu Liu, Pau-Chung Chen, Wei Jie Seow, Chien-Hao Sung, Chih-Da Wu',
-    date: '2026',
-    abstract: 'This study develops a high-resolution Geo-AI framework to project climate-conditioned PM2.5 concentrations in Taiwan under IPCC AR6/CMIP6 climate scenarios. The model integrates long-term monitoring data, geo-environmental predictors, and downscaled climate projections to assess spatially uneven air-quality responses under future warming.',
-    href: '/publications/pm25-geoai-taiwan-2026.pdf',
-    journal: 'Journal of Environmental Management',
-    doi: 'https://doi.org/10.1016/j.jenvman.2026.130232',
-  },
-  {
-    id: 0.5,
-    badge: 'New Publication',
-    title: 'A utility-level analysis of residential electricity use: Governance, pricing, and incentive programs in the Southeastern U.S.',
-    authors: 'Geyu Lyu, John Kim, Yu Wang, Chien-fei Chen, Brian An',
-    date: '2026',
-    abstract: 'This study examines residential electricity consumption across utility service territories in Georgia and North Carolina, focusing on utility governance, electricity pricing, energy burden, demographics, housing characteristics, and utility-sponsored energy programs. Findings support more equitable utility policies around demand management, energy efficiency, electrification, and affordability.',
-    href: '/publications/utility-level-residential-electricity-use-2026.pdf',
-    journal: 'Energy Policy',
-    doi: 'https://doi.org/10.1016/j.enpol.2026.115413',
-  },
-  {
     id: 1,
     badge: 'Latest Publication',
     title: 'Health Co-Benefits and Low-Income Residential Weatherization in the United States',
@@ -146,24 +124,14 @@ export default function PublicationsPage() {
               {/* Abstract — expandable via native <details> */}
               <div className="flex items-start gap-4 md:gap-5 px-5 md:px-6 pb-5">
                 <div className="w-9 flex-shrink-0" />
-                <div className="flex-1 min-w-0 space-y-2">
-                  <details className="min-w-0">
-                    <summary className="text-xs font-medium cursor-pointer select-none hover:text-[#0B5FA5] transition-colors" style={{ color: '#0B5FA5' }}>
-                      Abstract
-                    </summary>
-                    <p className="text-xs leading-relaxed mt-2" style={{ color: 'var(--muted)' }}>
-                      {pub.abstract}
-                    </p>
-                  </details>
-                  {pub.doi && (
-                    <p className="text-xs">
-                      <span style={{ color: 'var(--muted)' }}>DOI: </span>
-                      <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#0B5FA5' }}>
-                        {pub.doi}
-                      </a>
-                    </p>
-                  )}
-                </div>
+                <details className="flex-1 min-w-0">
+                  <summary className="text-xs font-medium cursor-pointer select-none hover:text-[#0B5FA5] transition-colors" style={{ color: '#0B5FA5' }}>
+                    Abstract
+                  </summary>
+                  <p className="text-xs leading-relaxed mt-2" style={{ color: 'var(--muted)' }}>
+                    {pub.abstract}
+                  </p>
+                </details>
               </div>
             </article>
           ))}
