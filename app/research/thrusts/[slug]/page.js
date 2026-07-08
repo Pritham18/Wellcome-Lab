@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Download } from 'lucide-react'
 import { getThrustBySlug, getAllThrustSlugs, getNextThrust, getPreviousThrust } from '@/lib/thrustsData'
 import ImageLightbox from '@/components/ImageLightbox'
 
@@ -186,6 +186,65 @@ export default function ThrustDetailPage({ params }) {
                     >
                       {image.caption}
                     </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Educational Materials & Tools Section for Thrust 5 */}
+          {thrust.educationalMaterialsSection && (
+            <section style={{ marginTop: '2.5rem' }}>
+              <h2
+                className="text-xl font-bold mb-6 pb-2 border-b"
+                style={{ color: 'var(--text)', borderColor: 'var(--border)' }}
+              >
+                {thrust.educationalMaterialsSection.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
+                {thrust.educationalMaterialsSection.items.map((item, index) => (
+                  <div
+                    key={index}
+                    className="rounded-xl overflow-hidden"
+                    style={{
+                      background: 'white',
+                      padding: '14px',
+                      border: '1px solid #D7E6F2',
+                      boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
+                    }}
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="w-full h-auto rounded-lg"
+                      style={{
+                        maxWidth: '100%',
+                        objectFit: 'contain'
+                      }}
+                    />
+                    <div className="px-1 pt-3">
+                      <p
+                        className="text-sm font-semibold mb-1"
+                        style={{ color: 'var(--text)' }}
+                      >
+                        {item.label}
+                      </p>
+                      <p
+                        className="text-sm mb-3"
+                        style={{ color: 'var(--muted)' }}
+                      >
+                        {item.description}
+                      </p>
+                      <a
+                        href={item.downloadHref}
+                        download={item.downloadName}
+                        className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
+                        style={{ color: 'var(--accent)' }}
+                      >
+                        <Download className="w-4 h-4" />
+                        Download Flyer
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>

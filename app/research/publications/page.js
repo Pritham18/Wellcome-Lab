@@ -4,6 +4,22 @@ import Link from 'next/link'
 
 const publications = [
   {
+    id: 7,
+    title: 'A Utility-Level Analysis of Residential Electricity Use: Governance, Pricing, and Incentive Programs in the Southeastern U.S.',
+    authors: 'Geyu Lyu, John Kim, Yu Wang, Chien-fei Chen, Brian An',
+    abstract: 'This study examines utility-level variation in annual residential electricity consumption across Georgia and North Carolina, focusing on utility governance, electricity pricing, service-territory characteristics, and utility-run incentive programs. We construct a hand-collected inventory of 699 residential energy programs across 193 electric utilities and merge it with utility-level data, such as electricity consumption, rate, energy burden, climate, demographics and housing conditions, and EV charging-station data. The analytic sample includes 105 utilities with complete consumption and covariate data. Our results show that each additional EV program is associated with approximately 310 kWh (2.5%) higher annual per-household use, even after controlling for public EV charging-station density. Cooperative utilities initially exhibit higher household consumption than municipal utilities, but this difference loses statistical significance after accounting for program offerings and demographic factors. A one-cent/kWh higher electricity rate is associated with a 227 kWh (1.8%) to 334 kWh (2.7%) reduction in annual per-household electricity consumption, which may reflect both efficiency-driven conservation and energy-limiting behaviors. Prevalence of energy burden is associated with more electricity use after controlling for income, suggesting structural inefficiency in high-burden utility territories. These findings indicate that utility incentive programs should be paired with managed charging, demand response, targeted efficiency investment, and time-of-use pricing.',
+    href: '/publications/utility-level-residential-electricity-use-2026.pdf',
+    journal: 'Energy Policy',
+  },
+  {
+    id: 6,
+    title: 'Mapping Climate-Conditioned PM2.5 Response Under Climate Change in Taiwan Using a High-Resolution Geo-AI Model',
+    authors: 'Pei-Yi Wong, Wei-Lun Hsu, Chieh-Ying Chen, Chien-Fei Chen, Chia-Wei Hsu, Shih-Chun Candice Lung, Ta-Chih Hsiao, Chia-Pin Yu, Wan-Yu Liu, Pau-Chung Chen, Wei Jie Seow, Chien-Hao Sung, Chih-Da Wu',
+    abstract: 'This study develops a high-resolution Geo-AI framework to quantify the impact of future climate change on PM2.5 concentrations using Taiwan as a subtropical, monsoon-influenced island case. The model integrates long-term ground-based monitoring data (1994–2019), multi-scale geo-environmental predictors, and statistically downscaled CMIP6 meteorology, implemented using a Gradient Boosting Machine. The resulting model demonstrates strong predictive performance (R² = 0.81 and RMSE = 8.69 μg/m³) and effectively captures PM2.5 dynamics within complex islands and coastal environments. By explicitly coupling a Geo-AI model with Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6) climate scenarios, this study extends data-driven PM2.5 modeling from historical estimation to climate-conditioned future projection, addressing a key methodological gap in existing air-quality research. SHAP-based interpretability analysis identifies temperature and precipitation as dominant predictors, underscoring their central role in shaping future aerosol variability, with both variables showing nonlinear, largely inverse relationships with PM2.5 concentrations across different temporal and regional scales. Across four Shared Socioeconomic Pathway scenarios, projected PM2.5 concentrations consistently decline in the near and midterm (between −1.25 and −1.5 μg/m³), followed by increasing spatial heterogeneity in the long term, with localized PM2.5 hotspots emerging under severe warming conditions. These findings suggest that climate change may generate uneven air-quality responses across space, highlighting the limitations of regional mean assessments and the need for high-resolution, climate-informed mitigation and adaptation planning.',
+    href: '/publications/pm25-geoai-taiwan-2026.pdf',
+    journal: 'Journal of Environmental Management',
+  },
+  {
     id: 1,
     badge: 'Latest Publication',
     title: 'Health Co-Benefits and Low-Income Residential Weatherization in the United States',

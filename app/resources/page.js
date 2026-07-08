@@ -52,6 +52,18 @@ const resourceData = [
           },
         ],
       },
+      {
+        id: 'ph-project-resources',
+        label: 'Project Resources',
+        description: 'Survey instruments developed and used by our research team as part of ongoing project data collection.',
+        resources: [
+          {
+            title: 'TVA Home Uplift Program Survey for Residents — Round 2 Full Packet',
+            url: '/publications/tva-home-uplift-survey-round-2-packet.pdf',
+            description: 'Resident survey packet used to collect household-level information related to non-energy impacts of the Home Uplift Program.',
+          },
+        ],
+      },
     ],
   },
   {
@@ -324,6 +336,18 @@ const resourceData = [
             title: 'South Carolina Office of Resilience',
             url: 'https://scor.sc.gov/',
             description: 'Resources and official documents related to resilience planning, hazard mitigation, and climate adaptation policies in South Carolina. The Office of Resilience provides guidance, reports, and program information that support state and local efforts to reduce disaster risks, strengthen infrastructure, and enhance community resilience to flooding, extreme weather, and climate impacts.',
+          },
+        ],
+      },
+      {
+        id: 'project-resources',
+        label: 'F. Project Resources',
+        description: 'Reports produced by our research team evaluating the impacts of energy and housing intervention programs.',
+        resources: [
+          {
+            title: 'TVA Home Uplift Metro Areas Final Report on Non-Energy Impacts',
+            url: '/publications/tva-home-uplift-nei-final-report-2022.pdf',
+            description: 'Final report evaluating non-energy impacts of TVA’s Home Uplift weatherization pilot, including energy affordability, household security, dwelling quality, and health and well-being outcomes.',
           },
         ],
       },

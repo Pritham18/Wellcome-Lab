@@ -8,6 +8,212 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 16,
+    category: 'Research Updates',
+    date: 'June 2026',
+    title: 'New Publication in Energy Policy',
+    preview: 'Dr. Chien-fei Chen and collaborators published a new Energy Policy article examining residential electricity use across utility service territories in Georgia and North Carolina.',
+    fullContent: (
+      <>
+        <p>
+          We are pleased to share a new publication by Dr. Chien-fei Chen and collaborators:
+        </p>
+        <p className="mt-3 italic" style={{ color: '#0c2340' }}>
+          Lyu, G., Kim, J., Wang, Y., Chen, C.-f., &amp; An, B. (2026). A Utility-Level Analysis of Residential Electricity Use: Governance, Pricing, and Incentive Programs in the Southeastern U.S. <em>Energy Policy</em>.
+        </p>
+        <p className="mt-3">
+          This study examines residential electricity consumption across 105 utility service territories in Georgia and North Carolina, integrating data on utility governance, electricity pricing, energy burden, demographic characteristics, and 699 utility-sponsored energy programs.
+        </p>
+
+        <div className="my-5 flex justify-center">
+          <div style={{ maxWidth: '480px' }}>
+            <img
+              src="/images/news/utility-level-electricity-fig3-consumption-by-ownership.png"
+              alt="Boxplot chart comparing annual residential electricity consumption across municipal, investor-owned, and cooperative utilities"
+              className="w-full rounded-lg"
+              style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
+            />
+            <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
+              Annual energy consumption by utility ownership (Lyu et al., 2026)
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-3">
+          Key findings highlight the important roles of electricity pricing, energy burden, utility program portfolios, and electrification initiatives in shaping residential energy use. The results provide evidence to support more equitable and effective utility policies, including demand management, EV adoption strategies, energy efficiency investments, and affordability-focused interventions.
+        </p>
+        <p className="mt-3">
+          The study contributes to ongoing efforts to advance climate mitigation, energy equity, and resilience planning through utility-scale policy analysis.
+        </p>
+        <p className="mt-3">
+          <a
+            href="/publications/utility-level-residential-electricity-use-2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium hover:underline"
+            style={{ color: '#0B5FA5' }}
+          >
+            View the full publication (PDF) →
+          </a>
+        </p>
+      </>
+    )
+  },
+  {
+    id: 15,
+    category: 'Seminars',
+    date: 'June 18, 2026',
+    title: 'Dr. Chien-fei Chen Shares U.S. Perspectives on Data Centers, Energy, and Community Resilience in Taiwan',
+    preview: 'Dr. Chien-fei Chen delivered an invited presentation at the Taiwan Power Research Institute in Taipei on data centers, energy systems, sustainability, and community resilience.',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: (
+      <>
+        <p>
+          On June 18, 2026, Dr. Chien-fei Chen, Professor at Clemson University and Director of the Greater Resilience, Innovation &amp; Transformation (GRIT) Lab, delivered an invited presentation at the Taiwan Power Research Institute in Taipei, Taiwan.
+        </p>
+        <p className="mt-3">
+          Her presentation, &ldquo;Powering Communities in the Age of Data Centers: Energy, Sustainability, and Resilience in the United States,&rdquo; explored how the rapid growth of data centers—driven by artificial intelligence, cloud computing, and digital transformation—is reshaping energy systems, environmental sustainability, and community resilience across the United States.
+        </p>
+        <p className="mt-3">
+          Drawing on current U.S. experiences, Dr. Chen discussed the challenges that large-scale digital infrastructure poses for electricity demand, water resources, land use, and local communities. The presentation highlighted the important roles of utilities, local governments, and policymakers in balancing economic development, energy reliability, sustainability goals, and community well-being.
+        </p>
+        <p className="mt-3">
+          A key focus of the discussion was energy and environmental justice, emphasizing how the costs and benefits of data center expansion are often unevenly distributed across communities. Dr. Chen also presented policy strategies related to grid resilience, renewable energy integration, demand-side management, water reuse, and community engagement.
+        </p>
+        <p className="mt-3">
+          Building on lessons learned from the United States, the presentation offered recommendations for Taiwan as it navigates increasing demand for digital infrastructure while addressing energy security, climate resilience, and sustainability challenges. Topics included renewable energy deployment, resilient power systems, water-efficient cooling technologies, and equitable infrastructure planning.
+        </p>
+        <p className="mt-3">
+          This international engagement reflects the broader goals of the Wellcome-funded Climate–Energy–Health Resilience Project, which seeks to advance interdisciplinary research and policy solutions at the intersection of climate change, energy systems, public health, and community resilience.
+        </p>
+        <p className="mt-3 font-medium" style={{ color: '#0c2340' }}>
+          Event: Taiwan Power Research Institute, Taipei, Taiwan &nbsp;&middot;&nbsp; Date: June 18, 2026
+        </p>
+      </>
+    )
+  },
+  {
+    id: 14,
+    category: 'Research Updates',
+    date: 'June 2026',
+    title: 'New Publication on Climate-Conditioned PM2.5 Projections in Taiwan',
+    preview: 'A new Journal of Environmental Management article uses a high-resolution Geo-AI model to project how climate change may shape future PM2.5 concentrations across Taiwan.',
+    fullContent: (
+      <>
+        <p>
+          We are pleased to share a new publication co-authored by Dr. Chien-fei Chen in the <em>Journal of Environmental Management</em>:
+        </p>
+        <p className="mt-3 italic" style={{ color: '#0c2340' }}>
+          Wong, P.-Y., Hsu, W.-L., Chen, C.-Y., Chen, C.-F., Hsu, C.-W., Lung, S.-C.C., Hsiao, T.-C., Yu, C.-P., Liu, W.-Y., Chen, P.-C., Seow, W.J., Sung, C.-H., &amp; Wu, C.-D. (2026). Mapping Climate-Conditioned PM2.5 Response Under Climate Change in Taiwan Using a High-Resolution Geo-AI Model. <em>Journal of Environmental Management</em>.
+        </p>
+        <p className="mt-3">
+          The study develops a high-resolution Geo-AI framework that combines long-term air quality monitoring data, geo-environmental predictors, and statistically downscaled CMIP6 climate projections to estimate future PM2.5 concentrations across Taiwan, a subtropical, monsoon-influenced island setting.
+        </p>
+
+        <div className="my-5 flex justify-center">
+          <div style={{ maxWidth: '480px' }}>
+            <img
+              src="/images/news/pm25-geoai-taiwan-fig1-study-area.png"
+              alt="Map of Taiwan showing the distribution of air quality monitoring stations and township population density"
+              className="w-full rounded-lg"
+              style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
+            />
+            <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
+              Distribution of air quality monitoring stations and township population density (Wong et al., 2026)
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-3">
+          Using this framework, the team finds that temperature and precipitation are the dominant drivers of future PM2.5 variability, and that projected air-quality changes are spatially uneven—concentrations broadly decline in the near and mid-term across most of Taiwan, while localized PM2.5 hotspots emerge under more severe long-term warming scenarios.
+        </p>
+        <p className="mt-3">
+          The findings underscore the limitations of relying on regional average projections alone and support the case for high-resolution, climate-responsive air-quality planning and mitigation strategies.
+        </p>
+        <p className="mt-3">
+          <a
+            href="/publications/pm25-geoai-taiwan-2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium hover:underline"
+            style={{ color: '#0B5FA5' }}
+          >
+            View the full publication (PDF) →
+          </a>
+        </p>
+      </>
+    )
+  },
+  {
+    id: 13,
+    category: 'Project Updates',
+    date: 'July 2026',
+    title: 'Indoor Air Quality Educational Materials Developed for Healthy Home Intervention Participants',
+    preview: 'The Healthy Home Intervention Project has developed a new educational resource to help participating households better understand indoor air quality (IAQ) and interpret the information collected by indoor environmental monitors.',
+    detailPage: '/resources/news/iaq-educational-materials',
+    bannerImage: '/images/iaq-flyer-final.png',
+    bannerAlt: 'Helping Households Understand Their Indoor Air Quality — IAQ educational flyer',
+    fullContent: null
+  },
+  {
+    id: 12,
+    category: 'Workshops',
+    date: 'June 25–26, 2026',
+    title: 'Community Partner Spotlight: South Carolina Gullah Geechee Summit',
+    preview: 'We are pleased to share an upcoming event hosted by one of our valued community partners, the Gullah Geechee Cultural Heritage Corridor: the South Carolina Gullah Geechee Summit in Georgetown, South Carolina.',
+    bannerImage: '/images/news/sc-gullah-geechee-summit-2026.jpg',
+    bannerAlt: 'Flyer for the South Carolina Gullah Geechee Summit, June 25–26, 2026, in Georgetown, South Carolina',
+    fullContent: (
+      <>
+        <p>
+          We are pleased to share an upcoming event hosted by one of our valued community partners, the Gullah Geechee Cultural Heritage Corridor.
+        </p>
+        <p className="mt-3">
+          The South Carolina Gullah Geechee Summit will take place on June 25–26, 2026, in Georgetown, South Carolina. The summit will bring together community leaders, researchers, preservation professionals, and local organizations to discuss Gullah Geechee culture, language preservation, land stewardship, cultural tourism, and community resilience.
+        </p>
+        <p className="mt-3">
+          The event will feature community workshops, panel discussions, networking opportunities, and a keynote address by Ron Daise, a nationally recognized advocate for Gullah Geechee heritage.
+        </p>
+        <p className="mt-3">
+          As part of our commitment to community-engaged research and collaborative partnerships, we are excited to support and highlight events that strengthen cultural heritage and community resilience.
+        </p>
+        <p className="mt-3 font-medium" style={{ color: '#0c2340' }}>
+          Date: June 25–26, 2026 &nbsp;&middot;&nbsp; Location: Georgetown, South Carolina
+        </p>
+        <p className="mt-3">
+          For registration and additional information, please scan the QR code on the event flyer or visit the event registration page.
+        </p>
+      </>
+    )
+  },
+  {
+    id: 11,
+    category: 'Recognition',
+    date: 'July 2026',
+    title: 'Faculty Spotlight: Dr. Chien-fei Chen Featured by Clemson CAMHR',
+    preview: "We are delighted to share that Dr. Chien-fei Chen, Professor of Sociology at Clemson University and Director of the Greater Resilience, Innovation & Transformation (GRIT) Lab, has been featured by Clemson University's Center on Addiction and Mental Health Research (CAMHR) as one of its faculty affiliates.",
+    fullContent: (
+      <>
+        <p>
+          We are delighted to share that Dr. Chien-fei Chen, Professor of Sociology at Clemson University and Director of the Greater Resilience, Innovation & Transformation (GRIT) Lab, has been featured by Clemson University's Center on Addiction and Mental Health Research (CAMHR) as one of its faculty affiliates.
+        </p>
+        <p className="mt-3">
+          Dr. Chen's interdisciplinary research brings together climate change, energy systems, environmental justice, public health, and community resilience to address some of today's most pressing societal challenges. Her work examines how social, behavioral, technological, and built-environment factors influence energy insecurity, infrastructure resilience, environmental exposures, and health outcomes, particularly among underserved communities.
+        </p>
+        <p className="mt-3">
+          Among her current research initiatives are community-based healthy home interventions, energy justice, climate resilience, power outages, microgrids, and the impacts of rapidly growing data centers on public and population health. Working closely with healthcare providers, nonprofit organizations, utilities, policymakers, and community partners, Dr. Chen's research supports evidence-based solutions that promote healthier, more resilient, and more equitable communities.
+        </p>
+        <p className="mt-3">
+          Supported by organizations including the Wellcome Trust, the U.S. National Science Foundation (NSF), the U.S. Environmental Protection Agency (EPA), and the Alfred P. Sloan Foundation, Dr. Chen has led numerous interdisciplinary projects advancing climate mitigation and health co-benefits through research, community engagement, and policy innovation.
+        </p>
+        <p className="mt-3">
+          We congratulate Dr. Chen on this recognition and look forward to continuing to share the impacts of our research through the Wellcome Climate–Energy–Health Resilience Project.
+        </p>
+      </>
+    )
+  },
+  {
     id: 10,
     category: 'Seminars',
     date: 'May 21, 2026',
