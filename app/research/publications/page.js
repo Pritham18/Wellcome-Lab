@@ -1,8 +1,17 @@
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { FileText, ArrowUpRight, Users } from 'lucide-react'
+import { FileText, ArrowUpRight, Users, ExternalLink, Download } from 'lucide-react'
 import Link from 'next/link'
 
 const publications = [
+  {
+    id: 8,
+    title: 'Risk in Translation: Climate Risk, Social Vulnerability, and Clean Energy Support Across the United States',
+    authors: 'Lyudmyla Tsykalova, Praise Ayotola Ayinla, Chien-Fei Chen',
+    abstract: 'This study examines how climate risk perception, social vulnerability, and political context shape public support for the clean energy transition across the United States. Integrating county-level data from more than 3,000 U.S. counties—combining Yale Climate Opinion Maps, FEMA’s National Risk Index, and 2024 U.S. presidential election results—the analysis finds that perceived climate risk is a stronger predictor of clean energy support than objective climate hazards alone. Political context substantially shapes how people interpret climate risk: in conservative-leaning counties, higher objective risk does not necessarily translate into greater perceived risk, while the opposite pattern holds in more liberal communities. The findings underscore the importance of communication and policy strategies that reflect local social, political, and environmental conditions, and highlight the role of social vulnerability in shaping public attitudes toward the clean energy transition.',
+    href: '/publications/risk-in-translation-climate-risk-clean-energy-support-2026.pdf',
+    doiUrl: 'https://doi.org/10.1016/j.erss.2026.104827',
+    journal: 'Energy Research & Social Science, Vol. 138, Article 104827 (2026)',
+  },
   {
     id: 7,
     title: 'A Utility-Level Analysis of Residential Electricity Use: Governance, Pricing, and Incentive Programs in the Southeastern U.S.',
@@ -149,6 +158,35 @@ export default function PublicationsPage() {
                   </p>
                 </details>
               </div>
+
+              {/* View Article / Download PDF actions */}
+              {pub.doiUrl && (
+                <div className="flex items-start gap-4 md:gap-5 px-5 md:px-6 pb-5">
+                  <div className="w-9 flex-shrink-0" />
+                  <div className="flex flex-wrap items-center gap-4">
+                    <a
+                      href={pub.doiUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium hover:underline"
+                      style={{ color: '#0B5FA5' }}
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      View Article
+                    </a>
+                    <a
+                      href={pub.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium hover:underline"
+                      style={{ color: '#0B5FA5' }}
+                    >
+                      <Download className="w-3.5 h-3.5" />
+                      Download PDF
+                    </a>
+                  </div>
+                </div>
+              )}
             </article>
           ))}
         </div>

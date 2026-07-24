@@ -8,6 +8,28 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 18,
+    category: 'Seminars',
+    date: 'July 2026',
+    title: 'International Research Exchange Strengthens Collaboration on Community Resilience and Data Integration',
+    preview: 'Professor Chien-fei Chen recently visited the Department of Geography at National Changhua University of Education (NCUE) in Taiwan, continuing a growing international collaboration focused on community resilience, energy transitions, and socio-environmental research.',
+    detailPage: '/resources/news/international-research-exchange-strengthens-collaboration-on-community-resilience-and-data-integration',
+    bannerImage: '/images/news/international-research-exchange-taiwan-2026-1.jpg',
+    bannerAlt: 'Professor Chien-fei Chen with researchers from Clemson University, NCUE, Tunghai University, and National Taichung University of Education in Taiwan',
+    fullContent: null
+  },
+  {
+    id: 17,
+    category: 'Research Updates',
+    date: 'July 2026',
+    title: 'New Publication Explores How Climate Risk Perception Shapes Support for the Clean Energy Transition',
+    preview: 'Researchers from the GRIT Lab at Clemson University have published a new study examining how climate risk perception, social vulnerability, and political context influence public support for the clean energy transition across the United States.',
+    detailPage: '/resources/news/new-publication-explores-how-climate-risk-perception-shapes-support-for-the-clean-energy-transition',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: null
+  },
+  {
     id: 16,
     category: 'Research Updates',
     date: 'June 2026',
