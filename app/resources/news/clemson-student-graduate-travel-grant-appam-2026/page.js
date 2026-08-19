@@ -3,11 +3,8 @@
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { Award, ArrowLeft } from 'lucide-react'
-import { getTeamMemberBySlug } from '@/lib/teamData'
 
 export default function YueyangFengAppamTravelGrantPage() {
-  const yueyang = getTeamMemberBySlug('yueyang-feng')
-
   return (
     <div style={{ background: '#f8fafc' }}>
       <Breadcrumbs
@@ -52,88 +49,49 @@ export default function YueyangFengAppamTravelGrantPage() {
         </div>
       </section>
 
-      {/* Full-width two-column body */}
-      <div className="mx-auto px-6 md:px-10 py-10 md:py-14" style={{ maxWidth: '1400px' }}>
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+      {/* Article body */}
+      <div className="mx-auto px-6 md:px-10 py-10 md:py-14" style={{ maxWidth: '900px' }}>
+        <div
+          className="rounded-xl p-6 md:p-10"
+          style={{
+            background: 'white',
+            border: '1px solid rgba(12, 35, 64, 0.09)',
+            boxShadow: '0 1px 6px rgba(12, 35, 64, 0.07)'
+          }}
+        >
+          <div className="space-y-5 text-base leading-relaxed" style={{ color: '#374151' }}>
+            <p>
+              <strong style={{ color: '#0c2340' }}>Yueyang Feng</strong>, a research assistant and Ph.D. student in Psychology, has been awarded a Graduate Travel Grant from Clemson University Graduate Student Government. The grant will support Yueyang&apos;s travel to Boston to attend the Association for Public Policy Analysis and Management (APPAM) 2026 Fall Research Conference. The travel grant will help offset conference-related expenses and support the dissemination of the team&apos;s research.
+            </p>
+            <p>
+              At the conference, Yueyang will present research conducted as part of the Wellcome project. The presentation will provide an opportunity to share the research team&apos;s findings with scholars and policy professionals, receive feedback, and connect with researchers working on related public policy issues.
+            </p>
 
-          {/* LEFT — Image column */}
-          <div className="lg:w-5/12 flex-shrink-0">
-            <div
-              className="rounded-xl overflow-hidden"
-              style={{
-                background: 'white',
-                border: '1px solid rgba(12, 35, 64, 0.09)',
-                boxShadow: '0 1px 6px rgba(12, 35, 64, 0.07)'
-              }}
+            <blockquote
+              className="my-6 pl-4 py-1 text-sm leading-relaxed italic"
+              style={{ borderLeft: '3px solid #F56600', color: '#4a5568' }}
             >
-              <div style={{ aspectRatio: '3 / 4', overflow: 'hidden' }}>
-                <img
-                  src={yueyang?.photo}
-                  alt="Yueyang Feng"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    display: 'block'
-                  }}
-                />
-              </div>
-              <div className="px-5 py-3" style={{ borderTop: '1px solid rgba(12, 35, 64, 0.08)' }}>
-                <p className="text-sm font-semibold" style={{ color: '#0c2340' }}>Yueyang Feng</p>
-                <p className="text-xs mt-0.5" style={{ color: '#6b7280' }}>
-                  Research Assistant &middot; Ph.D. Student in Psychology, Clemson University
-                </p>
-              </div>
-            </div>
+              &ldquo;I am grateful to Clemson Graduate Student Government for its support and to my advisors, Dr. Chien-fei Chen and Dr. Jody Nicholson, for their guidance and encouragement. I look forward to representing the GRIT Lab at the Association for Public Policy Analysis and Management (APPAM) conference and sharing our research on public perceptions of climate change and community vulnerability across the United States.&rdquo;
+              <span className="block mt-2 not-italic font-medium" style={{ color: '#0c2340' }}>
+                &mdash; Yueyang Feng
+              </span>
+            </blockquote>
+
+            <p>
+              We congratulate Yueyang on this achievement.
+            </p>
           </div>
 
-          {/* RIGHT — Article text column */}
-          <div className="flex-1 min-w-0">
-            <div
-              className="rounded-xl p-6 md:p-10"
-              style={{
-                background: 'white',
-                border: '1px solid rgba(12, 35, 64, 0.09)',
-                boxShadow: '0 1px 6px rgba(12, 35, 64, 0.07)'
-              }}
+          <div className="mt-10 pt-6" style={{ borderTop: '1px solid rgba(12, 35, 64, 0.1)' }}>
+            <Link
+              href="/resources/news"
+              className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
+              style={{ color: '#0B5FA5' }}
             >
-              <div className="space-y-5 text-base leading-relaxed" style={{ color: '#374151' }}>
-                <p>
-                  <strong style={{ color: '#0c2340' }}>Yueyang Feng</strong>, a research assistant and Ph.D. student in Psychology, has been awarded a Graduate Travel Grant from Clemson University Graduate Student Government. The grant will support Yueyang&apos;s travel to Boston to attend the Association for Public Policy Analysis and Management (APPAM) 2026 Fall Research Conference. The travel grant will help offset conference-related expenses and support the dissemination of the team&apos;s research.
-                </p>
-                <p>
-                  At the conference, Yueyang will present research conducted as part of the Wellcome project. The presentation will provide an opportunity to share the research team&apos;s findings with scholars and policy professionals, receive feedback, and connect with researchers working on related public policy issues.
-                </p>
-
-                <blockquote
-                  className="my-6 pl-4 py-1 text-sm leading-relaxed italic"
-                  style={{ borderLeft: '3px solid #F56600', color: '#4a5568' }}
-                >
-                  &ldquo;I am grateful to Clemson Graduate Student Government for its support and to my advisors, Dr. Chien-fei Chen and Dr. Jody Nicholson, for their guidance and encouragement. I look forward to representing the GRIT Lab at the Association for Public Policy Analysis and Management (APPAM) conference and sharing our research on public perceptions of climate change and community vulnerability across the United States.&rdquo;
-                  <span className="block mt-2 not-italic font-medium" style={{ color: '#0c2340' }}>
-                    &mdash; Yueyang Feng
-                  </span>
-                </blockquote>
-
-                <p>
-                  We congratulate Yueyang on this achievement.
-                </p>
-              </div>
-
-              <div className="mt-10 pt-6" style={{ borderTop: '1px solid rgba(12, 35, 64, 0.1)' }}>
-                <Link
-                  href="/resources/news"
-                  className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
-                  style={{ color: '#0B5FA5' }}
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  Back to News
-                </Link>
-              </div>
-            </div>
+              <ArrowLeft className="w-4 h-4" />
+              Back to News
+            </Link>
           </div>
-
         </div>
       </div>
     </div>
