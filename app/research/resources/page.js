@@ -1,7 +1,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { FileText, ExternalLink } from 'lucide-react'
+import { FileText, ExternalLink, Users } from 'lucide-react'
 
 export default function ResourcesPage() {
   return (
@@ -32,6 +32,86 @@ export default function ResourcesPage() {
           <section>
             <h2 className="mb-8">Our Publications</h2>
             <div className="space-y-6">
+              {/* Publication: Impact of Weatherization on Unhealthy Indoor Temperature and Humidity */}
+              <Card className="section-card">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <FileText className="h-6 w-6" style={{ color: 'var(--brand)' }} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 leading-tight">
+                        The Impact of Weatherization on Unhealthy Indoor Temperature and Humidity
+                      </h3>
+                      <p className="text-sm mb-1" style={{ color: 'var(--muted)' }}>
+                        <Users className="h-3.5 w-3.5 inline-block mr-1.5 -mt-0.5" />
+                        Michaela Marincic, Bruce Tonn, Erin Rose
+                      </p>
+                      <p className="text-sm mb-3" style={{ color: 'var(--muted)' }}>
+                        2026 ACEEE Summer Study on Energy Efficiency in Buildings
+                      </p>
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="rounded-lg"
+                        style={{ borderColor: 'var(--border)', color: 'var(--brand)' }}
+                      >
+                        <a
+                          href="/publications/impact-of-weatherization-on-indoor-temperature-and-humidity-2026.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2"
+                        >
+                          View PDF
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Publication: Reductions in Medicaid Spending Associated with Income-Eligible Home Weatherization */}
+              <Card className="section-card">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <FileText className="h-6 w-6" style={{ color: 'var(--brand)' }} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 leading-tight">
+                        Reductions in Medicaid Spending Associated with Income-Eligible Home Weatherization in the Southeastern U.S.
+                      </h3>
+                      <p className="text-sm mb-1" style={{ color: 'var(--muted)' }}>
+                        <Users className="h-3.5 w-3.5 inline-block mr-1.5 -mt-0.5" />
+                        Michaela Marincic, Erin Rose, Bruce Tonn, Palash Arora
+                      </p>
+                      <p className="text-sm mb-3" style={{ color: 'var(--muted)' }}>
+                        2026 ACEEE Summer Study on Energy Efficiency in Buildings
+                      </p>
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="rounded-lg"
+                        style={{ borderColor: 'var(--border)', color: 'var(--brand)' }}
+                      >
+                        <a
+                          href="/publications/reductions-in-medicaid-spending-income-eligible-weatherization-southeastern-us-2026.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2"
+                        >
+                          View PDF
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
               {/* Publication 1 */}
               <Card className="section-card">
                 <CardContent className="p-6">

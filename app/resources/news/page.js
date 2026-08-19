@@ -8,6 +8,28 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 20,
+    category: 'Workshops',
+    date: 'August 10, 2026',
+    title: 'Bridges Across the Grid: International Workshop Connects Research, Technology, and Community Resilience',
+    preview: 'On August 10, the GRIT Lab at Clemson University hosted the Power Grid, Sustainability and Resilience Stakeholder Engagement Workshop, bringing together researchers, industry representatives, community leaders, and international partners—including a delegation from Taiwan—for a day of interdisciplinary exchange in Charleston, South Carolina.',
+    detailPage: '/resources/news/bridges-across-the-grid-international-workshop',
+    bannerImage: '/images/news/bridges-across-the-grid-workshop-2026-1.jpg',
+    bannerAlt: 'Workshop participants attending a presentation',
+    fullContent: null
+  },
+  {
+    id: 19,
+    category: 'Recognition',
+    date: 'July 28, 2026',
+    title: 'Clemson Student Graduate Travel Grant to Present Wellcome Project’s Research at APPAM 2026',
+    preview: 'Yueyang Feng awarded Clemson’s Graduate Travel Grant to present research from the Wellcome project at the APPAM 2026 Fall Research Conference in Boston.',
+    detailPage: '/resources/news/clemson-student-graduate-travel-grant-appam-2026',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: null
+  },
+  {
     id: 18,
     category: 'Seminars',
     date: 'July 2026',
