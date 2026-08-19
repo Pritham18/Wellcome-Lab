@@ -66,7 +66,7 @@ export default function YueyangFengAppamTravelGrantPage() {
                 boxShadow: '0 1px 6px rgba(12, 35, 64, 0.07)'
               }}
             >
-              <div style={{ height: '380px', overflow: 'hidden' }}>
+              <div style={{ aspectRatio: '3 / 4', overflow: 'hidden' }}>
                 <img
                   src={yueyang?.photo}
                   alt="Yueyang Feng"
@@ -74,7 +74,7 @@ export default function YueyangFengAppamTravelGrantPage() {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    objectPosition: 'center top',
+                    objectPosition: 'center',
                     display: 'block'
                   }}
                 />
