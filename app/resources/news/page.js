@@ -8,6 +8,116 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 21,
+    category: 'Seminars',
+    date: 'October 2026',
+    title: 'Dr. Chien-fei Chen to Present at CAMHR Fall Triple 7 Speaker Series',
+    preview: 'Dr. Chien-fei Chen, Professor of Sociology and Director of the GRIT Lab at Clemson University, will join six other speakers for the CAMHR Fall Triple 7 Speaker Series on Wednesday, October 21, 2026, at noon via Zoom.',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: (
+      <>
+        <p>
+          Dr. Chien-fei Chen, Professor of Sociology and Director of the Greater Resilience, Innovation and Transformation (GRIT) Lab at Clemson University, will participate in the{' '}
+          <strong>CAMHR Fall Triple 7 Speaker Series</strong> on Wednesday, October 21, at noon via Zoom.
+        </p>
+        <p className="mt-3">
+          Hosted by the Clemson Addiction and Mental Health Research (CAMHR) Center, the Triple 7 Speaker Series brings together seven speakers, each with seven minutes and up to seven slides to introduce their research, professional work, and current interests. The fast-paced format provides an opportunity for researchers and practitioners from across disciplines to learn about one another&apos;s work and identify opportunities for future collaboration.
+        </p>
+
+        <div
+          className="my-5 rounded-lg px-4 py-4 md:px-5 md:py-5 text-sm"
+          style={{ background: '#E8F2F9' }}
+        >
+          <dl className="space-y-2.5">
+            <div className="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Event</dt>
+              <dd>CAMHR Fall Triple 7 Speaker Series</dd>
+            </div>
+            <div className="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Date</dt>
+              <dd>Wednesday, October 21, 2026</dd>
+            </div>
+            <div className="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Time</dt>
+              <dd>12:00 p.m.</dd>
+            </div>
+            <div className="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Location</dt>
+              <dd>
+                <a
+                  href="https://clemson.zoom.us/j/91052723386?pwd=ZicUlkkCepVuaem4aPSDgoywCbqclB.1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="break-all hover:underline"
+                  style={{ color: '#0B5FA5' }}
+                >
+                  https://clemson.zoom.us/j/91052723386?pwd=ZicUlkkCepVuaem4aPSDgoywCbqclB.1
+                </a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <p className="mt-3">
+          <a
+            href="https://clemson.zoom.us/j/91052723386?pwd=ZicUlkkCepVuaem4aPSDgoywCbqclB.1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-medium hover:underline"
+            style={{ color: '#0B5FA5' }}
+          >
+            <span
+              className="inline-block w-2 h-2 shrink-0"
+              style={{ background: '#0B5FA5' }}
+              aria-hidden
+            />
+            Join the event via Zoom
+          </a>
+        </p>
+
+        <h3
+          className="text-base font-semibold mt-6 mb-3 flex items-center gap-2"
+          style={{ color: '#0c2340' }}
+        >
+          <span
+            className="inline-block w-2 h-2 shrink-0"
+            style={{ background: '#0c2340' }}
+            aria-hidden
+          />
+          Featured Speakers
+        </h3>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>Chien-Fei Chen, Ph.D.</strong> — Professor, Department of Sociology, Anthropology, and Criminal Justice
+          </li>
+          <li>
+            <strong>Moonseong Heo, Ph.D.</strong> — Professor, Department of Public Health Sciences
+          </li>
+          <li>
+            <strong>Angie Farmer, M.Ed., MAC, LAC, LPC/S</strong> — Executive Director, Behavioral Health Services of Pickens County
+          </li>
+          <li>
+            <strong>Wesley Wampler, NRP, CCP-C, MPH</strong> — Community Paramedic, Prisma Health
+          </li>
+          <li>
+            <strong>Anna Baker, Ph.D.</strong> — Assistant Professor, Department of Psychology
+          </li>
+          <li>
+            <strong>Kimbley Smith, M.Ed., LPC/S, LAC/S, CS, MAC</strong> — Director of Women and Children Treatment Services, The Phoenix Center
+          </li>
+          <li>
+            <strong>Kathleen Cartmell, Ph.D.</strong> — Associate Research Professor, Department of Public Health Sciences
+          </li>
+        </ul>
+
+        <p className="mt-4">
+          Dr. Chen&apos;s participation reflects the GRIT Lab&apos;s broader commitment to interdisciplinary research connecting social science, health, energy, environmental conditions, and community resilience.
+        </p>
+      </>
+    )
+  },
+  {
     id: 20,
     category: 'Workshops',
     date: 'August 10, 2026',
