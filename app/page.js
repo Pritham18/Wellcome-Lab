@@ -169,10 +169,18 @@ export default function Home() {
               </div>
               
               <p 
-                className="text-base leading-7"
+                className="text-base leading-7 mb-4"
                 style={{ color: 'var(--muted)' }}
               >
                 Empower Health uses community-centered and mixed-methods research approaches to design and evaluate energy interventions that improve health and resilience outcomes. The initiative combines community co-design, interdisciplinary research, and program evaluation to assess the impacts of weatherization, electrification, microgrids, and indoor environmental quality improvements. Findings are translated into evidence-based insights that inform policy and support equitable energy transitions.
+              </p>
+              <p 
+                className="text-base leading-7"
+                style={{ color: 'var(--muted)' }}
+              >
+                <a href="https://grit.hitslab.app" target="_blank" rel="noopener noreferrer" className="font-medium text-[#f56600] underline decoration-[#f56600]/50 underline-offset-4 transition-colors hover:text-[#cc5200]">GRIT Data Hub</a> is an integrated climate and infrastructure research platform that brings extreme weather, environmental, public health, energy, housing, and socioeconomic data into a unified resource for analysis and decision-making. 
+                <a href="https://sparc.hitslab.app" target="_blank" rel="noopener noreferrer" className="font-medium text-[#f56600] underline decoration-[#f56600]/50 underline-offset-4 transition-colors hover:text-[#cc5200]">ACCORD</a> is an AI-human collaborative platform for resilience policy analysis. It enables systematic, transparent, and scalable qualitative analysis of resilience plans at the state level, creating a searchable and comparable evidence base for researchers, planners, and policymakers across diverse geographic contexts.
+
               </p>
             </div>
 

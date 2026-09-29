@@ -8,6 +8,65 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 22,
+    category: 'Seminars',
+    date: 'October 13, 2026',
+    title: 'Dr. Chien-fei Chen Will Present on Human-in-the-Loop AI and Data Integration',
+    preview: 'Dr. Chien-fei Chen and Dr. Xueping Li will present “Human-in-the-Loop AI: Integrating Data and Policy Analysis for Better Decision-Making” to the South Carolina Sea Grant Consortium on October 13, 2026.',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: (
+      <>
+        <p>
+          Dr. Chien-fei Chen and Dr. Xueping Li will present{' '}
+          <strong>&ldquo;Human-in-the-Loop AI: Integrating Data and Policy Analysis for Better Decision-Making&rdquo;</strong>{' '}
+          to the South Carolina Sea Grant Consortium on October 13, 2026.
+        </p>
+        <p className="mt-3">
+          Their presentation,{' '}
+          <strong>&ldquo;Human-in-the-Loop AI: Integrating Data and Policy Analysis for Better Decision-Making,&rdquo;</strong>{' '}
+          will explore how artificial intelligence can be combined with human expertise, integrated data, and policy analysis to support more informed and effective decision-making.
+        </p>
+        <p className="mt-3">
+          The presentation reflects ongoing research by the GRIT Lab on{' '}
+          <strong>data integration, climate resilience, energy systems, and community decision-making.</strong>{' '}
+          Rather than relying solely on automated analytical tools, the human-in-the-loop approach considers how researchers, practitioners, and decision-makers can work with AI systems to interpret complex information and translate data-driven insights into practical applications.
+        </p>
+        <p className="mt-3">
+          The discussion will highlight opportunities to connect interdisciplinary data sources with policy and decision-making processes, with particular relevance to environmental and coastal challenges.
+        </p>
+        <p className="mt-3">
+          This presentation is part of the South Carolina Sea Grant Consortium&apos;s{' '}
+          <strong>Water Chats</strong> series, which provides a forum for research and discussion related to water, coastal communities, and environmental issues.
+        </p>
+
+        <div
+          className="my-5 rounded-lg px-4 py-4 md:px-5 md:py-5 text-sm"
+          style={{ background: '#E8F2F9' }}
+        >
+          <dl className="space-y-2.5">
+            <div className="grid grid-cols-[7.5rem_1fr] sm:grid-cols-[8.5rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Presentation Title</dt>
+              <dd className="italic">Human-in-the-Loop AI: Integrating Data and Policy Analysis for Better Decision-Making</dd>
+            </div>
+            <div className="grid grid-cols-[7.5rem_1fr] sm:grid-cols-[8.5rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Date</dt>
+              <dd>October 13, 2026</dd>
+            </div>
+            <div className="grid grid-cols-[7.5rem_1fr] sm:grid-cols-[8.5rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Host</dt>
+              <dd>South Carolina Sea Grant Consortium</dd>
+            </div>
+            <div className="grid grid-cols-[7.5rem_1fr] sm:grid-cols-[8.5rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Series</dt>
+              <dd>Water Chats</dd>
+            </div>
+          </dl>
+        </div>
+      </>
+    )
+  },
+  {
     id: 21,
     category: 'Seminars',
     date: 'October 2026',
