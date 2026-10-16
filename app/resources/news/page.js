@@ -8,6 +8,69 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 23,
+    category: 'Seminars',
+    date: 'October 2026',
+    title: 'Dr. Chien-fei Chen Presents on Data Centers, Microgrids, and Community Resilience at NCUE',
+    preview: 'Dr. Chien-fei Chen, Professor of Sociology and Director of the Greater Resilience, Innovation and Transformation (GRIT) Lab at Clemson University, presented an invited lecture at the Department of Geography, National Changhua University of Education (NCUE), Taiwan, on October 1, 2026.',
+    bannerImage: null,
+    bannerAlt: '',
+    fullContent: (
+      <>
+        <p>
+          Dr. Chien-fei Chen, Professor of Sociology and Director of the Greater Resilience, Innovation and Transformation (GRIT) Lab at Clemson University, presented an invited lecture at the Department of Geography, National Changhua University of Education (NCUE), Taiwan, on October 1, 2026.
+        </p>
+        <p className="mt-3">
+          Her presentation,{' '}
+          &ldquo;Building Resilient Communities: Public Perspectives on Data Centers, Community Microgrids, and Energy Infrastructure amid Power Outages and Extreme Weather,&rdquo;{' '}
+          brought together several areas of her recent research on energy infrastructure, public perceptions, and community resilience.
+        </p>
+        <p className="mt-3">
+          Drawing on findings from recent national U.S. surveys, Dr. Chen discussed how the rapid expansion of data centers, growing electricity demand, extreme weather, and aging infrastructure are creating new challenges for energy reliability and communities. Her research examines how the public evaluates data center development, including its demands on electricity grids and water resources, land-use considerations, infrastructure and economic benefits, and potential health and quality-of-life impacts.
+        </p>
+        <p className="mt-3">
+          A second part of the presentation focused on community microgrids and their potential role in strengthening local energy resilience. Dr. Chen shared national survey findings examining the social, economic, and policy factors associated with public acceptance of decentralized energy systems, particularly in communities facing power outages and climate-related disruptions.
+        </p>
+        <p className="mt-3">
+          The presentation also examined how power outages and extreme weather events affect households and communities through disruptions to health, public services, economic activity, and everyday quality of life. Together, these research areas demonstrate how social science and infrastructure research can help identify practical strategies for strengthening community resilience and improving energy-related decision-making.
+        </p>
+        <p className="mt-3">
+          The invited presentation continued Dr. Chen&apos;s ongoing academic exchange with colleagues in Taiwan and provided another opportunity to connect research conducted in the United States with international conversations on energy infrastructure, extreme weather, and resilient communities.
+        </p>
+        <p className="mt-3">
+          Through international research exchanges such as this one, the GRIT Lab continues to advance interdisciplinary collaboration in environmental sociology, data integration, energy affordability, infrastructure resilience, and community resilience.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Event Information
+        </h3>
+        <div
+          className="my-5 rounded-lg px-4 py-4 md:px-5 md:py-5 text-sm"
+          style={{ background: '#E8F2F9' }}
+        >
+          <dl className="space-y-2.5">
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Presentation</dt>
+              <dd className="italic">Building Resilient Communities: Public Perspectives on Data Centers, Community Microgrids, and Energy Infrastructure amid Power Outages and Extreme Weather</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Speaker</dt>
+              <dd>Dr. Chien-fei Chen, Clemson University</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Date</dt>
+              <dd>October 1, 2026</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Host</dt>
+              <dd>Department of Geography, National Changhua University of Education (NCUE), Taiwan</dd>
+            </div>
+          </dl>
+        </div>
+      </>
+    )
+  },
+  {
     id: 22,
     category: 'Seminars',
     date: 'October 13, 2026',
