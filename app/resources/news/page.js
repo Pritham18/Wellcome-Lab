@@ -8,6 +8,182 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 // News data organized by category
 const newsData = [
   {
+    id: 26,
+    category: 'Seminars',
+    date: 'November 12, 2026',
+    title: 'From Research to Action: How Chien-Fei Chen Is Bridging Science, Policy, and Communities to Design Healthier, More Sustainable Cities',
+    preview: 'Dr. Chien-fei Chen of Clemson University is featured at an international workshop in Yokohama, Japan, on November 12, 2026, for research demonstrating how climate solutions can be co-designed with the people and institutions responsible for implementing them.',
+    bannerImage: '/images/news/japan-iges-workshop-2026.jpg',
+    bannerAlt: 'Participants attending the international workshop in Yokohama, Japan',
+    fullContent: (
+      <>
+        <p>
+          As cities around the world grapple with the intertwined challenges of climate change, public health, and sustainable development, a growing number of researchers are calling for approaches that move beyond traditional disciplinary and institutional boundaries. Among them is Chien-Fei Chen of Clemson University, whose work is gaining international recognition for demonstrating how climate solutions can be co-designed with the people and institutions responsible for implementing them.
+        </p>
+        <p className="mt-3">
+          This approach will be featured at the international workshop in Yokohama, Japan, on November 12, 2026,{' '}
+          <em>&ldquo;Connecting Climate, Health and Sustainability Science in Cities: Lessons from the Wellcome Trust Project and Celebrating 20 Years of Sustainability Science,&rdquo;</em>{' '}
+          organized by the Institute for Global Environmental Strategies (IGES), the Wellcome Trust, Kyushu University, and collaborators from Japan, the United States, Europe, and Asia. The event brings together researchers, policymakers, and city practitioners to examine how scientific evidence can be translated into practical urban action.
+        </p>
+        <p className="mt-3">
+          At the center of Chen&apos;s work is the idea that effective climate, health, and energy policies cannot be designed by scientists alone. Instead, they must emerge through partnerships that connect residents, community organizations, local governments, national policymakers, utilities, businesses, public health experts, engineers, and social scientists. Through projects spanning the United States, Japan, and other countries, Chen has developed a model of multi-level co-design that integrates insights from individual households, local communities, city governments, and decision-makers.
+        </p>
+        <p className="mt-3">
+          Her research operates across disciplines that have historically worked separately. Drawing from sociology, energy policy, environmental science, public health, behavioral science, infrastructure systems, and data analytics, Chen&apos;s team develops decision-making tools that reflect not only technological and economic considerations, but also public values, community priorities, social-psychological factors, and equity concerns. This multidisciplinary framework helps ensure that climate policies are both technically effective and socially acceptable.
+        </p>
+        <p className="mt-3">
+          Rather than viewing residents as passive recipients of policy decisions, Chen&apos;s work emphasizes meaningful engagement throughout the research process. Community workshops, stakeholder advisory groups, focus groups, surveys, and collaborative planning exercises are used to identify local concerns, evaluate trade-offs, and co-produce solutions alongside policymakers and practitioners. The goal is to create policies that are informed by local knowledge while remaining responsive to broader environmental and health objectives.
+        </p>
+        <p className="mt-3">
+          This philosophy aligns closely with the objectives of the Wellcome Trust-funded research initiative highlighted at the workshop. All of the funded Wellcome projects examine how cities and communities can leverage the health co-benefits of climate action while advancing net-zero goals. Drawing on experiences from cities in Japan, the United States, France, and elsewhere, participants will discuss how analytical tools, scientific evidence, and practical experience can support healthier and more resilient urban futures.
+        </p>
+        <p className="mt-3">
+          Chen&apos;s contribution to the session on Decision-Making and Analytical Tools reflects a broader integration of data, policy, and research. For Chen, the future of sustainability research lies not simply in generating new evidence, but in creating processes through which communities, governments, and experts can jointly design solutions. In an era when climate, health, and social challenges are becoming increasingly interconnected, her work offers a model for translating research into action and ensuring that the transition to sustainable communities is shaped by the people it is intended to serve.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Event Information
+        </h3>
+        <div
+          className="my-5 rounded-lg px-4 py-4 md:px-5 md:py-5 text-sm"
+          style={{ background: '#E8F2F9' }}
+        >
+          <dl className="space-y-2.5">
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Event</dt>
+              <dd className="italic">Connecting Climate, Health and Sustainability Science in Cities: Lessons from the Wellcome Trust Project and Celebrating 20 Years of Sustainability Science</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Date</dt>
+              <dd>November 12, 2026</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Location</dt>
+              <dd>Yokohama, Japan</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Organizers</dt>
+              <dd>Institute for Global Environmental Strategies (IGES), the Wellcome Trust, and Kyushu University</dd>
+            </div>
+          </dl>
+        </div>
+      </>
+    )
+  },
+  {
+    id: 25,
+    category: 'Seminars',
+    date: 'October 22–23, 2026',
+    title: 'Dr. Chien-fei Chen Discusses Rural Data Centers and Community Well-Being at the South Carolina Rural Health Conference',
+    preview: 'Dr. Chen joined the panel discussion “The Road Ahead: Rural Data Warehouses” at the South Carolina Department of Rural Health Annual Conference on October 22–23, 2026, in Spartanburg, South Carolina.',
+    bannerImage: '/images/news/rural-health-conference-panel-2026.jpg',
+    bannerAlt: 'Panelists standing in front of a screen at the South Carolina Rural Health Conference',
+    fullContent: (
+      <>
+        <p>
+          As artificial intelligence (AI), cloud computing, and digital technologies continue to expand across the United States, rural communities are increasingly finding themselves at the center of discussions about data center development and its long-term implications. To some communities, data centers represent opportunities to strengthen local infrastructure, attract investment, diversify rural economies, and participate in the growing digital economy. Others are raising important questions about energy and water consumption, land use, environmental impacts, noise, infrastructure capacity, and community well-being.
+        </p>
+        <p className="mt-3">
+          Those competing perspectives formed the basis of a panel discussion,{' '}
+          <em>&ldquo;The Road Ahead: Rural Data Warehouses,&rdquo;</em>{' '}
+          held during the South Carolina Department of Rural Health Annual Conference on October 22–23 in Spartanburg. The session brought together leaders from academia, industry, economic development, and community organizations to explore how rural communities can evaluate opportunities associated with data centers and AI-related infrastructure while addressing potential environmental and social challenges.
+        </p>
+        <p className="mt-3">
+          The discussion was hosted by Paola A. Gutiérrez, Director of External Engagement for the South Carolina Department of Rural Health, and Ken Harvin, Rural Program Director for the South Carolina Association for Community Economic Development (SCACED). Panelists included Dr. Chien-fei Chen, Professor of Environmental Sociology at Clemson University, and Benny Middleton, Vice President of Channels and Strategic Alliances at DC BLOX.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Helping Rural Communities Make Informed Decisions
+        </h3>
+        <p>
+          A recurring theme throughout the discussion was that data centers are not a one-size-fits-all form of development. Facilities can vary substantially in their size, power demands, cooling technologies, workforce requirements, and infrastructure needs.
+        </p>
+        <p className="mt-3">
+          Panelists emphasized that understanding these differences is critical for local governments and residents evaluating potential projects. Community leaders need to understand how data centers may affect transportation systems, electric grids, water resources, emergency services, and future growth plans before making long-term development decisions. Rather than advocating for or against data center development, speakers stressed the importance of helping communities access reliable information and carefully evaluate how proposed projects align with local priorities.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Balancing Economic Benefits and Community Concerns
+        </h3>
+        <p>
+          The panel explored both the opportunities and challenges associated with data center investments in rural areas. Potential benefits include capital investment, expansion of local tax bases, infrastructure improvements, and increased visibility within the digital economy. At the same time, rural communities are increasingly asking questions about electricity demand, water consumption, land-use changes, environmental impacts, and the long-term commitments developers are willing to make to host communities.
+        </p>
+        <p className="mt-3">
+          Dr. Chen emphasized that these decisions should be guided by transparent information, meaningful community engagement, and a clear understanding of local goals rather than by assumptions or speculation.
+        </p>
+
+        <blockquote
+          className="my-6 pl-4 py-1 text-sm leading-relaxed italic"
+          style={{ borderLeft: '3px solid #F56600', color: '#4a5568' }}
+        >
+          &ldquo;Communities need access to accurate, evidence-based information so they can evaluate both benefits and tradeoffs. The goal is not simply to attract development, but to ensure that development aligns with community priorities and long-term well-being.&rdquo;
+          <span className="block mt-2 not-italic font-medium" style={{ color: '#0c2340' }}>
+            &mdash; Dr. Chien-fei Chen
+          </span>
+        </blockquote>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Bringing Research to the Community Conversation
+        </h3>
+        <p>
+          Dr. Chen highlighted her research examining public acceptance of data centers and AI-related infrastructure. She discussed a multidimensional framework that helps explain how communities perceive and respond to emerging technologies.
+        </p>
+        <p className="mt-3">
+          A key element of her presentation focused on distinguishing between established scientific evidence, emerging findings that require additional study, and claims that have not yet been adequately validated. She emphasized that communities should rely on credible research when evaluating proposals and negotiating with developers. Panelists agreed that evidence-based decision-making can help local governments identify information gaps, ask more informed questions, and avoid unintended consequences while maximizing potential benefits.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Environmental and Public Health Considerations
+        </h3>
+        <p>
+          The discussion also addressed environmental and public health issues associated with data-center development. Drawing on emerging research, Dr. Chen outlined factors communities may wish to monitor, including energy use, water consumption, noise, heat generation, air quality, and other environmental exposures. While some impacts are increasingly understood, panelists noted that important questions remain regarding long-term cumulative effects and how impacts may differ across facility designs and technologies. Speakers emphasized that transparency, ongoing monitoring, and public engagement are essential components of responsible development.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Negotiating for Long-Term Community Benefits
+        </h3>
+        <p>
+          Another major topic focused on how rural communities can prepare for and negotiate potential data-center investments. Panelists discussed considerations such as infrastructure upgrades, environmental protections, water and energy resources, tax revenues, community-benefit agreements, emergency-service capacity, land-use planning, and long-term accountability measures. Speakers noted that successful projects are often built on clear expectations, transparent communication, and agreements that align economic development goals with community priorities.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Looking Ahead
+        </h3>
+        <p>
+          Throughout the session, panelists returned to a common message: rural communities should play an active role in shaping their technological future. As demand for AI and cloud-computing infrastructure continues to grow, community leaders increasingly face complex decisions about how these projects fit into local visions for economic prosperity, environmental sustainability, and quality of life. Rather than simply reacting to proposals, speakers encouraged rural communities to become informed partners in evaluating how data centers and other AI-related infrastructure can contribute to their long-term development goals.
+        </p>
+
+        <div
+          className="my-5 rounded-lg px-4 py-4 md:px-5 md:py-5 text-sm"
+          style={{ background: '#E8F2F9' }}
+        >
+          <dl className="space-y-2.5">
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Session</dt>
+              <dd className="italic">The Road Ahead: Rural Data Warehouses</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Event</dt>
+              <dd>South Carolina Rural Health Conference (29th Annual)</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Date</dt>
+              <dd>October 22–23, 2026</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Location</dt>
+              <dd>Spartanburg, South Carolina</dd>
+            </div>
+            <div className="grid grid-cols-[6rem_1fr] sm:grid-cols-[7rem_1fr] gap-x-3 gap-y-1 items-baseline">
+              <dt className="font-semibold" style={{ color: '#0c2340' }}>Host</dt>
+              <dd>South Carolina Department of Rural Health</dd>
+            </div>
+          </dl>
+        </div>
+      </>
+    )
+  },
+  {
     id: 23,
     category: 'Seminars',
     date: 'October 2026',
@@ -271,6 +447,67 @@ const newsData = [
     bannerImage: '/images/news/international-research-exchange-taiwan-2026-1.jpg',
     bannerAlt: 'Professor Chien-fei Chen with researchers from Clemson University, NCUE, Tunghai University, and National Taichung University of Education in Taiwan',
     fullContent: null
+  },
+  {
+    id: 24,
+    category: 'Research Updates',
+    date: 'November 2026',
+    title: 'GRIT Lab Researchers Present Research at APPAM 2026',
+    preview: 'Dr. Chien-fei Chen and Yueyang Feng of Clemson University’s GRIT Lab shared research at the APPAM 2026 Fall Research Conference in Boston, including a panel on data center expansion and a poster on social vulnerability and mental health.',
+    bannerImage: '/images/news/appam-2026-chen-feng.jpg',
+    bannerAlt: 'Dr. Chien-fei Chen and Yueyang Feng at the APPAM 2026 Fall Research Conference in Boston',
+    fullContent: (
+      <>
+        <p>
+          Dr. Chien-fei Chen and Yueyang Feng, Clemson University&rsquo;s GRIT Lab, shared research at the APPAM 2026 Fall Research Conference in Boston.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Panel on Data Center Expansion
+        </h3>
+        <p>
+          Dr. Chen organized a panel examining the policy, socioeconomic, energy, and environmental health implications of data center expansion. She also presented{' '}
+          <em>&ldquo;Understanding Social Acceptance of Data Center Development in the United States: A Multidimensional Perspective,&rdquo;</em>{' '}
+          coauthored with Dr. Mary Willis of Boston University and Dr. Yu Wang of Iowa State University.
+        </p>
+        <p className="mt-3">
+          The study explores public acceptance of data centers, including concerns about community health, environmental quality, and energy costs, as well as the roles of institutional trust and fairness in decision-making.
+        </p>
+
+        <h3 className="text-base font-semibold mt-6 mb-3" style={{ color: '#0c2340' }}>
+          Poster on Social Vulnerability and Mental Health
+        </h3>
+        <p>
+          Yueyang presented a poster examining how social vulnerability and climate change views relate to mental health. Conducted with Dr. Chen and Dr. Jody Nicholson-Bell, as part of a Wellcome-funded project, the study draws on data from 3,144 U.S. counties. The poster findings highlight the importance of addressing social disadvantage and improving access to mental health support in climate planning.
+        </p>
+
+        <div className="my-5 flex justify-center">
+          <div style={{ maxWidth: '480px' }}>
+            <img
+              src="/images/news/appam-2026-yueyang-feng-poster.jpg"
+              alt="Yueyang Feng presenting the research poster on social vulnerability and mental distress at APPAM 2026"
+              className="w-full rounded-lg"
+              style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
+            />
+            <p className="text-xs text-center mt-2 italic" style={{ color: '#6b7280' }}>
+              Yueyang Feng discussing the poster at APPAM 2026
+            </p>
+          </div>
+        </div>
+
+        <div className="my-5 flex justify-center">
+          <div style={{ maxWidth: '480px' }}>
+            <img
+              src="/images/news/appam-2026-grit-lab-poster-team.jpg"
+              alt="GRIT Lab researchers standing in front of the research poster at APPAM 2026"
+              className="w-full rounded-lg"
+              style={{ border: '1px solid rgba(12, 35, 64, 0.1)' }}
+            />
+            
+          </div>
+        </div>
+      </>
+    )
   },
   {
     id: 17,
