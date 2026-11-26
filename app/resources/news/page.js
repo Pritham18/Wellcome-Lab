@@ -9,7 +9,7 @@ import { Calendar, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-re
 const newsData = [
   {
     id: 26,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'November 12, 2026',
     title: 'From Research to Action: How Chien-Fei Chen Is Bridging Science, Policy, and Communities to Design Healthier, More Sustainable Cities',
     preview: 'Dr. Chien-fei Chen of Clemson University is featured at an international workshop in Yokohama, Japan, on November 12, 2026, for research demonstrating how climate solutions can be co-designed with the people and institutions responsible for implementing them.',
@@ -72,7 +72,7 @@ const newsData = [
   },
   {
     id: 25,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'October 22–23, 2026',
     title: 'Dr. Chien-fei Chen Discusses Rural Data Centers and Community Well-Being at the South Carolina Rural Health Conference',
     preview: 'Dr. Chen joined the panel discussion “The Road Ahead: Rural Data Warehouses” at the South Carolina Department of Rural Health Annual Conference on October 22–23, 2026, in Spartanburg, South Carolina.',
@@ -185,7 +185,7 @@ const newsData = [
   },
   {
     id: 23,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'October 2026',
     title: 'Dr. Chien-fei Chen Presents on Data Centers, Microgrids, and Community Resilience at NCUE',
     preview: 'Dr. Chien-fei Chen, Professor of Sociology and Director of the Greater Resilience, Innovation and Transformation (GRIT) Lab at Clemson University, presented an invited lecture at the Department of Geography, National Changhua University of Education (NCUE), Taiwan, on October 1, 2026.',
@@ -248,7 +248,7 @@ const newsData = [
   },
   {
     id: 22,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'October 13, 2026',
     title: 'Dr. Chien-fei Chen Will Present on Human-in-the-Loop AI and Data Integration',
     preview: 'Dr. Chien-fei Chen and Dr. Xueping Li will present “Human-in-the-Loop AI: Integrating Data and Policy Analysis for Better Decision-Making” to the South Carolina Sea Grant Consortium on October 13, 2026.',
@@ -307,7 +307,7 @@ const newsData = [
   },
   {
     id: 21,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'October 2026',
     title: 'Dr. Chien-fei Chen to Present at CAMHR Fall Triple 7 Speaker Series',
     preview: 'Dr. Chien-fei Chen, Professor of Sociology and Director of the GRIT Lab at Clemson University, will join six other speakers for the CAMHR Fall Triple 7 Speaker Series on Wednesday, October 21, 2026, at noon via Zoom.',
@@ -417,7 +417,7 @@ const newsData = [
   },
   {
     id: 20,
-    category: 'Workshops',
+    category: 'Workshops / Seminars',
     date: 'August 10, 2026',
     title: 'Bridges Across the Grid: International Workshop Connects Research, Technology, and Community Resilience',
     preview: 'On August 10, the GRIT Lab at Clemson University hosted the Power Grid, Sustainability and Resilience Stakeholder Engagement Workshop, bringing together researchers, industry representatives, community leaders, and international partners—including a delegation from Taiwan—for a day of interdisciplinary exchange in Charleston, South Carolina.',
@@ -439,7 +439,7 @@ const newsData = [
   },
   {
     id: 18,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'July 2026',
     title: 'International Research Exchange Strengthens Collaboration on Community Resilience and Data Integration',
     preview: 'Professor Chien-fei Chen recently visited the Department of Geography at National Changhua University of Education (NCUE) in Taiwan, continuing a growing international collaboration focused on community resilience, energy transitions, and socio-environmental research.',
@@ -574,7 +574,7 @@ const newsData = [
   },
   {
     id: 15,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'June 18, 2026',
     title: 'Dr. Chien-fei Chen Shares U.S. Perspectives on Data Centers, Energy, and Community Resilience in Taiwan',
     preview: 'Dr. Chien-fei Chen delivered an invited presentation at the Taiwan Power Research Institute in Taipei on data centers, energy systems, sustainability, and community resilience.',
@@ -671,7 +671,7 @@ const newsData = [
   },
   {
     id: 12,
-    category: 'Workshops',
+    category: 'Workshops / Seminars',
     date: 'June 25–26, 2026',
     title: 'Community Partner Spotlight: South Carolina Gullah Geechee Summit',
     preview: 'We are pleased to share an upcoming event hosted by one of our valued community partners, the Gullah Geechee Cultural Heritage Corridor: the South Carolina Gullah Geechee Summit in Georgetown, South Carolina.',
@@ -728,7 +728,7 @@ const newsData = [
   },
   {
     id: 10,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'May 21, 2026',
     title: 'Dr. Chen Presented Built Environment, Energy Burden, Power Outages, and Health at the WM-NET ZERO Group at the University of Birmingham',
     preview: 'Dr. Chen presented research on the multilevel links among the built environment, energy burden, power outages, and health outcomes to another Wellcome project group, WM-NET ZERO group, at the University of Birmingham on May 21, 2026.',
@@ -772,7 +772,7 @@ const newsData = [
   },
   {
     id: 1,
-    category: 'Workshops',
+    category: 'Workshops / Seminars',
     date: 'Feb 26–27, 2026',
     title: 'Powering Resilience and Health Workshop Explores Links Between Energy Transitions, Community Resilience and Health Benefits',
     preview: 'On February 26–27, 2026, Clemson University hosted an interdisciplinary workshop bringing together researchers, community leaders, public health practitioners, engineers, and policymakers to explore how energy transitions can advance community resilience and health equity.',
@@ -896,7 +896,7 @@ const newsData = [
   },
   {
     id: 6,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'April 6, 2026',
     title: 'Exploring Community Impacts, Energy Transitions, and Conceptual Frontiers for Industrial Decarbonization and Net-Zero Societies',
     preview: 'Join Dr. Benjamin K. Sovacool for a GRIT Lab seminar exploring the social, ethical, and political dimensions of industrial decarbonization—highlighting Just Transitions and equitable pathways to net-zero.',
@@ -907,7 +907,7 @@ const newsData = [
   },
   {
     id: 3,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'November 10, 2025',
     title: 'Community & Infrastructure Resilience Seminar: Human-Centered Emergency Management',
     preview: 'GRIT Lab collaborated with Clemson\'s Community and Infrastructure Resilience initiative to host Dr. Haizhong Wang for a seminar on human-centered behavioral analysis and modeling for rapid-onset disasters.',
@@ -921,7 +921,7 @@ const newsData = [
   },
   {
     id: 4,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'October 31, 2025',
     title: 'GRIT Lab Seminar: People, Places, and Policies—Addressing Environmental Exposures in Low-Income Housing',
     preview: 'As part of the GRIT Lab Fall 2025 Seminar Series, Dr. Gary Adamkiewicz shared new research on environmental exposures and health disparities in low-income housing.',
@@ -935,7 +935,7 @@ const newsData = [
   },
   {
     id: 5,
-    category: 'Seminars',
+    category: 'Workshops / Seminars',
     date: 'October 24, 2025',
     title: 'GRIT Lab Seminar: Environmental Applications and Impacts of Artificial Intelligence',
     preview: 'GRIT Lab hosted Dr. Yuan Yao (Yale University) as part of the Fall 2025 Seminar Series to discuss how artificial intelligence is being applied to advance sustainable development.',
@@ -1080,7 +1080,7 @@ export default function NewsPage() {
   const filteredNews = newsData.filter(item => item.category === activeCategory)
 
   // Category options
-  const categories = ['Project Updates', 'Research Updates', 'Workshops', 'Seminars', 'Recognition']
+  const categories = ['Project Updates', 'Research Updates', 'Workshops / Seminars', 'Recognition']
 
   return (
     <div style={{ background: '#f8fafc' }}>
